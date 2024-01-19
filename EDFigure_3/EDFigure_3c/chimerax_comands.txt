@@ -1,0 +1,23 @@
+cartoon style modeHelix default arrows true arrowsHelix false arrowScale 2 width 2 thickness 1 sides 12 divisions 20
+color #FFB825
+color :Trp,Tyr,Phe #89050D
+graphics silhouettes false
+lighting soft
+
+color sel #ffffff72
+
+
+
+camera mono
+
+
+save /Users/magalhae/Desktop/HNRNAP1.png supersample 3
+save /Users/magalhae/Desktop/HNRNAP1_wS.tiff supersample 3
+save /Users/magalhae/Desktop/HNRNAP1_woS.tiff supersample 3
+
+color bfactor palette 40,#f29100:80,#53F4F6
+color :Trp,Tyr,Phe #ec1c24
+
+
+
+#ffb825

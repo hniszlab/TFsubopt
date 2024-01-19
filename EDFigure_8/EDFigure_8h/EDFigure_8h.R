@@ -1,0 +1,52 @@
+library(Seurat)
+library(cowplot)
+library(hdf5r)
+library(kableExtra)
+library(biomaRt)
+library(limma)
+library(topGO)
+library(org.Hs.eg.db)
+library(sva)
+library(scran)
+library(tidyverse)
+library(DoubletFinder)
+library(gprofiler2)
+library(rliger)
+library(future)
+library(harmony)
+library(pheatmap)
+library(clustree)
+library(venn)
+library(enrichR)
+library(rafalib)
+library(scPred)
+library(loomR)
+library(SeuratWrappers)
+library(velocyto.R)
+library("Nebulosa")
+library(ggalluvial)
+library(patchwork)
+plan("multicore", workers = 10)
+options(future.globals.maxSize = 28 * 1024 ^ 3)
+set.seed(12345)
+
+alldataF <- readRDS("Main_seuratObject.rds")
+
+alldata7 <- SetIdent(alldataF, value = "RNA_snn_res.0.5")
+alldata7 <- subset(alldata7,  idents = 7)
+alldata7 <- SetIdent(alldata7, value = "type")
+alldata7 <- subset(alldata7,  idents = c("AroPerfect_IS15", "WT"))
+cell_selection <- SetIdent(alldata7, value = "type")
+# Compute differentiall expression
+DGE_cell_selection <- FindAllMarkers(cell_selection, logfc.threshold = 0.2, test.use = "DESeq2", 
+                                     min.pct = 0.1, min.diff.pct = 0.2, only.pos = F, max.cells.per.ident = 200,
+                                     assay = "RNA")
+
+genes.to.labelT = DGE_cell_selection  %>% top_n(-25, p_val_adj)
+genes.to.labelT = genes.to.labelT %>% arrange(desc(avg_log2FC))
+genes.to.label = as.character(unique(genes.to.labelT$gene))
+
+ISWT_IS15_cells = subset(alldataF, subset = type == c("WT", "AroPerfect_IS15"))
+
+VlnPlot(ISWT_IS15_cells, genes.to.label, stack = TRUE, sort = F, flip = F, split.by = "type", raster = F) +
+  theme(text = element_text(size = 6), axis.text = element_text(size = 6))

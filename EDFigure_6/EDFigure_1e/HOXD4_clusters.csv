@@ -1,0 +1,1224 @@
+GeneID,Cluster,entrez,symbol,chr,start,end,strand,biotype,description
+ENSG00000196335,cluster1,56164,STK31,7,23710203,23832513,1,protein_coding,serine/threonine kinase 31
+ENSG00000118004,cluster1,78989,COLEC11,2,3594832,3644644,1,protein_coding,collectin subfamily member 11
+ENSG00000186297,cluster1,2558,GABRA5,15,26866911,26949208,1,protein_coding,gamma-aminobutyric acid type A receptor subunit alpha5
+ENSG00000153162,cluster1,654,BMP6,6,7726099,7881728,1,protein_coding,bone morphogenetic protein 6
+ENSG00000115963,cluster1,390,RND3,2,150468195,150539011,-1,protein_coding,Rho family GTPase 3
+ENSG00000049323,cluster1,4052,LTBP1,2,32946953,33399509,1,protein_coding,latent transforming growth factor beta binding protein 1
+ENSG00000135074,cluster1,8728,ADAM19,5,157395534,157575775,-1,protein_coding,ADAM metallopeptidase domain 19
+ENSG00000049192,cluster1,11174,ADAMTS6,5,65148738,65481920,-1,protein_coding,ADAM metallopeptidase with thrombospondin type 1 motif 6
+ENSG00000197497,cluster1,79788,ZNF665,19,53159213,53193386,-1,protein_coding,zinc finger protein 665
+ENSG00000196091,cluster1,4604,MYBPC1,12,101568353,101686028,1,protein_coding,myosin binding protein C1
+ENSG00000183850,cluster1,100129543,ZNF730,19,23075210,23147221,1,protein_coding,zinc finger protein 730
+ENSG00000132669,cluster1,54453,RIN2,20,19757606,20002457,1,protein_coding,Ras and Rab interactor 2
+ENSG00000205744,cluster1,79958,DENND1C,19,6467207,6482557,-1,protein_coding,DENN domain containing 1C
+ENSG00000197635,cluster1,1803,DPP4,2,161992245,162074394,-1,protein_coding,dipeptidyl peptidase 4
+ENSG00000170962,cluster1,80310,PDGFD,11,103907189,104164379,-1,protein_coding,platelet derived growth factor D
+ENSG00000120328,cluster1,56124,PCDHB12,5,141208697,141212571,1,protein_coding,protocadherin beta 12
+ENSG00000086205,cluster1,2346,FOLH1,11,49145092,49208638,-1,protein_coding,folate hydrolase 1
+ENSG00000164659,cluster1,222223,ELAPOR2,7,86876906,87059654,-1,protein_coding,endosome-lysosome associated apoptosis and autophagy regulator family member 2
+ENSG00000113209,cluster1,26167,PCDHB5,5,141135206,141138615,1,protein_coding,protocadherin beta 5
+ENSG00000133805,cluster1,272,AMPD3,11,10308313,10507579,1,protein_coding,adenosine monophosphate deaminase 3
+ENSG00000171617,cluster1,8507,ENC1,5,74627406,74641424,-1,protein_coding,ectodermal-neural cortex 1
+ENSG00000142609,cluster1,85452,CFAP74,1,1921951,2003837,-1,protein_coding,cilia and flagella associated protein 74
+ENSG00000080493,cluster1,8671,SLC4A4,4,71062667,71572087,1,protein_coding,solute carrier family 4 member 4
+ENSG00000173868,cluster1,162466,PHOSPHO1,17,49223366,49230787,-1,protein_coding,phosphoethanolamine/phosphocholine phosphatase 1
+ENSG00000256229,cluster1,90649,ZNF486,19,20167214,20200488,1,protein_coding,zinc finger protein 486
+ENSG00000179046,cluster1,205860,TRIML2,4,188091272,188109603,-1,protein_coding,tripartite motif family like 2
+ENSG00000131668,cluster1,56033,BARX1,9,93951627,93955355,-1,protein_coding,BARX homeobox 1
+ENSG00000160223,cluster1,23308,ICOSLG,21,44215382,44241446,-1,protein_coding,inducible T cell costimulator ligand
+ENSG00000160223,cluster1,102723996,ICOSLG,21,44215382,44241446,-1,protein_coding,inducible T cell costimulator ligand
+ENSG00000117525,cluster1,2152,F3,1,94529173,94541759,-1,protein_coding,"coagulation factor III, tissue factor"
+ENSG00000164744,cluster1,256979,SUN3,7,47987148,48029119,-1,protein_coding,Sad1 and UNC84 domain containing 3
+ENSG00000174460,cluster1,170261,ZCCHC12,X,118823824,118826968,1,protein_coding,zinc finger CCHC-type containing 12
+ENSG00000114378,cluster1,3373,HYAL1,3,50299890,50312381,-1,protein_coding,hyaluronidase 1
+ENSG00000144847,cluster1,152404,IGSF11,3,118900557,119146068,-1,protein_coding,immunoglobulin superfamily member 11
+ENSG00000167562,cluster1,55762,ZNF701,19,52555822,52587174,1,protein_coding,zinc finger protein 701
+ENSG00000082497,cluster1,56256,SERTAD4,1,210232796,210246631,1,protein_coding,SERTA domain containing 4
+ENSG00000267041,cluster1,342892,ZNF850,19,36714383,36772825,-1,protein_coding,zinc finger protein 850
+ENSG00000178882,cluster1,144347,RFLNA,12,123973241,124316024,1,protein_coding,refilin A
+ENSG00000178882,cluster1,100533183,RFLNA,12,123973241,124316024,1,protein_coding,refilin A
+ENSG00000148942,cluster1,159963,SLC5A12,11,26667020,26723427,-1,protein_coding,solute carrier family 5 member 12
+ENSG00000119686,cluster1,55640,FLVCR2,14,75578620,75663214,1,protein_coding,FLVCR heme transporter 2
+ENSG00000187808,cluster1,347454,SOWAHD,X,119758588,119760202,1,protein_coding,sosondowah ankyrin repeat domain family member D
+ENSG00000175556,cluster1,79836,LONRF3,X,118974614,119018355,1,protein_coding,LON peptidase N-terminal domain and ring finger 3
+ENSG00000181781,cluster1,284451,ODF3L2,19,463346,474983,-1,protein_coding,outer dense fiber of sperm tails 3 like 2
+ENSG00000198939,cluster1,80108,ZFP2,5,178895898,178933212,1,protein_coding,ZFP2 zinc finger protein
+ENSG00000253731,cluster1,56109,PCDHGA6,5,141373891,141512975,1,protein_coding,"protocadherin gamma subfamily A, 6"
+ENSG00000257446,cluster1,729747,ZNF878,19,12043805,12052961,-1,protein_coding,zinc finger protein 878
+ENSG00000030419,cluster1,22807,IKZF2,2,212999691,213152427,-1,protein_coding,IKAROS family zinc finger 2
+ENSG00000164093,cluster1,5308,PITX2,4,110617423,110642123,-1,protein_coding,paired like homeodomain 2
+ENSG00000171956,cluster1,27023,FOXB1,15,60004234,60061730,1,protein_coding,forkhead box B1
+ENSG00000198915,cluster1,221002,RASGEF1A,10,43194535,43267065,-1,protein_coding,RasGEF domain family member 1A
+ENSG00000113248,cluster1,56121,PCDHB15,5,141245395,141249365,1,protein_coding,protocadherin beta 15
+ENSG00000162039,cluster1,254528,MEIOB,16,1833986,1872178,-1,protein_coding,meiosis specific with OB-fold
+ENSG00000105464,cluster1,2906,GRIN2D,19,48393668,48444931,1,protein_coding,glutamate ionotropic receptor NMDA type subunit 2D
+ENSG00000184005,cluster1,256435,ST6GALNAC3,1,76074746,76634603,1,protein_coding,"ST6 N-acetylgalactosaminide alpha-2,6-sialyltransferase 3"
+ENSG00000268940,cluster1,541466,CT45A1,X,135713639,135723539,1,protein_coding,cancer/testis antigen family 45 member A1
+ENSG00000125726,cluster1,970,CD70,19,6583183,6604103,-1,protein_coding,CD70 molecule
+ENSG00000127928,cluster1,2792,GNGT1,7,93591573,93911265,1,protein_coding,G protein subunit gamma transducin 1
+ENSG00000154645,cluster1,140578,CHODL,21,17901263,18267373,1,protein_coding,chondrolectin
+ENSG00000179918,cluster1,22928,SEPHS2,16,30443631,30445874,-1,protein_coding,selenophosphate synthetase 2
+ENSG00000198429,cluster1,7620,ZNF69,19,11887782,11914329,1,protein_coding,zinc finger protein 69
+ENSG00000112852,cluster1,56133,PCDHB2,5,141094606,141098703,1,protein_coding,protocadherin beta 2
+ENSG00000237440,cluster1,100129842,ZNF737,19,20535825,20565809,-1,protein_coding,zinc finger protein 737
+ENSG00000120324,cluster1,56126,PCDHB10,5,141192353,141195647,1,protein_coding,protocadherin beta 10
+ENSG00000181885,cluster1,1366,CLDN7,17,7259903,7263983,-1,protein_coding,claudin 7
+ENSG00000125657,cluster1,8744,TNFSF9,19,6531026,6535924,1,protein_coding,TNF superfamily member 9
+ENSG00000196109,cluster1,163223,ZNF676,19,22179089,22215801,-1,protein_coding,zinc finger protein 676
+ENSG00000112837,cluster1,9096,TBX18,6,84687351,84764598,-1,protein_coding,T-box transcription factor 18
+ENSG00000188738,cluster1,401024,FSIP2,2,185738804,185833290,1,protein_coding,fibrous sheath interacting protein 2
+ENSG00000018869,cluster1,147948,ZNF582,19,56375846,56393538,-1,protein_coding,zinc finger protein 582
+ENSG00000160161,cluster1,148113,CILP2,19,19538248,19546659,1,protein_coding,cartilage intermediate layer protein 2
+ENSG00000134438,cluster1,30062,RAX,18,59267035,59274086,-1,protein_coding,retina and anterior neural fold homeobox
+ENSG00000204969,cluster1,56146,PCDHA2,5,140794852,141012347,1,protein_coding,protocadherin alpha 2
+ENSG00000255408,cluster1,56145,PCDHA3,5,140801028,141012347,1,protein_coding,protocadherin alpha 3
+ENSG00000112232,cluster1,202559,KHDRBS2,6,61679961,62286225,-1,protein_coding,"KH RNA binding domain containing, signal transduction associated 2"
+ENSG00000166415,cluster1,256764,WDR72,15,53513741,53762878,-1,protein_coding,WD repeat domain 72
+ENSG00000250120,cluster1,56139,PCDHA10,5,140855883,141012347,1,protein_coding,protocadherin alpha 10
+ENSG00000139211,cluster1,347902,AMIGO2,12,47075707,47079959,-1,protein_coding,adhesion molecule with Ig like domain 2
+ENSG00000178919,cluster1,2304,FOXE1,9,97853226,97856717,1,protein_coding,forkhead box E1
+ENSG00000021826,cluster1,1373,CPS1,2,210477682,210679107,1,protein_coding,carbamoyl-phosphate synthase 1
+ENSG00000157502,cluster1,139221,PWWP3B,X,106168305,106208956,1,protein_coding,PWWP domain containing 3B
+ENSG00000133321,cluster1,5920,PLAAT4,11,63536808,63546462,1,protein_coding,phospholipase A and acyltransferase 4
+ENSG00000179008,cluster1,317761,C14orf39,14,60396469,60515543,-1,protein_coding,chromosome 14 open reading frame 39
+ENSG00000186103,cluster1,503582,ARGFX,3,121567949,121590622,1,protein_coding,arginine-fifty homeobox
+ENSG00000113889,cluster1,3827,KNG1,3,186717348,186744410,1,protein_coding,kininogen 1
+ENSG00000188158,cluster1,4810,NHS,X,17375200,17735994,1,protein_coding,NHS actin remodeling regulator
+ENSG00000152661,cluster1,2697,GJA1,6,121435595,121449727,1,protein_coding,gap junction protein alpha 1
+ENSG00000178695,cluster1,115207,KCTD12,13,76880175,76886405,-1,protein_coding,potassium channel tetramerization domain containing 12
+ENSG00000155962,cluster1,1193,CLIC2,X,155276211,155334657,-1,protein_coding,chloride intracellular channel 2
+ENSG00000131848,cluster1,79149,ZSCAN5A,19,56219670,56368383,-1,protein_coding,zinc finger and SCAN domain containing 5A
+ENSG00000204970,cluster1,56147,PCDHA1,5,140786136,141012347,1,protein_coding,protocadherin alpha 1
+ENSG00000173253,cluster1,10655,DMRT2,9,1049858,1057552,1,protein_coding,doublesex and mab-3 related transcription factor 2
+ENSG00000185010,cluster1,2157,F8,X,154835788,155026940,-1,protein_coding,coagulation factor VIII
+ENSG00000140297,cluster1,9245,GCNT3,15,59594875,59640239,1,protein_coding,"glucosaminyl (N-acetyl) transferase 3, mucin type"
+ENSG00000204963,cluster1,56141,PCDHA7,5,140834248,141012347,1,protein_coding,protocadherin alpha 7
+ENSG00000125845,cluster1,650,BMP2,20,6767686,6780246,1,protein_coding,bone morphogenetic protein 2
+ENSG00000118596,cluster1,9194,SLC16A7,12,59596029,59789855,1,protein_coding,solute carrier family 16 member 7
+ENSG00000128918,cluster1,8854,ALDH1A2,15,57953424,58497866,-1,protein_coding,aldehyde dehydrogenase 1 family member A2
+ENSG00000143878,cluster1,388,RHOB,2,20447074,20449440,1,protein_coding,ras homolog family member B
+ENSG00000188227,cluster1,390927,ZNF793,19,37506939,37548762,1,protein_coding,zinc finger protein 793
+ENSG00000076944,cluster1,6813,STXBP2,19,7636772,7647873,1,protein_coding,syntaxin binding protein 2
+ENSG00000197757,cluster1,3223,HOXC6,12,53990624,54030823,1,protein_coding,homeobox C6
+ENSG00000187372,cluster1,56123,PCDHB13,5,141213919,141218979,1,protein_coding,protocadherin beta 13
+ENSG00000204514,cluster1,730051,ZNF814,19,57848731,57889074,-1,protein_coding,zinc finger protein 814
+ENSG00000120327,cluster1,56122,PCDHB14,5,141223343,141227759,1,protein_coding,protocadherin beta 14
+ENSG00000129991,cluster1,7137,TNNI3,19,55151767,55157773,-1,protein_coding,"troponin I3, cardiac type"
+ENSG00000062282,cluster1,84649,DGAT2,11,75759512,75801535,1,protein_coding,diacylglycerol O-acyltransferase 2
+ENSG00000163064,cluster1,2019,EN1,2,118842171,118847648,-1,protein_coding,engrailed homeobox 1
+ENSG00000178053,cluster1,4291,MLF1,3,158571163,158607252,1,protein_coding,myeloid leukemia factor 1
+ENSG00000180818,cluster1,3226,HOXC10,12,53985065,53990279,1,protein_coding,homeobox C10
+ENSG00000198131,cluster1,27300,ZNF544,19,58228594,58277495,1,protein_coding,zinc finger protein 544
+ENSG00000164107,cluster1,9464,HAND2,4,173524969,173530229,-1,protein_coding,heart and neural crest derivatives expressed 2
+ENSG00000198440,cluster1,147949,ZNF583,19,56397966,56436035,1,protein_coding,zinc finger protein 583
+ENSG00000050555,cluster1,10319,LAMC3,9,131009174,131094473,1,protein_coding,laminin subunit gamma 3
+ENSG00000269825,cluster1,122539214,,19,52650447,52690496,-1,protein_coding,novel zinc finger protein
+ENSG00000185905,cluster1,283897,C16orf54,16,29742463,29745990,-1,protein_coding,chromosome 16 open reading frame 54
+ENSG00000197937,cluster1,84671,ZNF347,19,53124072,53159075,-1,protein_coding,zinc finger protein 347
+ENSG00000198521,cluster1,7594,ZNF43,19,21804946,21852125,-1,protein_coding,zinc finger protein 43
+ENSG00000258405,cluster1,147660,ZNF578,19,52453553,52516882,1,protein_coding,zinc finger protein 578
+ENSG00000256771,cluster1,56242,ZNF253,19,19865882,19894674,1,protein_coding,zinc finger protein 253
+ENSG00000176204,cluster1,80059,LRRTM4,2,76747685,77593319,-1,protein_coding,leucine rich repeat transmembrane neuronal 4
+ENSG00000120322,cluster1,56128,PCDHB8,5,141177790,141180539,1,protein_coding,protocadherin beta 8
+ENSG00000198453,cluster1,374900,ZNF568,19,36916316,37005037,1,protein_coding,zinc finger protein 568
+ENSG00000154274,cluster1,55286,C4orf19,4,37453925,37623495,1,protein_coding,chromosome 4 open reading frame 19
+ENSG00000053108,cluster1,23105,FSTL4,5,133196455,133612541,-1,protein_coding,follistatin like 4
+ENSG00000185760,cluster1,56479,KCNQ5,6,72621792,73198853,1,protein_coding,potassium voltage-gated channel subfamily Q member 5
+ENSG00000159445,cluster1,117145,THEM4,1,151870866,151909637,-1,protein_coding,thioesterase superfamily member 4
+ENSG00000026508,cluster1,960,CD44,11,35138882,35232402,1,protein_coding,CD44 molecule (Indian blood group)
+ENSG00000198626,cluster1,6262,RYR2,1,237042184,237833988,1,protein_coding,ryanodine receptor 2
+ENSG00000160321,cluster1,7757,ZNF208,19,21932958,22010949,-1,protein_coding,zinc finger protein 208
+ENSG00000181894,cluster1,79673,ZNF329,19,58126248,58155110,-1,protein_coding,zinc finger protein 329
+ENSG00000197608,cluster1,284371,ZNF841,19,52064465,52095765,-1,protein_coding,zinc finger protein 841
+ENSG00000180806,cluster1,3225,HOXC9,12,53994895,54003337,1,protein_coding,homeobox C9
+ENSG00000198331,cluster1,219844,HYLS1,11,125883614,125900646,1,protein_coding,HYLS1 centriolar and ciliogenesis associated
+ENSG00000198353,cluster1,3221,HOXC4,12,54016931,54056030,1,protein_coding,homeobox C4
+ENSG00000004468,cluster1,952,CD38,4,15778275,15853232,1,protein_coding,CD38 molecule
+ENSG00000079335,cluster1,8556,CDC14A,1,100345001,100520277,1,protein_coding,cell division cycle 14A
+ENSG00000140993,cluster1,91151,TIGD7,16,3298808,3305729,-1,protein_coding,tigger transposable element derived 7
+ENSG00000005844,cluster1,3683,ITGAL,16,30472658,30523567,1,protein_coding,integrin subunit alpha L
+ENSG00000159640,cluster1,1636,ACE,17,63477061,63498380,1,protein_coding,angiotensin I converting enzyme
+ENSG00000142182,cluster1,29947,DNMT3L,21,44246339,44262216,-1,protein_coding,DNA methyltransferase 3 like
+ENSG00000189190,cluster1,162966,ZNF600,19,52749942,52786807,-1,protein_coding,zinc finger protein 600
+ENSG00000172000,cluster1,80032,ZNF556,19,2867335,2883445,1,protein_coding,zinc finger protein 556
+ENSG00000146938,cluster1,57502,NLGN4X,X,5840637,6228867,-1,protein_coding,neuroligin 4 X-linked
+ENSG00000154080,cluster1,83539,CHST9,18,26906481,27185308,-1,protein_coding,carbohydrate sulfotransferase 9
+ENSG00000161551,cluster1,84765,ZNF577,19,51804816,51890950,-1,protein_coding,zinc finger protein 577
+ENSG00000113205,cluster1,56132,PCDHB3,5,141100473,141103827,1,protein_coding,protocadherin beta 3
+ENSG00000081818,cluster1,56131,PCDHB4,5,141121818,141125623,1,protein_coding,protocadherin beta 4
+ENSG00000204956,cluster1,56114,PCDHGA1,5,141330514,141512975,1,protein_coding,"protocadherin gamma subfamily A, 1"
+ENSG00000113396,cluster1,28965,SLC27A6,5,128538013,129033642,1,protein_coding,solute carrier family 27 member 6
+ENSG00000106123,cluster1,2051,EPHB6,7,142855061,142871094,1,protein_coding,EPH receptor B6
+ENSG00000254221,cluster1,56104,PCDHGB1,5,141350099,141512975,1,protein_coding,"protocadherin gamma subfamily B, 1"
+ENSG00000163530,cluster1,151871,DPPA2,3,109293788,109316517,-1,protein_coding,developmental pluripotency associated 2
+ENSG00000204397,cluster1,114769,CARD16,11,105041326,105101431,-1,protein_coding,caspase recruitment domain family member 16
+ENSG00000086717,cluster1,5475,PPEF1,X,18675909,18827921,1,protein_coding,protein phosphatase with EF-hand domain 1
+ENSG00000133019,cluster1,1131,CHRM3,1,239386565,239915452,1,protein_coding,cholinergic receptor muscarinic 3
+ENSG00000172986,cluster1,727936,GXYLT2,3,72888046,72998138,1,protein_coding,glucoside xylosyltransferase 2
+ENSG00000164867,cluster1,4846,NOS3,7,150991017,151014588,1,protein_coding,nitric oxide synthase 3
+ENSG00000173281,cluster1,79660,PPP1R3B,8,9136255,9151574,-1,protein_coding,protein phosphatase 1 regulatory subunit 3B
+ENSG00000156298,cluster1,7102,TSPAN7,X,38561542,38688920,1,protein_coding,tetraspanin 7
+ENSG00000144407,cluster1,5746,PTH2R,2,208359714,208854503,1,protein_coding,parathyroid hormone 2 receptor
+ENSG00000130822,cluster1,139728,PNCK,X,153669733,153689010,-1,protein_coding,pregnancy up-regulated nonubiquitous CaM kinase
+ENSG00000154127,cluster1,84959,UBASH3B,11,122655722,122814473,1,protein_coding,ubiquitin associated and SH3 domain containing B
+ENSG00000077092,cluster1,5915,RARB,3,24687887,25597932,1,protein_coding,retinoic acid receptor beta
+ENSG00000176222,cluster1,342908,ZNF404,19,43872365,43901385,-1,protein_coding,zinc finger protein 404
+ENSG00000177839,cluster1,56127,PCDHB9,5,141187127,141191541,1,protein_coding,protocadherin beta 9
+ENSG00000155052,cluster1,129684,CNTNAP5,2,124025287,124921219,1,protein_coding,contactin associated protein family member 5
+ENSG00000069018,cluster1,57113,TRPC7,5,136212745,136365545,-1,protein_coding,transient receptor potential cation channel subfamily C member 7
+ENSG00000138792,cluster1,2028,ENPEP,4,110365733,110565285,1,protein_coding,glutamyl aminopeptidase
+ENSG00000117632,cluster1,3925,STMN1,1,25884181,25906991,-1,protein_coding,stathmin 1
+ENSG00000089091,cluster1,55184,DZANK1,20,18383367,18467281,-1,protein_coding,double zinc ribbon and ankyrin repeat domains 1
+ENSG00000080166,cluster1,1638,DCT,13,94436811,94479682,-1,protein_coding,dopachrome tautomerase
+ENSG00000149970,cluster1,22866,CNKSR2,X,21372801,21654695,1,protein_coding,connector enhancer of kinase suppressor of Ras 2
+ENSG00000113494,cluster1,5618,PRLR,5,35048756,35230487,-1,protein_coding,prolactin receptor
+ENSG00000154928,cluster1,2047,EPHB1,3,134795260,135260467,1,protein_coding,EPH receptor B1
+ENSG00000145708,cluster1,1393,CRHBP,5,76953045,76981158,1,protein_coding,corticotropin releasing hormone binding protein
+ENSG00000181274,cluster1,23401,FRAT2,10,97332497,97334729,-1,protein_coding,FRAT regulator of WNT signaling pathway 2
+ENSG00000008226,cluster1,9940,DLEC1,3,38039205,38124025,1,protein_coding,DLEC1 cilia and flagella associated protein
+ENSG00000023839,cluster1,1244,ABCC2,10,99782640,99852594,1,protein_coding,ATP binding cassette subfamily C member 2
+ENSG00000180875,cluster1,64388,GREM2,1,240489573,240612155,-1,protein_coding,"gremlin 2, DAN family BMP antagonist"
+ENSG00000125730,cluster1,718,C3,19,6677704,6730562,-1,protein_coding,complement C3
+ENSG00000113211,cluster1,56130,PCDHB6,5,141150057,141153287,1,protein_coding,protocadherin beta 6
+ENSG00000145113,cluster1,4585,MUC4,3,195746765,195811973,-1,protein_coding,"mucin 4, cell surface associated"
+ENSG00000006606,cluster1,10344,CCL26,7,75769533,75789896,-1,protein_coding,C-C motif chemokine ligand 26
+ENSG00000181666,cluster1,284459,ZNF875,19,37312837,37369365,1,protein_coding,zinc finger protein 875
+ENSG00000174718,cluster1,55196,RESF1,12,31959370,31993107,1,protein_coding,retroelement silencing factor 1
+ENSG00000204711,cluster1,138255,CFAP95,9,69820817,69906227,1,protein_coding,cilia and flagella associated protein 95
+ENSG00000104833,cluster1,10382,TUBB4A,19,6494319,6502848,-1,protein_coding,tubulin beta 4A class IVa
+ENSG00000175040,cluster1,9435,CHST2,3,143119771,143124014,1,protein_coding,carbohydrate sulfotransferase 2
+ENSG00000196458,cluster1,100289635,ZNF605,12,132918306,132956306,-1,protein_coding,zinc finger protein 605
+ENSG00000155629,cluster1,118788,PIK3AP1,10,96593315,96720514,-1,protein_coding,phosphoinositide-3-kinase adaptor protein 1
+ENSG00000163673,cluster1,85443,DCLK3,3,36712421,36764553,-1,protein_coding,doublecortin like kinase 3
+ENSG00000272674,cluster1,57717,PCDHB16,5,141182387,141186226,1,protein_coding,protocadherin beta 16
+ENSG00000235268,cluster1,390245,KDM4E,11,95025258,95027596,1,protein_coding,lysine demethylase 4E
+ENSG00000186265,cluster1,151888,BTLA,3,112463966,112499472,-1,protein_coding,B and T lymphocyte associated
+ENSG00000064218,cluster1,58524,DMRT3,9,976655,991732,1,protein_coding,doublesex and mab-3 related transcription factor 3
+ENSG00000197705,cluster1,57565,KLHL14,18,32672673,32773023,-1,protein_coding,kelch like family member 14
+ENSG00000164265,cluster1,117156,SCGB3A2,5,147870682,147882191,1,protein_coding,secretoglobin family 3A member 2
+ENSG00000114656,cluster1,57501,CFAP92,3,128909866,129002690,-1,protein_coding,cilia and flagella associated protein 92 (putative)
+ENSG00000164694,cluster1,84624,FNDC1,6,159169400,159272108,1,protein_coding,fibronectin type III domain containing 1
+ENSG00000196263,cluster1,57573,ZNF471,19,56507850,56530221,1,protein_coding,zinc finger protein 471
+ENSG00000250423,cluster1,57481,KIAA1210,X,119078635,119150579,-1,protein_coding,KIAA1210
+ENSG00000184160,cluster1,152,ADRA2C,4,3766348,3768526,1,protein_coding,adrenoceptor alpha 2C
+ENSG00000067715,cluster1,6857,SYT1,12,78863993,79452008,1,protein_coding,synaptotagmin 1
+ENSG00000070915,cluster1,6559,SLC12A3,16,56865207,56915850,1,protein_coding,solute carrier family 12 member 3
+ENSG00000198844,cluster1,22899,ARHGEF15,17,8310241,8322514,1,protein_coding,Rho guanine nucleotide exchange factor 15
+ENSG00000133256,cluster1,5158,PDE6B,4,625573,670782,1,protein_coding,phosphodiesterase 6B
+ENSG00000137462,cluster1,7097,TLR2,4,153684070,153706260,1,protein_coding,toll like receptor 2
+ENSG00000186792,cluster1,8372,HYAL3,3,50292831,50299405,-1,protein_coding,hyaluronidase 3
+ENSG00000069812,cluster1,54626,HES2,1,6412418,6424670,-1,protein_coding,hes family bHLH transcription factor 2
+ENSG00000165186,cluster1,139411,PTCHD1,X,23334849,23404374,1,protein_coding,patched domain containing 1
+ENSG00000188859,cluster1,149297,FAM78B,1,166057426,166167001,-1,protein_coding,family with sequence similarity 78 member B
+ENSG00000184261,cluster1,56660,KCNK12,2,47509290,47570985,-1,protein_coding,potassium two pore domain channel subfamily K member 12
+ENSG00000261787,cluster1,100129654,TCF24,8,66946501,66962591,-1,protein_coding,transcription factor 24
+ENSG00000131398,cluster1,3748,KCNC3,19,50311937,50333515,-1,protein_coding,potassium voltage-gated channel subfamily C member 3
+ENSG00000078814,cluster1,57644,MYH7B,20,34955810,35002437,1,protein_coding,myosin heavy chain 7B
+ENSG00000164604,cluster1,54329,GPR85,7,113078331,113087778,-1,protein_coding,G protein-coupled receptor 85
+ENSG00000141448,cluster1,2627,GATA6,18,22169589,22202528,1,protein_coding,GATA binding protein 6
+ENSG00000168505,cluster1,2637,GBX2,2,236165236,236168386,-1,protein_coding,gastrulation brain homeobox 2
+ENSG00000119121,cluster1,140803,TRPM6,9,74722495,74888094,-1,protein_coding,transient receptor potential cation channel subfamily M member 6
+ENSG00000159216,cluster1,861,RUNX1,21,34787801,36004667,-1,protein_coding,RUNX family transcription factor 1
+ENSG00000159216,cluster1,100506403,RUNX1,21,34787801,36004667,-1,protein_coding,RUNX family transcription factor 1
+ENSG00000144476,cluster1,57007,ACKR3,2,236567787,236582354,1,protein_coding,atypical chemokine receptor 3
+ENSG00000118729,cluster1,845,CASQ2,1,115700021,115768714,-1,protein_coding,calsequestrin 2
+ENSG00000144681,cluster1,6769,STAC,3,36380503,36548007,1,protein_coding,SH3 and cysteine rich domain
+ENSG00000160229,cluster1,7617,ZNF66,19,20776304,20809995,1,protein_coding,zinc finger protein 66
+ENSG00000133135,cluster1,79589,RNF128,X,106693794,106797016,1,protein_coding,ring finger protein 128
+ENSG00000102349,cluster1,11279,KLF8,X,56232356,56291531,1,protein_coding,KLF transcription factor 8
+ENSG00000198963,cluster1,6096,RORB,9,74497335,74693177,1,protein_coding,RAR related orphan receptor B
+ENSG00000007062,cluster1,8842,PROM1,4,15963076,16084378,-1,protein_coding,prominin 1
+ENSG00000132357,cluster1,84674,CARD6,5,40841308,40860175,1,protein_coding,caspase recruitment domain family member 6
+ENSG00000132938,cluster1,23281,MTUS2,13,28820339,29505947,1,protein_coding,microtubule associated scaffold protein 2
+ENSG00000147642,cluster1,55638,SYBU,8,109573978,109691791,-1,protein_coding,syntabulin
+ENSG00000154040,cluster1,26256,CABYR,18,24138987,24161600,1,protein_coding,calcium binding tyrosine phosphorylation regulated
+ENSG00000198673,cluster1,338811,TAFA2,12,61708273,62279150,-1,protein_coding,TAFA chemokine like family member 2
+ENSG00000141431,cluster1,80816,ASXL3,18,33578219,33751195,1,protein_coding,ASXL transcriptional regulator 3
+ENSG00000203995,cluster1,440590,ZYG11A,1,52842511,52894998,1,protein_coding,"zyg-11 family member A, cell cycle regulator"
+ENSG00000223547,cluster1,284391,ZNF844,19,12064731,12081565,1,protein_coding,zinc finger protein 844
+ENSG00000175832,cluster1,2118,ETV4,17,43527844,43579620,-1,protein_coding,ETS variant transcription factor 4
+ENSG00000111799,cluster1,1303,COL12A1,6,75084326,75206267,-1,protein_coding,collagen type XII alpha 1 chain
+ENSG00000123576,cluster1,80712,ESX1,X,104250038,104254933,-1,protein_coding,ESX homeobox 1
+ENSG00000157368,cluster1,146433,IL34,16,70579895,70660682,1,protein_coding,interleukin 34
+ENSG00000165084,cluster1,116328,C8orf34,8,68330955,68819023,1,protein_coding,chromosome 8 open reading frame 34
+ENSG00000109819,cluster1,10891,PPARGC1A,4,23755041,23904089,-1,protein_coding,PPARG coactivator 1 alpha
+ENSG00000112964,cluster1,2690,GHR,5,42423439,42721878,1,protein_coding,growth hormone receptor
+ENSG00000100053,cluster1,1417,CRYBB3,22,25199858,25207359,1,protein_coding,crystallin beta B3
+ENSG00000144619,cluster1,152330,CNTN4,3,2098813,3057959,1,protein_coding,contactin 4
+ENSG00000113580,cluster1,2908,NR3C1,5,143277931,143435512,-1,protein_coding,nuclear receptor subfamily 3 group C member 1
+ENSG00000121310,cluster1,55268,ECHDC2,1,52895910,52927212,-1,protein_coding,enoyl-CoA hydratase domain containing 2
+ENSG00000091831,cluster1,2099,ESR1,6,151656691,152129619,1,protein_coding,estrogen receptor 1
+ENSG00000164438,cluster1,30012,TLX3,5,171309248,171312139,1,protein_coding,T cell leukemia homeobox 3
+ENSG00000176170,cluster1,8877,SPHK1,17,76376584,76387860,1,protein_coding,sphingosine kinase 1
+ENSG00000187068,cluster1,285382,C3orf70,3,185076838,185153060,-1,protein_coding,chromosome 3 open reading frame 70
+ENSG00000170577,cluster1,10736,SIX2,2,45005182,45009452,-1,protein_coding,SIX homeobox 2
+ENSG00000131127,cluster1,7700,ZNF141,4,337814,384868,1,protein_coding,zinc finger protein 141
+ENSG00000196781,cluster1,7088,TLE1,9,81583683,81689547,-1,protein_coding,"TLE family member 1, transcriptional corepressor"
+ENSG00000177283,cluster1,8325,FZD8,10,35638247,35642296,-1,protein_coding,frizzled class receptor 8
+ENSG00000081803,cluster1,93664,CADPS2,7,122318411,122886759,-1,protein_coding,calcium dependent secretion activator 2
+ENSG00000170561,cluster1,153572,IRX2,5,2745845,2751677,-1,protein_coding,iroquois homeobox 2
+ENSG00000116774,cluster1,56944,OLFML3,1,113979391,114035572,1,protein_coding,olfactomedin like 3
+ENSG00000176697,cluster1,627,BDNF,11,27654893,27722058,-1,protein_coding,brain derived neurotrophic factor
+ENSG00000167614,cluster1,57348,TTYH1,19,54415219,54436904,1,protein_coding,tweety family member 1
+ENSG00000145244,cluster1,10699,CORIN,4,47593999,47838106,-1,protein_coding,"corin, serine peptidase"
+ENSG00000125816,cluster1,644524,NKX2-4,20,21395365,21397526,-1,protein_coding,NK2 homeobox 4
+ENSG00000172183,cluster1,3669,ISG20,15,88635670,88656483,1,protein_coding,interferon stimulated exonuclease gene 20
+ENSG00000163032,cluster1,7447,VSNL1,2,17539126,17657018,1,protein_coding,visinin like 1
+ENSG00000203950,cluster1,26071,RTL8A,X,135050932,135052196,-1,protein_coding,retrotransposon Gag like 8A
+ENSG00000158220,cluster1,83850,ESYT3,3,138434586,138481686,1,protein_coding,extended synaptotagmin 3
+ENSG00000150051,cluster1,283078,MKX,10,27672874,27746060,-1,protein_coding,mohawk homeobox
+ENSG00000140403,cluster1,55466,DNAJA4,15,78264086,78282196,1,protein_coding,DnaJ heat shock protein family (Hsp40) member A4
+ENSG00000186462,cluster1,4674,NAP1L2,X,73212299,73214851,-1,protein_coding,nucleosome assembly protein 1 like 2
+ENSG00000164430,cluster1,115004,CGAS,6,73413515,73452297,-1,protein_coding,cyclic GMP-AMP synthase
+ENSG00000070159,cluster1,5774,PTPN3,9,109375466,109498313,-1,protein_coding,protein tyrosine phosphatase non-receptor type 3
+ENSG00000127152,cluster1,64919,BCL11B,14,99169287,99272197,-1,protein_coding,BAF chromatin remodeling complex subunit BCL11B
+ENSG00000080224,cluster1,285220,EPHA6,3,96814581,97761532,1,protein_coding,EPH receptor A6
+ENSG00000134330,cluster1,285148,IAH1,2,9473658,9496543,1,protein_coding,isoamyl acetate hydrolyzing esterase 1 (putative)
+ENSG00000163082,cluster1,130367,SGPP2,2,222424543,222562621,1,protein_coding,sphingosine-1-phosphate phosphatase 2
+ENSG00000124160,cluster1,57727,NCOA5,20,46060991,46089962,-1,protein_coding,nuclear receptor coactivator 5
+ENSG00000101605,cluster1,8736,MYOM1,18,3066807,3219968,-1,protein_coding,myomesin 1
+ENSG00000119737,cluster1,10936,GPR75,2,53852912,53859967,-1,protein_coding,G protein-coupled receptor 75
+ENSG00000027869,cluster1,9047,SH2D2A,1,156806243,156816848,-1,protein_coding,SH2 domain containing 2A
+ENSG00000134256,cluster1,9398,CD101,1,117001750,117036552,1,protein_coding,CD101 molecule
+ENSG00000146094,cluster1,79930,DOK3,5,177501904,177511274,-1,protein_coding,docking protein 3
+ENSG00000129749,cluster1,57053,CHRNA10,11,3665587,3671384,-1,protein_coding,cholinergic receptor nicotinic alpha 10 subunit
+ENSG00000184378,cluster1,84517,ACTRT3,3,169766921,169769561,-1,protein_coding,actin related protein T3
+ENSG00000198354,cluster1,340578,DCAF12L2,X,126163499,126166289,-1,protein_coding,DDB1 and CUL4 associated factor 12 like 2
+ENSG00000164362,cluster1,7015,TERT,5,1253147,1295068,-1,protein_coding,telomerase reverse transcriptase
+ENSG00000242689,cluster1,1270,CNTF,11,58622665,58625733,1,protein_coding,ciliary neurotrophic factor
+ENSG00000244165,cluster1,5032,P2RY11,19,10111693,10115372,1,protein_coding,purinergic receptor P2Y11
+ENSG00000225614,cluster1,84627,ZNF469,16,88382959,88440757,1,protein_coding,zinc finger protein 469
+ENSG00000147255,cluster1,3547,IGSF1,X,131273506,131578899,-1,protein_coding,immunoglobulin superfamily member 1
+ENSG00000224420,cluster1,199800,ADM5,19,49689594,49690575,1,protein_coding,adrenomedullin 5 (putative)
+ENSG00000213638,cluster1,113179,ADAT3,19,1905399,1913447,1,protein_coding,adenosine deaminase tRNA specific 3
+ENSG00000144229,cluster1,80731,THSD7B,2,136765545,137677718,1,protein_coding,thrombospondin type 1 domain containing 7B
+ENSG00000115361,cluster1,33,ACADL,2,210187126,210225447,-1,protein_coding,acyl-CoA dehydrogenase long chain
+ENSG00000179869,cluster1,154664,ABCA13,7,48171458,48647497,1,protein_coding,ATP binding cassette subfamily A member 13
+ENSG00000213988,cluster1,7643,ZNF90,19,20077994,20127076,1,protein_coding,zinc finger protein 90
+ENSG00000178718,cluster1,54913,RPP25,15,74954418,74956772,-1,protein_coding,ribonuclease P and MRP subunit p25
+ENSG00000107731,cluster1,219699,UNC5B,10,71212570,71302864,1,protein_coding,unc-5 netrin receptor B
+ENSG00000152402,cluster1,2977,GUCY1A2,11,106674019,107018476,-1,protein_coding,guanylate cyclase 1 soluble subunit alpha 2
+ENSG00000129646,cluster1,84074,QRICH2,17,76274049,76308276,-1,protein_coding,glutamine rich 2
+ENSG00000175793,cluster1,2810,SFN,1,26863149,26864456,1,protein_coding,stratifin
+ENSG00000140853,cluster1,84166,NLRC5,16,56989485,57083531,1,protein_coding,NLR family CARD domain containing 5
+ENSG00000258947,cluster1,10381,TUBB3,16,89921392,89938761,1,protein_coding,tubulin beta 3 class III
+ENSG00000136826,cluster1,9314,KLF4,9,107484852,107490482,-1,protein_coding,KLF transcription factor 4
+ENSG00000272398,cluster1,100133941,CD24,6,106969831,106975627,-1,protein_coding,CD24 molecule
+ENSG00000145864,cluster1,2561,GABRB2,5,161288429,161549044,-1,protein_coding,gamma-aminobutyric acid type A receptor subunit beta2
+ENSG00000240184,cluster1,5098,PCDHGC3,5,141475947,141512977,1,protein_coding,"protocadherin gamma subfamily C, 3"
+ENSG00000167646,cluster1,352909,DNAAF3,19,55158661,55166722,-1,protein_coding,dynein axonemal assembly factor 3
+ENSG00000100906,cluster1,4792,NFKBIA,14,35401079,35404749,-1,protein_coding,NFKB inhibitor alpha
+ENSG00000144868,cluster1,66000,TMEM108,3,133038391,133397775,1,protein_coding,transmembrane protein 108
+ENSG00000113657,cluster1,1809,DPYSL3,5,147390808,147510068,-1,protein_coding,dihydropyrimidinase like 3
+ENSG00000163377,cluster1,151647,TAFA4,3,68731766,68953297,-1,protein_coding,TAFA chemokine like family member 4
+ENSG00000085552,cluster1,57549,IGSF9,1,159927039,159945613,-1,protein_coding,immunoglobulin superfamily member 9
+ENSG00000118246,cluster1,22868,FASTKD2,2,206765357,206796189,1,protein_coding,FAST kinase domains 2
+ENSG00000178522,cluster1,258,AMBN,4,70592256,70607288,1,protein_coding,ameloblastin
+ENSG00000117148,cluster1,81569,ACTL8,1,17755333,17827063,1,protein_coding,actin like 8
+ENSG00000160072,cluster1,83858,ATAD3B,1,1471765,1497848,1,protein_coding,ATPase family AAA domain containing 3B
+ENSG00000162670,cluster1,339479,BRINP3,1,190097658,190478404,-1,protein_coding,BMP/retinoic acid inducible neural specific 3
+ENSG00000121871,cluster1,22865,SLITRK3,3,165186720,165197109,-1,protein_coding,SLIT and NTRK like family member 3
+ENSG00000188921,cluster1,401494,HACD4,9,20999509,21031640,-1,protein_coding,3-hydroxyacyl-CoA dehydratase 4
+ENSG00000104899,cluster1,268,AMH,19,2249309,2252073,1,protein_coding,anti-Mullerian hormone
+ENSG00000184343,cluster1,26576,SRPK3,X,153776412,153785732,1,protein_coding,SRSF protein kinase 3
+ENSG00000212123,cluster1,163154,PRR22,19,5782960,5784746,-1,protein_coding,proline rich 22
+ENSG00000090376,cluster1,11213,IRAK3,12,66189195,66254622,1,protein_coding,interleukin 1 receptor associated kinase 3
+ENSG00000135116,cluster2,8739,HRK,12,116856144,116881441,-1,protein_coding,"harakiri, BCL2 interacting protein"
+ENSG00000110195,cluster2,2348,FOLR1,11,72189558,72196323,1,protein_coding,folate receptor alpha
+ENSG00000130203,cluster2,348,APOE,19,44905791,44909393,1,protein_coding,apolipoprotein E
+ENSG00000070669,cluster2,440,ASNS,7,97851677,97872542,-1,protein_coding,asparagine synthetase (glutamine-hydrolyzing)
+ENSG00000163689,cluster2,200844,CFAP20DC,3,58717365,59050084,-1,protein_coding,CFAP20 domain containing
+ENSG00000120875,cluster2,1846,DUSP4,8,29333064,29350684,-1,protein_coding,dual specificity phosphatase 4
+ENSG00000145824,cluster2,9547,CXCL14,5,135570679,135579279,-1,protein_coding,C-X-C motif chemokine ligand 14
+ENSG00000115267,cluster2,64135,IFIH1,2,162267074,162318684,-1,protein_coding,interferon induced with helicase C domain 1
+ENSG00000091490,cluster2,23231,SEL1L3,4,25747433,25863760,-1,protein_coding,SEL1L family member 3
+ENSG00000265763,cluster2,118738,ZNF488,10,47365496,47384293,-1,protein_coding,zinc finger protein 488
+ENSG00000144642,cluster2,27303,RBMS3,3,28574791,30010391,1,protein_coding,RNA binding motif single stranded interacting protein 3
+ENSG00000155367,cluster2,333926,PPM1J,1,112709994,112715332,-1,protein_coding,"protein phosphatase, Mg2+/Mn2+ dependent 1J"
+ENSG00000105974,cluster2,857,CAV1,7,116524994,116561179,1,protein_coding,caveolin 1
+ENSG00000078018,cluster2,4133,MAP2,2,209424047,209734147,1,protein_coding,microtubule associated protein 2
+ENSG00000135842,cluster2,116496,NIBAN1,1,184790724,184974508,-1,protein_coding,niban apoptosis regulator 1
+ENSG00000171502,cluster2,255631,COL24A1,1,85729233,86156943,-1,protein_coding,collagen type XXIV alpha 1 chain
+ENSG00000143382,cluster2,54507,ADAMTSL4,1,150549369,150560937,1,protein_coding,ADAMTS like 4
+ENSG00000243244,cluster2,11037,STON1,2,48529383,48598513,1,protein_coding,stonin 1
+ENSG00000087494,cluster2,5744,PTHLH,12,27958084,27972733,-1,protein_coding,parathyroid hormone like hormone
+ENSG00000196220,cluster2,9901,SRGAP3,3,8980591,9363053,-1,protein_coding,SLIT-ROBO Rho GTPase activating protein 3
+ENSG00000164741,cluster2,10395,DLC1,8,13083361,13604610,-1,protein_coding,DLC1 Rho GTPase activating protein
+ENSG00000107518,cluster2,26033,ATRNL1,10,115093365,115948999,1,protein_coding,attractin like 1
+ENSG00000152580,cluster2,285313,IGSF10,3,151425384,151461061,-1,protein_coding,immunoglobulin superfamily member 10
+ENSG00000183196,cluster2,4166,CHST6,16,75472052,75495445,-1,protein_coding,carbohydrate sulfotransferase 6
+ENSG00000064042,cluster2,22998,LIMCH1,4,41359607,41700044,1,protein_coding,LIM and calponin homology domains 1
+ENSG00000144278,cluster2,114805,GALNT13,2,153871922,154453979,1,protein_coding,polypeptide N-acetylgalactosaminyltransferase 13
+ENSG00000157510,cluster2,134265,AFAP1L1,5,149271859,149343637,1,protein_coding,actin filament associated protein 1 like 1
+ENSG00000151892,cluster2,2674,GFRA1,10,116056925,116276803,-1,protein_coding,GDNF family receptor alpha 1
+ENSG00000166265,cluster2,116159,CYYR1,21,26466209,26573286,-1,protein_coding,cysteine and tyrosine rich 1
+ENSG00000135063,cluster2,9413,ENTREP1,9,69324567,69392558,1,protein_coding,endosomal transmembrane epsin interactor 1
+ENSG00000163618,cluster2,8618,CADPS,3,62398346,62875416,-1,protein_coding,calcium dependent secretion activator
+ENSG00000095637,cluster2,10580,SORBS1,10,95311771,95561414,-1,protein_coding,sorbin and SH3 domain containing 1
+ENSG00000157168,cluster2,3084,NRG1,8,31639222,32855666,1,protein_coding,neuregulin 1
+ENSG00000111817,cluster2,29940,DSE,6,116254173,116444861,1,protein_coding,dermatan sulfate epimerase
+ENSG00000076641,cluster2,55824,PAG1,8,80967810,81112068,-1,protein_coding,phosphoprotein membrane anchor with glycosphingolipid microdomains 1
+ENSG00000021300,cluster2,58473,PLEKHB1,11,73646178,73662819,1,protein_coding,pleckstrin homology domain containing B1
+ENSG00000178662,cluster2,80034,CSRNP3,2,165469647,165689407,1,protein_coding,cysteine and serine rich nuclear protein 3
+ENSG00000106415,cluster2,113263,GLCCI1,7,7968796,8094272,1,protein_coding,glucocorticoid induced 1
+ENSG00000135362,cluster2,79899,PRR5L,11,36296288,36465204,1,protein_coding,proline rich 5 like
+ENSG00000196208,cluster2,9687,GREB1,2,11482341,11642788,1,protein_coding,growth regulating estrogen receptor binding 1
+ENSG00000064300,cluster2,4804,NGFR,17,49495293,49515008,1,protein_coding,nerve growth factor receptor
+ENSG00000061455,cluster2,93166,PRDM6,5,123089241,123194266,1,protein_coding,PR/SET domain 6
+ENSG00000175879,cluster2,3234,HOXD8,2,176129694,176132695,1,protein_coding,homeobox D8
+ENSG00000116285,cluster2,54206,ERRFI1,1,8004404,8026309,-1,protein_coding,ERBB receptor feedback inhibitor 1
+ENSG00000162409,cluster2,5563,PRKAA2,1,56645314,56715335,1,protein_coding,protein kinase AMP-activated catalytic subunit alpha 2
+ENSG00000141404,cluster2,2774,GNAL,18,11689264,11885685,1,protein_coding,G protein subunit alpha L
+ENSG00000162407,cluster2,8613,PLPP3,1,56494761,56645301,-1,protein_coding,phospholipid phosphatase 3
+ENSG00000197872,cluster2,81553,CYRIA,2,16549459,16666331,-1,protein_coding,CYFIP related Rac1 interactor A
+ENSG00000121236,cluster2,117854,TRIM6,11,5596109,5612958,1,protein_coding,tripartite motif containing 6
+ENSG00000109424,cluster2,7350,UCP1,4,140559431,140568961,-1,protein_coding,uncoupling protein 1
+ENSG00000168779,cluster2,6474,SHOX2,3,158095905,158106420,-1,protein_coding,short stature homeobox 2
+ENSG00000115232,cluster2,3676,ITGA4,2,181457202,181538940,1,protein_coding,integrin subunit alpha 4
+ENSG00000120885,cluster2,1191,CLU,8,27596917,27614700,-1,protein_coding,clusterin
+ENSG00000110148,cluster2,887,CCKBR,11,6259806,6272127,1,protein_coding,cholecystokinin B receptor
+ENSG00000164683,cluster2,23462,HEY1,8,79762371,79767857,-1,protein_coding,hes related family bHLH transcription factor with YRPW motif 1
+ENSG00000070778,cluster2,11099,PTPN21,14,88465778,88555007,-1,protein_coding,protein tyrosine phosphatase non-receptor type 21
+ENSG00000113361,cluster2,1004,CDH6,5,31193686,31329146,1,protein_coding,cadherin 6
+ENSG00000250305,cluster2,57604,TRMT9B,8,12945642,13031503,1,protein_coding,tRNA methyltransferase 9B (putative)
+ENSG00000132535,cluster2,1742,DLG4,17,7187187,7219841,-1,protein_coding,discs large MAGUK scaffold protein 4
+ENSG00000169439,cluster2,6383,SDC2,8,96493813,96611790,1,protein_coding,syndecan 2
+ENSG00000180720,cluster2,1132,CHRM4,11,46383789,46391776,-1,protein_coding,cholinergic receptor muscarinic 4
+ENSG00000197321,cluster2,6840,SVIL,10,29457338,29736959,-1,protein_coding,supervillin
+ENSG00000132429,cluster2,64208,POPDC3,6,105157900,105180014,-1,protein_coding,popeye domain containing 3
+ENSG00000187634,cluster2,148398,SAMD11,1,923923,944575,1,protein_coding,sterile alpha motif domain containing 11
+ENSG00000174498,cluster2,9543,IGDCC3,15,65327127,65378002,-1,protein_coding,immunoglobulin superfamily DCC subclass member 3
+ENSG00000148600,cluster2,92211,CDHR1,10,84194537,84219621,1,protein_coding,cadherin related family member 1
+ENSG00000162757,cluster2,148304,C1orf74,1,209779208,209784559,-1,protein_coding,chromosome 1 open reading frame 74
+ENSG00000139832,cluster2,55647,RAB20,13,110523066,110561722,-1,protein_coding,"RAB20, member RAS oncogene family"
+ENSG00000154265,cluster2,23461,ABCA5,17,69244311,69327244,-1,protein_coding,ATP binding cassette subfamily A member 5
+ENSG00000131370,cluster2,9467,SH3BP5,3,15254353,15341368,-1,protein_coding,SH3 domain binding protein 5
+ENSG00000174939,cluster2,253982,ASPHD1,16,29900375,29919864,1,protein_coding,aspartate beta-hydroxylase domain containing 1
+ENSG00000140450,cluster2,91947,ARRDC4,15,97960703,97973833,1,protein_coding,arrestin domain containing 4
+ENSG00000127920,cluster2,2791,GNG11,7,93921735,93928610,1,protein_coding,G protein subunit gamma 11
+ENSG00000091136,cluster2,3912,LAMB1,7,107923799,108003213,-1,protein_coding,laminin subunit beta 1
+ENSG00000013619,cluster2,10046,MAMLD1,X,150361422,150514178,1,protein_coding,mastermind like domain containing 1
+ENSG00000165194,cluster2,57526,PCDH19,X,100291644,100410273,-1,protein_coding,protocadherin 19
+ENSG00000018236,cluster2,1272,CNTN1,12,40692439,41072415,1,protein_coding,contactin 1
+ENSG00000196104,cluster2,50859,SPOCK3,4,166733384,167234796,-1,protein_coding,"SPARC (osteonectin), cwcv and kazal like domains proteoglycan 3"
+ENSG00000186399,cluster2,101059918,GOLGA8R,15,30400562,30414260,-1,protein_coding,golgin A8 family member R
+ENSG00000184489,cluster2,11156,PTP4A3,8,141391995,141432454,1,protein_coding,protein tyrosine phosphatase 4A3
+ENSG00000162733,cluster2,4921,DDR2,1,162631373,162787405,1,protein_coding,discoidin domain receptor tyrosine kinase 2
+ENSG00000153291,cluster2,9481,SLC25A27,6,46652915,46678190,1,protein_coding,solute carrier family 25 member 27
+ENSG00000121361,cluster2,3764,KCNJ8,12,21764955,21775600,-1,protein_coding,potassium inwardly rectifying channel subfamily J member 8
+ENSG00000112182,cluster2,60468,BACH2,6,89926528,90296843,-1,protein_coding,BTB domain and CNC homolog 2
+ENSG00000214944,cluster2,64283,ARHGEF28,5,73626158,73941993,1,protein_coding,Rho guanine nucleotide exchange factor 28
+ENSG00000154856,cluster2,147495,APCDD1,18,10454635,10489949,1,protein_coding,APC down-regulated 1
+ENSG00000203727,cluster2,389432,SAMD5,6,147508690,147737547,1,protein_coding,sterile alpha motif domain containing 5
+ENSG00000169860,cluster2,5028,P2RY1,3,152835131,152841439,1,protein_coding,purinergic receptor P2Y1
+ENSG00000176928,cluster2,51301,GCNT4,5,75025346,75052558,-1,protein_coding,glucosaminyl (N-acetyl) transferase 4
+ENSG00000087266,cluster2,6452,SH3BP2,4,2793071,2841098,1,protein_coding,SH3 domain binding protein 2
+ENSG00000178568,cluster2,2066,ERBB4,2,211375717,212538841,-1,protein_coding,erb-b2 receptor tyrosine kinase 4
+ENSG00000152527,cluster2,130271,PLEKHH2,2,43637260,43767987,1,protein_coding,"pleckstrin homology, MyTH4 and FERM domain containing H2"
+ENSG00000106484,cluster2,4232,MEST,7,130486171,130506465,1,protein_coding,mesoderm specific transcript
+ENSG00000135540,cluster2,57224,NHSL1,6,138422043,138692571,-1,protein_coding,NHS like 1
+ENSG00000172733,cluster2,29942,PURG,8,30995802,31033715,-1,protein_coding,purine rich element binding protein G
+ENSG00000115468,cluster2,80303,EFHD1,2,232606057,232682776,1,protein_coding,EF-hand domain family member D1
+ENSG00000171766,cluster2,2628,GATM,15,45361124,45402327,-1,protein_coding,glycine amidinotransferase
+ENSG00000164099,cluster2,8492,PRSS12,4,118280038,118353003,-1,protein_coding,serine protease 12
+ENSG00000103490,cluster2,29108,PYCARD,16,31201486,31203450,-1,protein_coding,PYD and CARD domain containing
+ENSG00000122861,cluster2,5328,PLAU,10,73909177,73917496,1,protein_coding,"plasminogen activator, urokinase"
+ENSG00000169851,cluster2,5099,PCDH7,4,30720369,31146805,1,protein_coding,protocadherin 7
+ENSG00000007866,cluster2,7005,TEAD3,6,35473597,35497079,-1,protein_coding,TEA domain transcription factor 3
+ENSG00000154917,cluster2,51560,RAB6B,3,133824235,133895882,-1,protein_coding,"RAB6B, member RAS oncogene family"
+ENSG00000118432,cluster2,1268,CNR1,6,88139864,88166347,-1,protein_coding,cannabinoid receptor 1
+ENSG00000175352,cluster2,56675,NRIP3,11,8965682,9005288,-1,protein_coding,nuclear receptor interacting protein 3
+ENSG00000115902,cluster2,6509,SLC1A4,2,64988477,65023865,1,protein_coding,solute carrier family 1 member 4
+ENSG00000183044,cluster2,18,ABAT,16,8674596,8784575,1,protein_coding,4-aminobutyrate aminotransferase
+ENSG00000188042,cluster2,10123,ARL4C,2,234493041,234497081,-1,protein_coding,ADP ribosylation factor like GTPase 4C
+ENSG00000269113,cluster2,388630,TRABD2B,1,47760528,47997385,-1,protein_coding,TraB domain containing 2B
+ENSG00000213626,cluster2,81606,LBH,2,30231534,30323730,1,protein_coding,LBH regulator of WNT signaling pathway
+ENSG00000116852,cluster2,23046,KIF21B,1,200969390,201023714,-1,protein_coding,kinesin family member 21B
+ENSG00000124920,cluster2,745,MYRF,11,61752636,61788518,1,protein_coding,myelin regulatory factor
+ENSG00000111224,cluster2,57097,PARP11,12,3791047,3873448,-1,protein_coding,poly(ADP-ribose) polymerase family member 11
+ENSG00000136404,cluster2,53346,TM6SF1,15,83107572,83144854,1,protein_coding,transmembrane 6 superfamily member 1
+ENSG00000203867,cluster2,282996,RBM20,10,110644336,110839468,1,protein_coding,RNA binding motif protein 20
+ENSG00000203685,cluster2,375057,STUM,1,226548764,226609230,1,protein_coding,"stum, mechanosensory transduction mediator homolog"
+ENSG00000119630,cluster2,5228,PGF,14,74941834,74955626,-1,protein_coding,placental growth factor
+ENSG00000101004,cluster2,22981,NINL,20,25451594,25585531,-1,protein_coding,ninein like
+ENSG00000142871,cluster2,3491,CCN1,1,85580761,85584589,1,protein_coding,cellular communication network factor 1
+ENSG00000145431,cluster2,56034,PDGFC,4,156760454,156971799,-1,protein_coding,platelet derived growth factor C
+ENSG00000166831,cluster2,348093,RBPMS2,15,64739891,64775589,-1,protein_coding,"RNA binding protein, mRNA processing factor 2"
+ENSG00000140044,cluster2,122953,JDP2,14,75427716,75474111,1,protein_coding,Jun dimerization protein 2
+ENSG00000072609,cluster2,55743,CHFR,12,132822187,132956304,-1,protein_coding,checkpoint with forkhead and ring finger domains
+ENSG00000128564,cluster2,7425,VGF,7,101162509,101165569,-1,protein_coding,VGF nerve growth factor inducible
+ENSG00000109790,cluster2,51088,KLHL5,4,39045039,39126857,1,protein_coding,kelch like family member 5
+ENSG00000101000,cluster2,10544,PROCR,20,35172072,35216240,1,protein_coding,protein C receptor
+ENSG00000156587,cluster2,9246,UBE2L6,11,57551656,57568284,-1,protein_coding,ubiquitin conjugating enzyme E2 L6
+ENSG00000154930,cluster2,84532,ACSS1,20,25006230,25058980,-1,protein_coding,acyl-CoA synthetase short chain family member 1
+ENSG00000204381,cluster2,143903,LAYN,11,111540280,111561745,1,protein_coding,layilin
+ENSG00000104324,cluster2,10404,CPQ,8,96645242,97149654,1,protein_coding,carboxypeptidase Q
+ENSG00000180801,cluster2,79642,ARSJ,4,113900284,113979727,-1,protein_coding,arylsulfatase family member J
+ENSG00000104369,cluster2,56704,JPH1,8,74234700,74321540,-1,protein_coding,junctophilin 1
+ENSG00000078114,cluster2,10529,NEBL,10,20779973,21293011,-1,protein_coding,nebulette
+ENSG00000112276,cluster2,11149,BVES,6,105096822,105137157,-1,protein_coding,blood vessel epicardial substance
+ENSG00000163191,cluster2,6282,S100A11,1,152032506,152047907,-1,protein_coding,S100 calcium binding protein A11
+ENSG00000104313,cluster2,2138,EYA1,8,71197433,71592025,-1,protein_coding,EYA transcriptional coactivator and phosphatase 1
+ENSG00000170153,cluster2,57484,RNF150,4,140859807,141212877,-1,protein_coding,ring finger protein 150
+ENSG00000177181,cluster2,284716,RIMKLA,1,42380792,42424232,1,protein_coding,ribosomal modification protein rimK like family member A
+ENSG00000050165,cluster2,27122,DKK3,11,11956207,12009769,-1,protein_coding,dickkopf WNT signaling pathway inhibitor 3
+ENSG00000132561,cluster2,4147,MATN2,8,97868840,98036724,1,protein_coding,matrilin 2
+ENSG00000178026,cluster2,388886,LRRC75B,22,24585620,24593208,-1,protein_coding,leucine rich repeat containing 75B
+ENSG00000214336,cluster2,344167,FOXI3,2,88446787,88452693,-1,protein_coding,forkhead box I3
+ENSG00000109738,cluster2,2743,GLRB,4,157076125,157172090,1,protein_coding,glycine receptor beta
+ENSG00000145743,cluster2,64839,FBXL17,5,107859035,108382098,-1,protein_coding,F-box and leucine rich repeat protein 17
+ENSG00000205309,cluster2,56953,NT5M,17,17303335,17347663,1,protein_coding,"5',3'-nucleotidase, mitochondrial"
+ENSG00000010361,cluster2,80199,FUZ,19,49806866,49817376,-1,protein_coding,fuzzy planar cell polarity protein
+ENSG00000178403,cluster2,63973,NEUROG2,4,112513516,112516180,-1,protein_coding,neurogenin 2
+ENSG00000114646,cluster2,10675,CSPG5,3,47562238,47580792,-1,protein_coding,chondroitin sulfate proteoglycan 5
+ENSG00000243232,cluster2,56134,PCDHAC2,5,140966470,141012347,1,protein_coding,"protocadherin alpha subfamily C, 2"
+ENSG00000179331,cluster2,54734,RAB39A,11,107928448,107963482,1,protein_coding,"RAB39A, member RAS oncogene family"
+ENSG00000113083,cluster2,4015,LOX,5,122063195,122078413,-1,protein_coding,lysyl oxidase
+ENSG00000148541,cluster2,220965,FAM13C,10,59246130,59363181,-1,protein_coding,family with sequence similarity 13 member C
+ENSG00000206538,cluster2,389136,VGLL3,3,86876388,86991149,-1,protein_coding,vestigial like family member 3
+ENSG00000170500,cluster2,164832,LONRF2,2,100271875,100322501,-1,protein_coding,LON peptidase N-terminal domain and ring finger 2
+ENSG00000214575,cluster2,64506,CPEB1,15,82543201,82648861,-1,protein_coding,cytoplasmic polyadenylation element binding protein 1
+ENSG00000104419,cluster2,10397,NDRG1,8,133237175,133302022,-1,protein_coding,N-myc downstream regulated 1
+ENSG00000164398,cluster2,23305,ACSL6,5,131949973,132012243,-1,protein_coding,acyl-CoA synthetase long chain family member 6
+ENSG00000125355,cluster2,55026,TMEM255A,X,120258650,120311556,-1,protein_coding,transmembrane protein 255A
+ENSG00000134013,cluster2,4017,LOXL2,8,23296897,23425328,-1,protein_coding,lysyl oxidase like 2
+ENSG00000126016,cluster2,154796,AMOT,X,112774503,112840831,-1,protein_coding,angiomotin
+ENSG00000157514,cluster2,1831,TSC22D3,X,107713221,107777342,-1,protein_coding,TSC22 domain family member 3
+ENSG00000253304,cluster2,399474,TMEM200B,1,29119429,29123903,-1,protein_coding,transmembrane protein 200B
+ENSG00000154330,cluster2,5239,PGM5,9,68328308,68531061,1,protein_coding,phosphoglucomutase 5
+ENSG00000168004,cluster2,117245,PLAAT5,11,63461404,63491194,-1,protein_coding,phospholipase A and acyltransferase 5
+ENSG00000105928,cluster2,1687,GSDME,7,24698355,24757940,-1,protein_coding,gasdermin E
+ENSG00000151474,cluster2,55691,FRMD4A,10,13643706,14462142,-1,protein_coding,FERM domain containing 4A
+ENSG00000136859,cluster2,23452,ANGPTL2,9,127087348,127122635,-1,protein_coding,angiopoietin like 2
+ENSG00000101445,cluster2,26051,PPP1R16B,20,38805697,38923024,1,protein_coding,protein phosphatase 1 regulatory subunit 16B
+ENSG00000104368,cluster2,5327,PLAT,8,42174718,42207709,-1,protein_coding,"plasminogen activator, tissue type"
+ENSG00000139597,cluster2,90634,N4BP2L1,13,32400723,32428311,-1,protein_coding,NEDD4 binding protein 2 like 1
+ENSG00000130052,cluster2,9754,STARD8,X,68647666,68725842,1,protein_coding,StAR related lipid transfer domain containing 8
+ENSG00000108387,cluster2,5414,SEPTIN4,17,58520250,58544368,-1,protein_coding,septin 4
+ENSG00000128656,cluster2,1123,CHN1,2,174798809,175005381,-1,protein_coding,chimerin 1
+ENSG00000122756,cluster2,1271,CNTFR,9,34551432,34590140,-1,protein_coding,ciliary neurotrophic factor receptor
+ENSG00000105971,cluster2,858,CAV2,7,116287380,116508541,1,protein_coding,caveolin 2
+ENSG00000028137,cluster2,7133,TNFRSF1B,1,12166991,12209228,1,protein_coding,TNF receptor superfamily member 1B
+ENSG00000104213,cluster2,5157,PDGFRL,8,17576433,17644071,1,protein_coding,platelet derived growth factor receptor like
+ENSG00000171608,cluster2,5293,PIK3CD,1,9629889,9729114,1,protein_coding,"phosphatidylinositol-4,5-bisphosphate 3-kinase catalytic subunit delta"
+ENSG00000170915,cluster2,85315,PAQR8,6,52361421,52407777,1,protein_coding,progestin and adipoQ receptor family member 8
+ENSG00000137198,cluster2,2766,GMPR,6,16238587,16295549,1,protein_coding,guanosine monophosphate reductase
+ENSG00000106025,cluster2,23554,TSPAN12,7,120787320,120858402,-1,protein_coding,tetraspanin 12
+ENSG00000144218,cluster2,3899,AFF3,2,99545419,100192428,-1,protein_coding,ALF transcription elongation factor 3
+ENSG00000165698,cluster2,11092,SPACA9,9,132878027,132890201,1,protein_coding,sperm acrosome associated 9
+ENSG00000184305,cluster2,401145,CCSER1,4,90127394,91605295,1,protein_coding,coiled-coil serine rich protein 1
+ENSG00000153832,cluster2,130888,FBXO36,2,229922302,230013119,1,protein_coding,F-box protein 36
+ENSG00000188452,cluster2,375298,CERKL,2,181535041,181680665,-1,protein_coding,ceramide kinase like
+ENSG00000132470,cluster2,3691,ITGB4,17,75721328,75757818,1,protein_coding,integrin subunit beta 4
+ENSG00000177854,cluster2,8269,TMEM187,X,153972754,153983194,1,protein_coding,transmembrane protein 187
+ENSG00000159387,cluster2,79190,IRX6,16,55324203,55330756,1,protein_coding,iroquois homeobox 6
+ENSG00000118804,cluster2,8987,STBD1,4,76306733,76311130,1,protein_coding,starch binding domain 1
+ENSG00000165959,cluster2,79789,CLMN,14,95181940,95319908,-1,protein_coding,calmin
+ENSG00000120907,cluster2,148,ADRA1A,8,26748150,26867278,-1,protein_coding,adrenoceptor alpha 1A
+ENSG00000151689,cluster2,3628,INPP1,2,190343570,190371665,1,protein_coding,inositol polyphosphate-1-phosphatase
+ENSG00000130958,cluster2,11046,SLC35D2,9,96313444,96383711,-1,protein_coding,solute carrier family 35 member D2
+ENSG00000140876,cluster2,283927,NUDT7,16,77722492,77742260,1,protein_coding,nudix hydrolase 7
+ENSG00000073150,cluster2,56666,PANX2,22,50170731,50180295,1,protein_coding,pannexin 2
+ENSG00000205221,cluster2,5212,VIT,2,36696690,36814794,1,protein_coding,vitrin
+ENSG00000061337,cluster2,11178,LZTS1,8,20246165,20303963,-1,protein_coding,leucine zipper tumor suppressor 1
+ENSG00000137558,cluster2,51050,PI15,8,74824534,74855029,1,protein_coding,peptidase inhibitor 15
+ENSG00000085831,cluster2,22996,TTC39A,1,51287258,51345116,-1,protein_coding,tetratricopeptide repeat domain 39A
+ENSG00000137801,cluster2,7057,THBS1,15,39581079,39599466,1,protein_coding,thrombospondin 1
+ENSG00000109956,cluster2,27087,B3GAT1,11,134378504,134412242,-1,protein_coding,"beta-1,3-glucuronyltransferase 1"
+ENSG00000128567,cluster2,5420,PODXL,7,131500262,131558217,-1,protein_coding,podocalyxin like
+ENSG00000187260,cluster2,349136,WDR86,7,151375909,151410727,-1,protein_coding,WD repeat domain 86
+ENSG00000129244,cluster2,482,ATP1B2,17,7646627,7657770,1,protein_coding,ATPase Na+/K+ transporting subunit beta 2
+ENSG00000147509,cluster2,8601,RGS20,8,53851795,53959303,1,protein_coding,regulator of G protein signaling 20
+ENSG00000179630,cluster2,144811,LACC1,13,43879284,43893932,1,protein_coding,laccase domain containing 1
+ENSG00000112414,cluster2,57211,ADGRG6,6,142301854,142446266,1,protein_coding,adhesion G protein-coupled receptor G6
+ENSG00000100027,cluster2,29799,YPEL1,22,21697536,21735794,-1,protein_coding,yippee like 1
+ENSG00000175356,cluster2,57758,SCUBE2,11,9019476,9138114,-1,protein_coding,"signal peptide, CUB domain and EGF like domain containing 2"
+ENSG00000144857,cluster2,91653,BOC,3,113211003,113287459,1,protein_coding,"BOC cell adhesion associated, oncogene regulated"
+ENSG00000168676,cluster2,146212,KCTD19,16,67289428,67326760,-1,protein_coding,potassium channel tetramerization domain containing 19
+ENSG00000185477,cluster2,285513,GPRIN3,4,89236383,89307800,-1,protein_coding,GPRIN family member 3
+ENSG00000176438,cluster2,161176,SYNE3,14,95407266,95516650,-1,protein_coding,spectrin repeat containing nuclear envelope family member 3
+ENSG00000141622,cluster2,494470,RNF165,18,46326809,46463140,1,protein_coding,ring finger protein 165
+ENSG00000184838,cluster2,51334,PRR16,5,120464300,120687332,1,protein_coding,proline rich 16
+ENSG00000110002,cluster2,4013,VWA5A,11,124115404,124147721,1,protein_coding,von Willebrand factor A domain containing 5A
+ENSG00000075651,cluster2,5337,PLD1,3,171600404,171810950,-1,protein_coding,phospholipase D1
+ENSG00000188177,cluster2,376940,ZC3H6,2,112275597,112340063,1,protein_coding,zinc finger CCCH-type containing 6
+ENSG00000163347,cluster2,9076,CLDN1,3,190305707,190322446,-1,protein_coding,claudin 1
+ENSG00000144339,cluster2,23671,TMEFF2,2,191949043,192194933,-1,protein_coding,transmembrane protein with EGF like and two follistatin like domains 2
+ENSG00000117477,cluster2,57821,CCDC181,1,169394870,169460669,-1,protein_coding,coiled-coil domain containing 181
+ENSG00000132718,cluster2,23208,SYT11,1,155859567,155885199,1,protein_coding,synaptotagmin 11
+ENSG00000164929,cluster2,79870,BAALC,8,103140713,103230305,1,protein_coding,BAALC binder of MAP3K1 and KLF4
+ENSG00000204262,cluster2,1290,COL5A2,2,189031898,189225312,-1,protein_coding,collagen type V alpha 2 chain
+ENSG00000103852,cluster2,64927,TTC23,15,99136323,99251223,-1,protein_coding,tetratricopeptide repeat domain 23
+ENSG00000134198,cluster2,10100,TSPAN2,1,115048011,115089503,-1,protein_coding,tetraspanin 2
+ENSG00000120915,cluster2,2053,EPHX2,8,27490781,27545564,1,protein_coding,epoxide hydrolase 2
+ENSG00000100593,cluster2,145501,ISM2,14,77474394,77498816,-1,protein_coding,isthmin 2
+ENSG00000070540,cluster2,55062,WIPI1,17,68420948,68457513,-1,protein_coding,"WD repeat domain, phosphoinositide interacting 1"
+ENSG00000125510,cluster2,4987,OPRL1,20,64080082,64100643,1,protein_coding,opioid related nociceptin receptor 1
+ENSG00000178538,cluster2,767,CA8,8,60185412,60281400,-1,protein_coding,carbonic anhydrase 8
+ENSG00000053524,cluster2,23101,MCF2L2,3,183178041,183428778,-1,protein_coding,MCF.2 cell line derived transforming sequence-like 2
+ENSG00000072657,cluster2,29953,TRHDE,12,72087266,72670758,1,protein_coding,thyrotropin releasing hormone degrading enzyme
+ENSG00000065413,cluster2,91526,ANKRD44,2,196967017,197311173,-1,protein_coding,ankyrin repeat domain 44
+ENSG00000189195,cluster2,284697,BTBD8,1,92080305,92184725,1,protein_coding,BTB domain containing 8
+ENSG00000189127,cluster2,340120,ANKRD34B,5,80556755,80570280,-1,protein_coding,ankyrin repeat domain 34B
+ENSG00000136842,cluster2,7111,TMOD1,9,97501180,97601743,1,protein_coding,tropomodulin 1
+ENSG00000134202,cluster2,2947,GSTM3,1,109733932,109741038,-1,protein_coding,glutathione S-transferase mu 3
+ENSG00000172403,cluster2,171024,SYNPO2,4,118850688,119061247,1,protein_coding,synaptopodin 2
+ENSG00000277363,cluster3,80725,SRCIN1,17,38530031,38605952,-1,protein_coding,SRC kinase signaling inhibitor 1
+ENSG00000205364,cluster3,4499,MT1M,16,56632659,56633981,1,protein_coding,metallothionein 1M
+ENSG00000184905,cluster3,140597,TCEAL2,X,102125679,102140426,1,protein_coding,transcription elongation factor A like 2
+ENSG00000146166,cluster3,51557,LGSN,6,63275951,63319983,-1,protein_coding,"lengsin, lens protein with glutamine synthetase domain"
+ENSG00000135218,cluster3,948,CD36,7,80369575,80679277,1,protein_coding,CD36 molecule
+ENSG00000156299,cluster3,7074,TIAM1,21,31118416,31559977,-1,protein_coding,TIAM Rac1 associated GEF 1
+ENSG00000197134,cluster3,113835,ZNF257,19,22052430,22091480,1,protein_coding,zinc finger protein 257
+ENSG00000178235,cluster3,114798,SLITRK1,13,83877205,83882474,-1,protein_coding,SLIT and NTRK like family member 1
+ENSG00000188171,cluster3,199777,ZNF626,19,20619939,20661596,-1,protein_coding,zinc finger protein 626
+ENSG00000184347,cluster3,6586,SLIT3,5,168661733,169301139,-1,protein_coding,slit guidance ligand 3
+ENSG00000067066,cluster3,6672,SP100,2,230415942,230545606,1,protein_coding,SP100 nuclear antigen
+ENSG00000196350,cluster3,100287226,ZNF729,19,22286441,22317176,1,protein_coding,zinc finger protein 729
+ENSG00000169752,cluster3,145957,NRG4,15,75935969,76059795,-1,protein_coding,neuregulin 4
+ENSG00000183690,cluster3,80258,EFHC2,X,44147872,44343672,-1,protein_coding,EF-hand domain containing 2
+ENSG00000144821,cluster3,22989,MYH15,3,108380368,108529322,-1,protein_coding,myosin heavy chain 15
+ENSG00000196632,cluster3,65267,WNK3,X,54192823,54358642,-1,protein_coding,WNK lysine deficient protein kinase 3
+ENSG00000249242,cluster3,441027,TMEM150C,4,82483170,82562357,-1,protein_coding,transmembrane protein 150C
+ENSG00000091972,cluster3,4345,CD200,3,112332347,112362812,1,protein_coding,CD200 molecule
+ENSG00000105278,cluster3,23217,ZFR2,19,3804024,3869038,-1,protein_coding,zinc finger RNA binding protein 2
+ENSG00000156689,cluster3,219970,GLYATL2,11,58834065,58904215,-1,protein_coding,glycine-N-acyltransferase like 2
+ENSG00000101349,cluster3,57144,PAK5,20,9537370,9839076,-1,protein_coding,p21 (RAC1) activated kinase 5
+ENSG00000170965,cluster3,10761,PLAC1,X,134565838,134764322,-1,protein_coding,placenta enriched 1
+ENSG00000186197,cluster3,128178,EDARADD,1,236348257,236502915,1,protein_coding,EDAR associated death domain
+ENSG00000149534,cluster3,2206,MS4A2,11,60088261,60098467,1,protein_coding,membrane spanning 4-domains A2
+ENSG00000094755,cluster3,2568,GABRP,5,170763350,170814047,1,protein_coding,gamma-aminobutyric acid type A receptor subunit pi
+ENSG00000164484,cluster3,114801,TMEM200A,6,130366017,130443067,1,protein_coding,transmembrane protein 200A
+ENSG00000165591,cluster3,158584,FAAH2,X,57286706,57489193,1,protein_coding,fatty acid amide hydrolase 2
+ENSG00000106804,cluster3,727,C5,9,120932987,121075195,-1,protein_coding,complement C5
+ENSG00000104327,cluster3,793,CALB1,8,90058608,90095475,-1,protein_coding,calbindin 1
+ENSG00000183831,cluster3,339416,ANKRD45,1,173608336,173669851,-1,protein_coding,ankyrin repeat domain 45
+ENSG00000108602,cluster3,218,ALDH3A1,17,19737984,19748943,-1,protein_coding,aldehyde dehydrogenase 3 family member A1
+ENSG00000168314,cluster3,4336,MOBP,3,39467198,39529479,1,protein_coding,myelin associated oligodendrocyte basic protein
+ENSG00000152092,cluster3,460,ASTN1,1,176857302,177164973,-1,protein_coding,astrotactin 1
+ENSG00000277150,cluster3,474384,F8A3,X,155456914,155458620,-1,protein_coding,coagulation factor VIII associated 3
+ENSG00000203814,cluster3,440689,H2BC18,1,149782689,149812373,-1,protein_coding,H2B clustered histone 18
+ENSG00000027075,cluster3,5583,PRKCH,14,61187559,61550976,1,protein_coding,protein kinase C eta
+ENSG00000133710,cluster3,11005,SPINK5,5,148025683,148137382,1,protein_coding,serine peptidase inhibitor Kazal type 5
+ENSG00000067177,cluster3,5255,PHKA1,X,72578814,72714319,-1,protein_coding,phosphorylase kinase regulatory subunit alpha 1
+ENSG00000139351,cluster3,50511,SYCP3,12,101728648,101739472,-1,protein_coding,synaptonemal complex protein 3
+ENSG00000172159,cluster3,257019,FRMD3,9,83242990,83538546,-1,protein_coding,FERM domain containing 3
+ENSG00000084453,cluster3,6579,SLCO1A2,12,21264600,21419594,-1,protein_coding,solute carrier organic anion transporter family member 1A2
+ENSG00000167800,cluster3,347853,TBX10,11,67631303,67639763,-1,protein_coding,T-box transcription factor 10
+ENSG00000113532,cluster3,7903,ST8SIA4,5,100806933,100903282,-1,protein_coding,"ST8 alpha-N-acetyl-neuraminide alpha-2,8-sialyltransferase 4"
+ENSG00000148680,cluster3,3363,HTR7,10,90740823,90858039,-1,protein_coding,5-hydroxytryptamine receptor 7
+ENSG00000152377,cluster3,6695,SPOCK1,5,136975298,137598379,-1,protein_coding,"SPARC (osteonectin), cwcv and kazal like domains proteoglycan 1"
+ENSG00000114115,cluster3,5947,RBP1,3,139517434,139539829,-1,protein_coding,retinol binding protein 1
+ENSG00000135750,cluster3,3775,KCNK1,1,233614106,233672514,1,protein_coding,potassium two pore domain channel subfamily K member 1
+ENSG00000132297,cluster3,10086,HHLA1,8,132061480,132111159,-1,protein_coding,HERV-H LTR-associating 1
+ENSG00000172461,cluster3,10690,FUT9,6,96015974,96215612,1,protein_coding,fucosyltransferase 9
+ENSG00000122378,cluster3,84293,PRXL2A,10,80407829,80437115,1,protein_coding,peroxiredoxin like 2A
+ENSG00000170542,cluster3,5272,SERPINB9,6,2887270,2903309,-1,protein_coding,serpin family B member 9
+ENSG00000062038,cluster3,1001,CDH3,16,68636189,68727468,1,protein_coding,cadherin 3
+ENSG00000138028,cluster3,10669,CGREF1,2,27098889,27119128,-1,protein_coding,cell growth regulator with EF-hand domain 1
+ENSG00000086289,cluster3,54749,EPDR1,7,37920640,37951936,1,protein_coding,ependymin related 1
+ENSG00000114541,cluster3,23150,FRMD4B,3,69168782,69542583,-1,protein_coding,FERM domain containing 4B
+ENSG00000163508,cluster3,8320,EOMES,3,27715949,27722711,-1,protein_coding,eomesodermin
+ENSG00000164684,cluster3,619279,ZNF704,8,80628451,80874781,-1,protein_coding,zinc finger protein 704
+ENSG00000134769,cluster3,1837,DTNA,18,34493291,34891844,1,protein_coding,dystrobrevin alpha
+ENSG00000165025,cluster3,6850,SYK,9,90801787,90898549,1,protein_coding,spleen associated tyrosine kinase
+ENSG00000075223,cluster3,10512,SEMA3C,7,80742538,80922359,-1,protein_coding,semaphorin 3C
+ENSG00000135046,cluster3,301,ANXA1,9,73151865,73170393,1,protein_coding,annexin A1
+ENSG00000165091,cluster3,117531,TMC1,9,72521608,72838297,1,protein_coding,transmembrane channel like 1
+ENSG00000125430,cluster3,9953,HS3ST3B1,17,14301081,14349404,1,protein_coding,heparan sulfate-glucosamine 3-sulfotransferase 3B1
+ENSG00000185133,cluster4,27124,INPP5J,22,31122731,31134697,1,protein_coding,inositol polyphosphate-5-phosphatase J
+ENSG00000187140,cluster4,27022,FOXD3,1,63322567,63325128,1,protein_coding,forkhead box D3
+ENSG00000079102,cluster4,862,RUNX1T1,8,91954972,92103286,-1,protein_coding,RUNX1 partner transcriptional co-repressor 1
+ENSG00000128655,cluster4,50940,PDE11A,2,177623244,178108339,-1,protein_coding,phosphodiesterase 11A
+ENSG00000005108,cluster4,221981,THSD7A,7,11370365,11832198,-1,protein_coding,thrombospondin type 1 domain containing 7A
+ENSG00000178685,cluster4,84875,PARP10,8,143977153,144012772,-1,protein_coding,poly(ADP-ribose) polymerase family member 10
+ENSG00000004848,cluster4,170302,ARX,X,25003694,25016420,-1,protein_coding,aristaless related homeobox
+ENSG00000133101,cluster4,8900,CCNA1,13,36431520,36442870,1,protein_coding,cyclin A1
+ENSG00000136541,cluster4,57471,ERMN,2,157318631,157327713,-1,protein_coding,ermin
+ENSG00000188636,cluster4,84247,RTL6,22,44492583,44498233,-1,protein_coding,retrotransposon Gag like 6
+ENSG00000165731,cluster4,5979,RET,10,43077064,43130351,1,protein_coding,ret proto-oncogene
+ENSG00000144644,cluster4,339896,GADL1,3,30726197,30894661,-1,protein_coding,glutamate decarboxylase like 1
+ENSG00000133083,cluster4,9201,DCLK1,13,35768652,36131382,-1,protein_coding,doublecortin like kinase 1
+ENSG00000082482,cluster4,3776,KCNK2,1,215005775,215237090,1,protein_coding,potassium two pore domain channel subfamily K member 2
+ENSG00000196569,cluster4,3908,LAMA2,6,128883138,129516566,1,protein_coding,laminin subunit alpha 2
+ENSG00000060718,cluster4,1301,COL11A1,1,102876467,103108872,-1,protein_coding,collagen type XI alpha 1 chain
+ENSG00000117122,cluster4,4237,MFAP2,1,16974502,16980632,-1,protein_coding,microfibril associated protein 2
+ENSG00000101144,cluster4,655,BMP7,20,57168753,57266641,-1,protein_coding,bone morphogenetic protein 7
+ENSG00000134802,cluster4,29015,SLC43A3,11,57406954,57427580,-1,protein_coding,solute carrier family 43 member 3
+ENSG00000182985,cluster4,23705,CADM1,11,115169218,115504957,-1,protein_coding,cell adhesion molecule 1
+ENSG00000114248,cluster4,79782,LRRC31,3,169839172,169869935,-1,protein_coding,leucine rich repeat containing 31
+ENSG00000137872,cluster4,80031,SEMA6D,15,47184101,47774228,1,protein_coding,semaphorin 6D
+ENSG00000185222,cluster4,51186,TCEAL9,X,103356489,103358462,1,protein_coding,transcription elongation factor A like 9
+ENSG00000116132,cluster4,5396,PRRX1,1,170662728,170739421,1,protein_coding,paired related homeobox 1
+ENSG00000170421,cluster4,3856,KRT8,12,52897187,52949954,-1,protein_coding,keratin 8
+ENSG00000196557,cluster4,8912,CACNA1H,16,1153106,1221771,1,protein_coding,calcium voltage-gated channel subunit alpha1 H
+ENSG00000131914,cluster4,79727,LIN28A,1,26410817,26429728,1,protein_coding,lin-28 homolog A
+ENSG00000118733,cluster4,118427,OLFM3,1,101802560,101996926,-1,protein_coding,olfactomedin 3
+ENSG00000125931,cluster4,4435,CITED1,X,72301638,72307187,-1,protein_coding,Cbp/p300 interacting transactivator with Glu/Asp rich carboxy-terminal domain 1
+ENSG00000091986,cluster4,151887,CCDC80,3,112596797,112649530,-1,protein_coding,coiled-coil domain containing 80
+ENSG00000059915,cluster4,5662,PSD,10,102402617,102421539,-1,protein_coding,pleckstrin and Sec7 domain containing
+ENSG00000164626,cluster4,8645,KCNK5,6,39188971,39229475,-1,protein_coding,potassium two pore domain channel subfamily K member 5
+ENSG00000077264,cluster4,5063,PAK3,X,110944285,111227361,1,protein_coding,p21 (RAC1) activated kinase 3
+ENSG00000197410,cluster4,54798,DCHS2,4,154231742,154491799,-1,protein_coding,dachsous cadherin-related 2
+ENSG00000114251,cluster4,7474,WNT5A,3,55465715,55490539,-1,protein_coding,Wnt family member 5A
+ENSG00000135333,cluster4,2045,EPHA7,6,93240020,93419687,-1,protein_coding,EPH receptor A7
+ENSG00000104332,cluster4,6422,SFRP1,8,41261962,41309473,-1,protein_coding,secreted frizzled related protein 1
+ENSG00000163017,cluster4,72,ACTG2,2,73892314,73919865,1,protein_coding,"actin gamma 2, smooth muscle"
+ENSG00000044524,cluster4,2042,EPHA3,3,89107621,89482134,1,protein_coding,EPH receptor A3
+ENSG00000047648,cluster4,395,ARHGAP6,X,11117651,11665920,-1,protein_coding,Rho GTPase activating protein 6
+ENSG00000095596,cluster4,1592,CYP26A1,10,93073475,93077885,1,protein_coding,cytochrome P450 family 26 subfamily A member 1
+ENSG00000112167,cluster4,55776,SAYSD1,6,39104063,39115193,-1,protein_coding,SAYSVFN motif domain containing 1
+ENSG00000248329,cluster4,100506013,APELA,4,164877178,164898965,1,protein_coding,apelin receptor early endogenous ligand
+ENSG00000145247,cluster4,132299,OCIAD2,4,48885019,48906937,-1,protein_coding,OCIA domain containing 2
+ENSG00000170011,cluster4,25924,MYRIP,3,39808914,40260321,1,protein_coding,myosin VIIA and Rab interacting protein
+ENSG00000111249,cluster4,23316,CUX2,12,111034165,111350554,1,protein_coding,cut like homeobox 2
+ENSG00000163485,cluster4,134,ADORA1,1,203090654,203167405,1,protein_coding,adenosine A1 receptor
+ENSG00000138944,cluster4,85352,SHISAL1,22,44243665,44312951,-1,protein_coding,shisa like 1
+ENSG00000261247,cluster4,653075,GOLGA8T,15,30135051,30148748,1,protein_coding,golgin A8 family member T
+ENSG00000261247,cluster4,653125,GOLGA8T,15,30135051,30148748,1,protein_coding,golgin A8 family member T
+ENSG00000175093,cluster4,92369,SPSB4,3,141051347,141148611,1,protein_coding,splA/ryanodine receptor domain and SOCS box containing 4
+ENSG00000259803,cluster4,146429,SLC22A31,16,89195761,89201651,-1,protein_coding,solute carrier family 22 member 31
+ENSG00000167680,cluster4,10501,SEMA6B,19,4542593,4581776,-1,protein_coding,semaphorin 6B
+ENSG00000205927,cluster4,10215,OLIG2,21,33025935,33029196,1,protein_coding,oligodendrocyte transcription factor 2
+ENSG00000165804,cluster4,51222,ZNF219,14,21090077,21104722,-1,protein_coding,zinc finger protein 219
+ENSG00000250510,cluster4,27239,GPR162,12,6821624,6829972,1,protein_coding,G protein-coupled receptor 162
+ENSG00000173546,cluster4,1464,CSPG4,15,75674322,75712848,-1,protein_coding,chondroitin sulfate proteoglycan 4
+ENSG00000159899,cluster4,4882,NPR2,9,35791003,35809732,1,protein_coding,natriuretic peptide receptor 2
+ENSG00000100031,cluster4,2678,GGT1,22,24594811,24629005,1,protein_coding,gamma-glutamyltransferase 1
+ENSG00000172716,cluster4,91607,SLFN11,17,35350305,35373701,-1,protein_coding,schlafen family member 11
+ENSG00000183087,cluster4,2621,GAS6,13,113820549,113864076,-1,protein_coding,growth arrest specific 6
+ENSG00000128591,cluster4,2318,FLNC,7,128830406,128859274,1,protein_coding,filamin C
+ENSG00000154760,cluster4,146857,SLFN13,17,35435096,35448837,-1,protein_coding,schlafen family member 13
+ENSG00000130294,cluster4,547,KIF1A,2,240713761,240824293,-1,protein_coding,kinesin family member 1A
+ENSG00000261308,cluster4,401720,FIGNL2,12,51817899,51848718,-1,protein_coding,fidgetin like 2
+ENSG00000137819,cluster4,54852,PAQR5,15,69298912,69407780,1,protein_coding,progestin and adipoQ receptor family member 5
+ENSG00000147394,cluster4,7739,ZNF185,X,152898067,152973481,1,protein_coding,zinc finger protein 185 with LIM domain
+ENSG00000129675,cluster4,9459,ARHGEF6,X,136665547,136780932,-1,protein_coding,Rac/Cdc42 guanine nucleotide exchange factor 6
+ENSG00000080503,cluster4,6595,SMARCA2,9,1980290,2193624,1,protein_coding,"SWI/SNF related, matrix associated, actin dependent regulator of chromatin, subfamily a, member 2"
+ENSG00000134775,cluster4,80206,FHOD3,18,36297713,36780220,1,protein_coding,formin homology 2 domain containing 3
+ENSG00000154914,cluster4,124739,USP43,17,9644698,9729687,1,protein_coding,ubiquitin specific peptidase 43
+ENSG00000115295,cluster4,79745,CLIP4,2,29097705,29199777,1,protein_coding,CAP-Gly domain containing linker protein family member 4
+ENSG00000114626,cluster4,80325,ABTB1,3,127672935,127680926,1,protein_coding,ankyrin repeat and BTB domain containing 1
+ENSG00000141179,cluster4,58488,PCTP,17,55751051,55842830,1,protein_coding,phosphatidylcholine transfer protein
+ENSG00000162373,cluster4,79656,BEND5,1,48727519,48776969,-1,protein_coding,BEN domain containing 5
+ENSG00000160190,cluster4,54020,SLC37A1,21,42496008,42581440,1,protein_coding,solute carrier family 37 member 1
+ENSG00000175274,cluster4,9537,TP53I11,11,44885903,44951306,-1,protein_coding,tumor protein p53 inducible protein 11
+ENSG00000170412,cluster4,55890,GPRC5C,17,74424851,74451653,1,protein_coding,G protein-coupled receptor class C group 5 member C
+ENSG00000091622,cluster4,83394,PITPNM3,17,6451263,6556555,-1,protein_coding,PITPNM family member 3
+ENSG00000087253,cluster4,54947,LPCAT2,16,55509072,55586666,1,protein_coding,lysophosphatidylcholine acyltransferase 2
+ENSG00000120451,cluster4,399979,SNX19,11,130866250,130916479,-1,protein_coding,sorting nexin 19
+ENSG00000108691,cluster4,6347,CCL2,17,34255274,34257208,1,protein_coding,C-C motif chemokine ligand 2
+ENSG00000069424,cluster4,8514,KCNAB2,1,5990927,6101193,1,protein_coding,potassium voltage-gated channel subfamily A regulatory beta subunit 2
+ENSG00000205795,cluster4,192668,CYS1,2,10056473,10080944,-1,protein_coding,cystin 1
+ENSG00000101096,cluster4,4773,NFATC2,20,51386957,51562831,-1,protein_coding,nuclear factor of activated T cells 2
+ENSG00000175806,cluster4,4482,MSRA,8,10054292,10428891,1,protein_coding,methionine sulfoxide reductase A
+ENSG00000075213,cluster4,10371,SEMA3A,7,83955777,84492724,-1,protein_coding,semaphorin 3A
+ENSG00000180353,cluster4,3059,HCLS1,3,121631399,121660927,-1,protein_coding,hematopoietic cell-specific Lyn substrate 1
+ENSG00000141639,cluster4,5596,MAPK4,18,50560087,50731826,1,protein_coding,mitogen-activated protein kinase 4
+ENSG00000072133,cluster4,27330,RPS6KA6,X,84058346,84206356,-1,protein_coding,ribosomal protein S6 kinase A6
+ENSG00000151773,cluster4,160857,CCDC122,13,43823909,43879740,-1,protein_coding,coiled-coil domain containing 122
+ENSG00000204060,cluster4,100132074,FOXO6,1,41361922,41383590,1,protein_coding,forkhead box O6
+ENSG00000105143,cluster4,6511,SLC1A6,19,14950033,15022990,-1,protein_coding,solute carrier family 1 member 6
+ENSG00000120251,cluster4,2891,GRIA2,4,157204182,157387146,1,protein_coding,glutamate ionotropic receptor AMPA type subunit 2
+ENSG00000184221,cluster4,116448,OLIG1,21,33070141,33072413,1,protein_coding,oligodendrocyte transcription factor 1
+ENSG00000132386,cluster4,5176,SERPINF1,17,1762029,1777565,1,protein_coding,serpin family F member 1
+ENSG00000124191,cluster4,84969,TOX2,20,43914852,44069616,1,protein_coding,TOX high mobility group box family member 2
+ENSG00000092345,cluster4,1618,DAZL,3,16586792,16670306,-1,protein_coding,deleted in azoospermia like
+ENSG00000019485,cluster4,56981,PRDM11,11,45095806,45235110,1,protein_coding,PR/SET domain 11
+ENSG00000131477,cluster4,10266,RAMP2,17,42758447,42763041,1,protein_coding,receptor activity modifying protein 2
+ENSG00000100360,cluster4,11020,IFT27,22,36758202,36776256,-1,protein_coding,intraflagellar transport 27
+ENSG00000085117,cluster4,3732,CD82,11,44564427,44620358,1,protein_coding,CD82 molecule
+ENSG00000124313,cluster4,23096,IQSEC2,X,53225828,53321350,-1,protein_coding,IQ motif and Sec7 domain ArfGEF 2
+ENSG00000104967,cluster4,4858,NOVA2,19,45933734,45974044,-1,protein_coding,NOVA alternative splicing regulator 2
+ENSG00000116983,cluster4,51440,HPCAL4,1,39678648,39691485,-1,protein_coding,hippocalcin like 4
+ENSG00000178031,cluster4,92949,ADAMTSL1,9,17906563,18910950,1,protein_coding,ADAMTS like 1
+ENSG00000160360,cluster4,26086,GPSM1,9,136327476,136359605,1,protein_coding,G protein signaling modulator 1
+ENSG00000133110,cluster4,10631,POSTN,13,37562583,37598844,-1,protein_coding,periostin
+ENSG00000165215,cluster4,1365,CLDN3,7,73768997,73770270,-1,protein_coding,claudin 3
+ENSG00000165801,cluster4,55701,ARHGEF40,14,21070273,21090248,1,protein_coding,Rho guanine nucleotide exchange factor 40
+ENSG00000250366,cluster4,NA,TUNAR,14,95866587,95925663,1,protein_coding,TCL1 upstream neural differentiation-associated RNA
+ENSG00000133466,cluster4,114904,C1QTNF6,22,37180166,37199385,-1,protein_coding,C1q and TNF related 6
+ENSG00000149328,cluster4,89944,GLB1L2,11,134331874,134378341,1,protein_coding,galactosidase beta 1 like 2
+ENSG00000142798,cluster4,3339,HSPG2,1,21822244,21937310,-1,protein_coding,heparan sulfate proteoglycan 2
+ENSG00000026559,cluster4,3755,KCNG1,20,51003656,51023107,-1,protein_coding,potassium voltage-gated channel modifier subfamily G member 1
+ENSG00000124126,cluster4,57580,PREX1,20,48624252,48827999,-1,protein_coding,"phosphatidylinositol-3,4,5-trisphosphate dependent Rac exchange factor 1"
+ENSG00000159784,cluster4,9715,FAM131B,7,143353400,143362770,-1,protein_coding,family with sequence similarity 131 member B
+ENSG00000167889,cluster4,146664,MGAT5B,17,76868404,76950393,1,protein_coding,"alpha-1,6-mannosylglycoprotein 6-beta-N-acetylglucosaminyltransferase B"
+ENSG00000107249,cluster4,169792,GLIS3,9,3824127,4348392,-1,protein_coding,GLIS family zinc finger 3
+ENSG00000099889,cluster4,421,ARVCF,22,19969896,20016823,-1,protein_coding,ARVCF delta catenin family member
+ENSG00000166750,cluster4,162394,SLFN5,17,35243071,35273655,1,protein_coding,schlafen family member 5
+ENSG00000142961,cluster4,148932,MOB3C,1,46607719,46616811,-1,protein_coding,MOB kinase activator 3C
+ENSG00000099365,cluster4,112755,STX1B,16,30989256,31010638,-1,protein_coding,syntaxin 1B
+ENSG00000197565,cluster4,1288,COL4A6,X,108155607,108439497,-1,protein_coding,collagen type IV alpha 6 chain
+ENSG00000112379,cluster4,57221,ARFGEF3,6,138161939,138344663,1,protein_coding,ARFGEF family member 3
+ENSG00000185008,cluster4,6092,ROBO2,3,75906695,77649964,1,protein_coding,roundabout guidance receptor 2
+ENSG00000141753,cluster4,3487,IGFBP4,17,40443450,40457725,1,protein_coding,insulin like growth factor binding protein 4
+ENSG00000083799,cluster4,1540,CYLD,16,50742050,50801935,1,protein_coding,CYLD lysine 63 deubiquitinase
+ENSG00000181031,cluster4,9501,RPH3AL,17,212389,386254,-1,protein_coding,rabphilin 3A like (without C2 domains)
+ENSG00000029534,cluster4,286,ANK1,8,41653220,41896741,-1,protein_coding,ankyrin 1
+ENSG00000160345,cluster4,138162,PIERCE1,9,135495181,135501734,-1,protein_coding,piercer of microtubule wall 1
+ENSG00000183691,cluster4,9241,NOG,17,56593699,56595611,1,protein_coding,noggin
+ENSG00000035664,cluster4,23604,DAPK2,15,63907036,64072033,-1,protein_coding,death associated protein kinase 2
+ENSG00000168135,cluster4,3761,KCNJ4,22,38426327,38455199,-1,protein_coding,potassium inwardly rectifying channel subfamily J member 4
+ENSG00000234965,cluster4,440829,SHISA8,22,41909543,41915074,-1,protein_coding,shisa family member 8
+ENSG00000006025,cluster4,114881,OSBPL7,17,47807372,47821834,-1,protein_coding,oxysterol binding protein like 7
+ENSG00000147852,cluster4,7436,VLDLR,9,2621182,2660056,1,protein_coding,very low density lipoprotein receptor
+ENSG00000172379,cluster4,9915,ARNT2,15,80404350,80597933,1,protein_coding,aryl hydrocarbon receptor nuclear translocator 2
+ENSG00000163701,cluster4,132014,IL17RE,3,9902612,9916402,1,protein_coding,interleukin 17 receptor E
+ENSG00000113140,cluster4,6678,SPARC,5,151661096,151686975,-1,protein_coding,secreted protein acidic and cysteine rich
+ENSG00000153904,cluster4,23576,DDAH1,1,85318481,85578363,-1,protein_coding,dimethylarginine dimethylaminohydrolase 1
+ENSG00000196422,cluster4,9858,PPP1R26,9,135479079,135488893,1,protein_coding,protein phosphatase 1 regulatory subunit 26
+ENSG00000168913,cluster4,375704,ENHO,9,34521043,34522990,-1,protein_coding,energy homeostasis associated
+ENSG00000185442,cluster4,400451,FAM174B,15,92617448,92809884,-1,protein_coding,family with sequence similarity 174 member B
+ENSG00000162882,cluster4,23498,HAAO,2,42767089,42792593,-1,protein_coding,"3-hydroxyanthranilate 3,4-dioxygenase"
+ENSG00000103723,cluster4,8120,AP3B2,15,82659281,82710112,-1,protein_coding,adaptor related protein complex 3 subunit beta 2
+ENSG00000185519,cluster4,348487,FAM131C,1,16057769,16073651,-1,protein_coding,family with sequence similarity 131 member C
+ENSG00000137726,cluster4,53826,FXYD6,11,117836976,117877486,-1,protein_coding,FXYD domain containing ion transport regulator 6
+ENSG00000171385,cluster4,3752,KCND3,1,111770662,111989668,-1,protein_coding,potassium voltage-gated channel subfamily D member 3
+ENSG00000103811,cluster4,1512,CTSH,15,78921058,78949574,-1,protein_coding,cathepsin H
+ENSG00000116544,cluster4,58512,DLGAP3,1,34865436,34929650,-1,protein_coding,DLG associated protein 3
+ENSG00000163888,cluster4,94032,CAMK2N2,3,184259213,184261553,-1,protein_coding,calcium/calmodulin dependent protein kinase II inhibitor 2
+ENSG00000120318,cluster4,64411,ARAP3,5,141653401,141682230,-1,protein_coding,"ArfGAP with RhoGAP domain, ankyrin repeat and PH domain 3"
+ENSG00000156475,cluster4,5521,PPP2R2B,5,146580742,147084784,-1,protein_coding,protein phosphatase 2 regulatory subunit Bbeta
+ENSG00000140557,cluster4,8128,ST8SIA2,15,92393881,92468728,1,protein_coding,"ST8 alpha-N-acetyl-neuraminide alpha-2,8-sialyltransferase 2"
+ENSG00000110455,cluster4,84680,ACCS,11,44065925,44084237,1,protein_coding,1-aminocyclopropane-1-carboxylate synthase homolog (inactive)
+ENSG00000184613,cluster4,4753,NELL2,12,44508275,44921848,-1,protein_coding,neural EGFL like 2
+ENSG00000130762,cluster4,27237,ARHGEF16,1,3454665,3481113,1,protein_coding,Rho guanine nucleotide exchange factor 16
+ENSG00000144843,cluster4,141,ADPRH,3,119579268,119589945,1,protein_coding,ADP-ribosylarginine hydrolase
+ENSG00000115828,cluster4,25797,QPCT,2,37342827,37373322,1,protein_coding,glutaminyl-peptide cyclotransferase
+ENSG00000168917,cluster4,80723,SLC35G2,3,136818647,136855888,1,protein_coding,solute carrier family 35 member G2
+ENSG00000136378,cluster4,11173,ADAMTS7,15,78759206,78811464,-1,protein_coding,ADAM metallopeptidase with thrombospondin type 1 motif 7
+ENSG00000196159,cluster4,79633,FAT4,4,125314918,125492932,1,protein_coding,FAT atypical cadherin 4
+ENSG00000172575,cluster4,10125,RASGRP1,15,38488103,38565575,-1,protein_coding,RAS guanyl releasing protein 1
+ENSG00000088881,cluster4,57593,EBF4,20,2692780,2760108,1,protein_coding,EBF family member 4
+ENSG00000133816,cluster4,9645,MICAL2,11,12094008,12359144,1,protein_coding,"microtubule associated monooxygenase, calponin and LIM domain containing 2"
+ENSG00000261115,cluster4,100507421,TMEM178B,7,141074064,141480380,1,protein_coding,transmembrane protein 178B
+ENSG00000101638,cluster4,29906,ST8SIA5,18,46667821,46759257,-1,protein_coding,"ST8 alpha-N-acetyl-neuraminide alpha-2,8-sialyltransferase 5"
+ENSG00000184384,cluster4,84441,MAML2,11,95976598,96343195,-1,protein_coding,mastermind like transcriptional coactivator 2
+ENSG00000056487,cluster4,112885,PHF21B,22,44881162,45010005,-1,protein_coding,PHD finger protein 21B
+ENSG00000189184,cluster4,54510,PCDH18,4,137518918,137532494,-1,protein_coding,protocadherin 18
+ENSG00000160233,cluster4,81543,LRRC3,21,44455510,44462196,1,protein_coding,leucine rich repeat containing 3
+ENSG00000115112,cluster4,29842,TFCP2L1,2,121216587,121285202,-1,protein_coding,transcription factor CP2 like 1
+ENSG00000185090,cluster4,149175,MANEAL,1,37793847,37801137,1,protein_coding,mannosidase endo-alpha like
+ENSG00000168243,cluster4,2786,GNG4,1,235547685,235650754,-1,protein_coding,G protein subunit gamma 4
+ENSG00000138685,cluster4,2247,FGF2,4,122826682,122898236,1,protein_coding,fibroblast growth factor 2
+ENSG00000119865,cluster4,25927,CNRIP1,2,68284171,68320051,-1,protein_coding,cannabinoid receptor interacting protein 1
+ENSG00000138613,cluster4,83464,APH1B,15,63276018,63309126,1,protein_coding,"aph-1 homolog B, gamma-secretase subunit"
+ENSG00000181019,cluster4,1728,NQO1,16,69706996,69726668,-1,protein_coding,NAD(P)H quinone dehydrogenase 1
+ENSG00000166963,cluster4,4130,MAP1A,15,43510958,43531620,1,protein_coding,microtubule associated protein 1A
+ENSG00000050628,cluster4,5733,PTGER3,1,70852353,71047816,-1,protein_coding,prostaglandin E receptor 3
+ENSG00000170439,cluster4,196410,METTL7B,12,55681736,55684611,1,protein_coding,methyltransferase like 7B
+ENSG00000135083,cluster4,79616,CCNJL,5,160249083,160345396,-1,protein_coding,cyclin J like
+ENSG00000171604,cluster4,51523,CXXC5,5,139647299,139683882,1,protein_coding,CXXC finger protein 5
+ENSG00000008516,cluster4,64386,MMP25,16,3046062,3060726,1,protein_coding,matrix metallopeptidase 25
+ENSG00000182580,cluster4,2049,EPHB3,3,184561785,184582408,1,protein_coding,EPH receptor B3
+ENSG00000177106,cluster4,64787,EPS8L2,11,694438,727727,1,protein_coding,EPS8 like 2
+ENSG00000135144,cluster4,1840,DTX1,12,113056730,113098028,1,protein_coding,deltex E3 ubiquitin ligase 1
+ENSG00000136040,cluster4,10154,PLXNC1,12,94148577,94307675,1,protein_coding,plexin C1
+ENSG00000122986,cluster4,84329,HVCN1,12,110627841,110704950,-1,protein_coding,hydrogen voltage gated channel 1
+ENSG00000162873,cluster4,55220,KLHDC8A,1,205336061,205357090,-1,protein_coding,kelch domain containing 8A
+ENSG00000011028,cluster4,9902,MRC2,17,62627670,62693597,1,protein_coding,mannose receptor C type 2
+ENSG00000187583,cluster4,84069,PLEKHN1,1,966482,975865,1,protein_coding,pleckstrin homology domain containing N1
+ENSG00000006534,cluster4,221,ALDH3B1,11,68008578,68029282,1,protein_coding,aldehyde dehydrogenase 3 family member B1
+ENSG00000198846,cluster4,9760,TOX,8,58805412,59119147,-1,protein_coding,thymocyte selection associated high mobility group box
+ENSG00000090539,cluster4,8646,CHRD,3,184380054,184390736,1,protein_coding,chordin
+ENSG00000103034,cluster4,65009,NDRG4,16,58462846,58513628,1,protein_coding,NDRG family member 4
+ENSG00000182871,cluster4,80781,COL18A1,21,45405165,45513720,1,protein_coding,collagen type XVIII alpha 1 chain
+ENSG00000163545,cluster4,81788,NUAK2,1,205302063,205321745,-1,protein_coding,NUAK family kinase 2
+ENSG00000153029,cluster4,3140,MR1,1,181033374,181061938,1,protein_coding,"major histocompatibility complex, class I-related"
+ENSG00000167034,cluster4,4824,NKX3-1,8,23678697,23682938,-1,protein_coding,NK3 homeobox 1
+ENSG00000023171,cluster4,57476,GRAMD1B,11,123358428,123627774,1,protein_coding,GRAM domain containing 1B
+ENSG00000064692,cluster4,9627,SNCAIP,5,122311354,122464219,1,protein_coding,synuclein alpha interacting protein
+ENSG00000145198,cluster4,90113,VWA5B2,3,184229585,184242329,1,protein_coding,von Willebrand factor A domain containing 5B2
+ENSG00000156453,cluster4,5097,PCDH1,5,141853090,141879246,-1,protein_coding,protocadherin 1
+ENSG00000164125,cluster4,51313,GASK1B,4,158124474,158173318,-1,protein_coding,golgi associated kinase 1B
+ENSG00000054793,cluster4,10079,ATP9A,20,51596514,51768390,-1,protein_coding,ATPase phospholipid transporting 9A (putative)
+ENSG00000105664,cluster4,1311,COMP,19,18782773,18791305,-1,protein_coding,cartilage oligomeric matrix protein
+ENSG00000160963,cluster4,136227,COL26A1,7,101362875,101559024,1,protein_coding,collagen type XXVI alpha 1 chain
+ENSG00000105696,cluster4,25789,TMEM59L,19,18607430,18621039,1,protein_coding,transmembrane protein 59 like
+ENSG00000135424,cluster4,3679,ITGA7,12,55684568,55716404,-1,protein_coding,integrin subunit alpha 7
+ENSG00000076864,cluster4,5909,RAP1GAP,1,21596221,21669357,-1,protein_coding,RAP1 GTPase activating protein
+ENSG00000160097,cluster4,252995,FNDC5,1,32862268,32872482,-1,protein_coding,fibronectin type III domain containing 5
+ENSG00000121753,cluster4,576,ADGRB2,1,31727117,31764893,-1,protein_coding,adhesion G protein-coupled receptor B2
+ENSG00000111859,cluster4,4739,NEDD9,6,11183298,11382348,-1,protein_coding,"neural precursor cell expressed, developmentally down-regulated 9"
+ENSG00000166341,cluster4,8642,DCHS1,11,6621330,6655809,-1,protein_coding,dachsous cadherin-related 1
+ENSG00000172350,cluster4,64137,ABCG4,11,119149052,119162653,1,protein_coding,ATP binding cassette subfamily G member 4
+ENSG00000126583,cluster4,5582,PRKCG,19,53879190,53907652,1,protein_coding,protein kinase C gamma
+ENSG00000230707,cluster4,389895,,X,140091678,140092911,1,protein_coding,novel protein (LOC389895)
+ENSG00000170430,cluster4,4255,MGMT,10,129467190,129770983,1,protein_coding,O-6-methylguanine-DNA methyltransferase
+ENSG00000126950,cluster4,59353,TMEM35A,X,101078879,101096367,1,protein_coding,transmembrane protein 35A
+ENSG00000102935,cluster4,23090,ZNF423,16,49487524,49857919,-1,protein_coding,zinc finger protein 423
+ENSG00000166033,cluster4,5654,HTRA1,10,122458551,122514907,1,protein_coding,HtrA serine peptidase 1
+ENSG00000113749,cluster4,3274,HRH2,5,175658030,175710756,1,protein_coding,histamine receptor H2
+ENSG00000142611,cluster4,63976,PRDM16,1,3069168,3438621,1,protein_coding,PR/SET domain 16
+ENSG00000196562,cluster4,55959,SULF2,20,47656197,47786616,-1,protein_coding,sulfatase 2
+ENSG00000169432,cluster4,6335,SCN9A,2,166195185,166376001,-1,protein_coding,sodium voltage-gated channel alpha subunit 9
+ENSG00000181409,cluster4,9625,AATK,17,81110487,81166221,-1,protein_coding,apoptosis associated tyrosine kinase
+ENSG00000174307,cluster4,23612,PHLDA3,1,201464278,201469237,-1,protein_coding,pleckstrin homology like domain family A member 3
+ENSG00000147364,cluster4,26260,FBXO25,8,406428,477967,1,protein_coding,F-box protein 25
+ENSG00000198513,cluster4,51062,ATL1,14,50532509,50634017,1,protein_coding,atlastin GTPase 1
+ENSG00000165730,cluster4,219736,STOX1,10,68827531,68895432,1,protein_coding,storkhead box 1
+ENSG00000183798,cluster4,90187,EMILIN3,20,41359962,41366818,-1,protein_coding,elastin microfibril interfacer 3
+ENSG00000139220,cluster4,8499,PPFIA2,12,81257975,81759553,-1,protein_coding,PTPRF interacting protein alpha 2
+ENSG00000167100,cluster4,201191,SAMD14,17,50110040,50130160,-1,protein_coding,sterile alpha motif domain containing 14
+ENSG00000129159,cluster4,3746,KCNC1,11,17734774,17856804,1,protein_coding,potassium voltage-gated channel subfamily C member 1
+ENSG00000151640,cluster4,10570,DPYSL4,10,132186948,132205759,1,protein_coding,dihydropyrimidinase like 4
+ENSG00000133216,cluster4,2048,EPHB2,1,22710839,22921500,1,protein_coding,EPH receptor B2
+ENSG00000140545,cluster4,4240,MFGE8,15,88898683,88913468,-1,protein_coding,milk fat globule EGF and factor V/VIII domain containing
+ENSG00000008735,cluster4,23542,MAPK8IP2,22,50600793,50613981,1,protein_coding,mitogen-activated protein kinase 8 interacting protein 2
+ENSG00000170624,cluster4,6444,SGCD,5,155870344,156767788,1,protein_coding,sarcoglycan delta
+ENSG00000173705,cluster4,26032,SUSD5,3,33150043,33218810,-1,protein_coding,sushi domain containing 5
+ENSG00000112139,cluster4,266727,MDGA1,6,37630679,37699306,-1,protein_coding,MAM domain containing glycosylphosphatidylinositol anchor 1
+ENSG00000150540,cluster4,3176,HNMT,2,137964020,138016364,1,protein_coding,histamine N-methyltransferase
+ENSG00000104081,cluster4,90427,BMF,15,40087890,40108892,-1,protein_coding,Bcl2 modifying factor
+ENSG00000176463,cluster4,28232,SLCO3A1,15,91853708,92172435,1,protein_coding,solute carrier organic anion transporter family member 3A1
+ENSG00000137571,cluster4,81796,SLCO5A1,8,69667046,69834978,-1,protein_coding,solute carrier organic anion transporter family member 5A1
+ENSG00000137868,cluster4,64220,STRA6,15,74179466,74212267,-1,protein_coding,signaling receptor and transporter of retinol STRA6
+ENSG00000186395,cluster4,3858,KRT10,17,40818117,40822614,-1,protein_coding,keratin 10
+ENSG00000148798,cluster4,9118,INA,10,103277138,103290346,1,protein_coding,internexin neuronal intermediate filament protein alpha
+ENSG00000157570,cluster4,90139,TSPAN18,11,44726465,44932423,1,protein_coding,tetraspanin 18
+ENSG00000127124,cluster4,59269,HIVEP3,1,41506365,42035925,-1,protein_coding,HIVEP zinc finger 3
+ENSG00000159176,cluster4,1465,CSRP1,1,201483530,201509456,-1,protein_coding,cysteine and glycine rich protein 1
+ENSG00000198053,cluster4,140885,SIRPA,20,1894167,1940592,1,protein_coding,signal regulatory protein alpha
+ENSG00000158106,cluster4,114822,RHPN1,8,143368876,143384221,1,protein_coding,rhophilin Rho GTPase binding protein 1
+ENSG00000006740,cluster4,9912,ARHGAP44,17,12789498,12991643,1,protein_coding,Rho GTPase activating protein 44
+ENSG00000124615,cluster4,4337,MOCS1,6,39899578,39934551,-1,protein_coding,molybdenum cofactor synthesis 1
+ENSG00000052850,cluster4,60529,ALX4,11,44260440,44310139,-1,protein_coding,ALX homeobox 4
+ENSG00000162367,cluster4,6886,TAL1,1,47216290,47232225,-1,protein_coding,"TAL bHLH transcription factor 1, erythroid differentiation factor"
+ENSG00000179314,cluster4,23302,WSCD1,17,6057807,6124427,1,protein_coding,WSC domain containing 1
+ENSG00000121297,cluster4,57616,TSHZ3,19,31149979,31349436,-1,protein_coding,teashirt zinc finger homeobox 3
+ENSG00000139410,cluster4,113675,SDSL,12,113422380,113438276,1,protein_coding,serine dehydratase like
+ENSG00000170801,cluster4,94031,HTRA3,4,8269754,8307098,1,protein_coding,HtrA serine peptidase 3
+ENSG00000256043,cluster4,1519,CTSO,4,155921580,155953912,-1,protein_coding,cathepsin O
+ENSG00000160991,cluster4,80228,ORAI2,7,102433106,102456825,1,protein_coding,ORAI calcium release-activated calcium modulator 2
+ENSG00000004139,cluster4,23098,SARM1,17,28364356,28404049,1,protein_coding,sterile alpha and TIR motif containing 1
+ENSG00000153993,cluster4,223117,SEMA3D,7,84995553,85187056,-1,protein_coding,semaphorin 3D
+ENSG00000273706,cluster4,3975,LHX1,17,36936785,36944612,1,protein_coding,LIM homeobox 1
+ENSG00000188760,cluster4,130612,TMEM198,2,219543663,219550595,1,protein_coding,transmembrane protein 198
+ENSG00000151090,cluster4,7068,THRB,3,24117153,24495756,-1,protein_coding,thyroid hormone receptor beta
+ENSG00000181444,cluster4,168544,ZNF467,7,149764182,149773588,-1,protein_coding,zinc finger protein 467
+ENSG00000197557,cluster4,92104,TTC30A,2,177612999,177618742,-1,protein_coding,tetratricopeptide repeat domain 30A
+ENSG00000223802,cluster4,10715,CERS1,19,18868545,18896727,-1,protein_coding,ceramide synthase 1
+ENSG00000235961,cluster4,84968,PNMA6A,X,153072454,153075019,1,protein_coding,PNMA family member 6A
+ENSG00000205978,cluster4,57523,NYNRIN,14,24399003,24419283,1,protein_coding,NYN domain and retroviral integrase containing
+ENSG00000067798,cluster4,89795,NAV3,12,77324641,78213010,1,protein_coding,neuron navigator 3
+ENSG00000244509,cluster4,27350,APOBEC3C,22,39014257,39020352,1,protein_coding,apolipoprotein B mRNA editing enzyme catalytic subunit 3C
+ENSG00000128342,cluster4,3976,LIF,22,30240453,30246759,-1,protein_coding,LIF interleukin 6 family cytokine
+ENSG00000188051,cluster4,100130519,TMEM221,19,17435509,17448668,-1,protein_coding,transmembrane protein 221
+ENSG00000183307,cluster4,27439,TMEM121B,22,17116297,17121367,-1,protein_coding,transmembrane protein 121B
+ENSG00000205363,cluster4,388135,INSYN1,15,73735458,73753351,-1,protein_coding,inhibitory synaptic factor 1
+ENSG00000077063,cluster4,83992,CTTNBP2,7,117710651,117874139,-1,protein_coding,cortactin binding protein 2
+ENSG00000165973,cluster4,4745,NELL1,11,20669551,21575686,1,protein_coding,neural EGFL like 1
+ENSG00000103241,cluster4,2294,FOXF1,16,86510527,86515422,1,protein_coding,forkhead box F1
+ENSG00000173114,cluster4,54674,LRRN3,7,111091006,111125454,1,protein_coding,leucine rich repeat neuronal 3
+ENSG00000179938,cluster4,653073,GOLGA8J,15,30082955,30096690,1,protein_coding,golgin A8 family member J
+ENSG00000166206,cluster4,2562,GABRB3,15,26543552,26939539,-1,protein_coding,gamma-aminobutyric acid type A receptor subunit beta3
+ENSG00000048740,cluster4,10659,CELF2,10,10798397,11336675,1,protein_coding,CUGBP Elav-like family member 2
+ENSG00000172086,cluster4,51315,KRCC1,2,88027205,88064252,-1,protein_coding,lysine rich coiled-coil 1
+ENSG00000180917,cluster4,55783,CMTR2,16,71281389,71289715,-1,protein_coding,cap methyltransferase 2
+ENSG00000185567,cluster4,113146,AHNAK2,14,104937244,104978374,-1,protein_coding,AHNAK nucleoprotein 2
+ENSG00000165548,cluster4,57156,TMEM63C,14,77116568,77259495,1,protein_coding,transmembrane protein 63C
+ENSG00000128849,cluster4,84952,CGNL1,15,57375967,57550717,1,protein_coding,cingulin like 1
+ENSG00000141519,cluster4,55036,CCDC40,17,80036632,80100613,1,protein_coding,coiled-coil domain containing 40
+ENSG00000140859,cluster4,3801,KIFC3,16,57758217,57863053,-1,protein_coding,kinesin family member C3
+ENSG00000165995,cluster4,783,CACNB2,10,18140424,18543557,1,protein_coding,calcium voltage-gated channel auxiliary subunit beta 2
+ENSG00000057704,cluster4,57458,TMCC3,12,94567122,94650557,-1,protein_coding,transmembrane and coiled-coil domain family 3
+ENSG00000161921,cluster4,58191,CXCL16,17,4733533,4739928,-1,protein_coding,C-X-C motif chemokine ligand 16
+ENSG00000005884,cluster4,3675,ITGA3,17,50055968,50090481,1,protein_coding,integrin subunit alpha 3
+ENSG00000065320,cluster4,9423,NTN1,17,9021510,9244000,1,protein_coding,netrin 1
+ENSG00000189283,cluster4,2272,FHIT,3,59747277,61251459,-1,protein_coding,fragile histidine triad diadenosine triphosphatase
+ENSG00000138134,cluster4,57559,STAMBPL1,10,88879734,88975153,1,protein_coding,STAM binding protein like 1
+ENSG00000144792,cluster4,285349,ZNF660,3,44578223,44599694,1,protein_coding,zinc finger protein 660
+ENSG00000112164,cluster4,2740,GLP1R,6,39048781,39091303,1,protein_coding,glucagon like peptide 1 receptor
+ENSG00000075891,cluster4,5076,PAX2,10,100735396,100829944,1,protein_coding,paired box 2
+ENSG00000120899,cluster4,2185,PTK2B,8,27311482,27459391,1,protein_coding,protein tyrosine kinase 2 beta
+ENSG00000160191,cluster4,5152,PDE9A,21,42653621,42775509,1,protein_coding,phosphodiesterase 9A
+ENSG00000184226,cluster4,5101,PCDH9,13,66302834,67230445,-1,protein_coding,protocadherin 9
+ENSG00000115159,cluster4,2820,GPD2,2,156435290,156613735,1,protein_coding,glycerol-3-phosphate dehydrogenase 2
+ENSG00000150625,cluster4,2823,GPM6A,4,175632934,176002664,-1,protein_coding,glycoprotein M6A
+ENSG00000149599,cluster4,128853,DUSP15,20,31847637,31870664,-1,protein_coding,dual specificity phosphatase 15
+ENSG00000137103,cluster4,51754,TMEM8B,9,35814451,35865518,1,protein_coding,transmembrane protein 8B
+ENSG00000137269,cluster4,55227,LRRC1,6,53794497,53924125,1,protein_coding,leucine rich repeat containing 1
+ENSG00000117266,cluster4,5129,CDK18,1,205504596,205532793,1,protein_coding,cyclin dependent kinase 18
+ENSG00000153898,cluster4,255231,MCOLN2,1,84925583,84997113,-1,protein_coding,mucolipin TRP cation channel 2
+ENSG00000101751,cluster4,11201,POLI,18,54269517,54321266,1,protein_coding,DNA polymerase iota
+ENSG00000205078,cluster4,100130958,SYCE1L,16,77199408,77213215,1,protein_coding,synaptonemal complex central element protein 1 like
+ENSG00000152672,cluster4,165530,CLEC4F,2,70808643,70820599,-1,protein_coding,C-type lectin domain family 4 member F
+ENSG00000184988,cluster4,113277,TMEM106A,17,43211835,43220041,1,protein_coding,transmembrane protein 106A
+ENSG00000186994,cluster4,256949,KANK3,19,8322584,8343262,-1,protein_coding,KN motif and ankyrin repeat domains 3
+ENSG00000101265,cluster4,9770,RASSF2,20,4780023,4823608,-1,protein_coding,Ras association domain family member 2
+ENSG00000158458,cluster4,9542,NRG2,5,139846779,140043299,-1,protein_coding,neuregulin 2
+ENSG00000170035,cluster4,10477,UBE2E3,2,180967248,181076585,1,protein_coding,ubiquitin conjugating enzyme E2 E3
+ENSG00000182253,cluster4,23336,SYNM,15,99098217,99135593,1,protein_coding,synemin
+ENSG00000267221,cluster4,110806298,C17orf113,17,42038232,42050601,-1,protein_coding,chromosome 17 open reading frame 113
+ENSG00000167861,cluster4,283987,HID1,17,74950742,74973166,-1,protein_coding,HID1 domain containing
+ENSG00000152078,cluster4,148534,TLCD4,1,95117355,95197607,1,protein_coding,TLC domain containing 4
+ENSG00000197461,cluster4,5154,PDGFA,7,497258,520296,-1,protein_coding,platelet derived growth factor subunit A
+ENSG00000173614,cluster4,64802,NMNAT1,1,9943428,9985501,1,protein_coding,nicotinamide nucleotide adenylyltransferase 1
+ENSG00000178878,cluster4,81575,APOLD1,12,12725917,12829975,1,protein_coding,apolipoprotein L domain containing 1
+ENSG00000249992,cluster4,25907,TMEM158,3,45224466,45226287,-1,protein_coding,transmembrane protein 158
+ENSG00000170310,cluster4,9482,STX8,17,9250471,9576591,-1,protein_coding,syntaxin 8
+ENSG00000106479,cluster4,643641,ZNF862,7,149838375,149867479,1,protein_coding,zinc finger protein 862
+ENSG00000170190,cluster4,9121,SLC16A5,17,75087727,75106162,1,protein_coding,solute carrier family 16 member 5
+ENSG00000166897,cluster4,114794,ELFN2,22,37367960,37427479,-1,protein_coding,extracellular leucine rich repeat and fibronectin type III domain containing 2
+ENSG00000189056,cluster4,5649,RELN,7,103471381,103989658,-1,protein_coding,reelin
+ENSG00000103647,cluster4,10391,CORO2B,15,68578993,68727806,1,protein_coding,coronin 2B
+ENSG00000196358,cluster4,84628,NTNG2,9,132162058,132244526,1,protein_coding,netrin G2
+ENSG00000118898,cluster4,5493,PPL,16,4882507,4960741,-1,protein_coding,periplakin
+ENSG00000053747,cluster4,3909,LAMA3,18,23689453,23956222,1,protein_coding,laminin subunit alpha 3
+ENSG00000134532,cluster4,6660,SOX5,12,23529504,24562544,-1,protein_coding,SRY-box transcription factor 5
+ENSG00000105605,cluster4,59284,CACNG7,19,53909278,53943950,1,protein_coding,calcium voltage-gated channel auxiliary subunit gamma 7
+ENSG00000196549,cluster4,4311,MME,3,155024124,155183704,1,protein_coding,membrane metalloendopeptidase
+ENSG00000179588,cluster4,161882,ZFPM1,16,88453280,88537031,1,protein_coding,"zinc finger protein, FOG family member 1"
+ENSG00000084628,cluster4,79570,NKAIN1,1,31179745,31239887,-1,protein_coding,sodium/potassium transporting ATPase interacting 1
+ENSG00000105088,cluster4,93145,OLFM2,19,9853718,9936515,-1,protein_coding,olfactomedin 2
+ENSG00000048052,cluster4,9734,HDAC9,7,18086949,19002416,1,protein_coding,histone deacetylase 9
+ENSG00000143355,cluster4,56956,LHX9,1,197911902,197935478,1,protein_coding,LIM homeobox 9
+ENSG00000153234,cluster4,4929,NR4A2,2,156324437,156342348,-1,protein_coding,nuclear receptor subfamily 4 group A member 2
+ENSG00000141736,cluster4,2064,ERBB2,17,39687914,39730426,1,protein_coding,erb-b2 receptor tyrosine kinase 2
+ENSG00000146966,cluster4,27147,DENND2A,7,140518420,140673993,-1,protein_coding,DENN domain containing 2A
+ENSG00000227051,cluster4,56967,C14orf132,14,96039362,96093971,1,protein_coding,chromosome 14 open reading frame 132
+ENSG00000168994,cluster4,221749,PXDC1,6,3722614,3751713,-1,protein_coding,PX domain containing 1
+ENSG00000273274,cluster4,728116,ZBTB8B,1,32465072,32496686,1,protein_coding,zinc finger and BTB domain containing 8B
+ENSG00000171877,cluster4,84978,FRMD5,15,43870761,44195271,-1,protein_coding,FERM domain containing 5
+ENSG00000074527,cluster4,59277,NTN4,12,95657807,95791189,-1,protein_coding,netrin 4
+ENSG00000165338,cluster4,143279,HECTD2,10,91409280,91514829,1,protein_coding,HECT domain E3 ubiquitin protein ligase 2
+ENSG00000128604,cluster4,3663,IRF5,7,128937457,128950038,1,protein_coding,interferon regulatory factor 5
+ENSG00000187608,cluster4,9636,ISG15,1,1001138,1014540,1,protein_coding,ISG15 ubiquitin like modifier
+ENSG00000166105,cluster4,112937,GLB1L3,11,134274245,134319564,1,protein_coding,galactosidase beta 1 like 3
+ENSG00000129038,cluster4,4016,LOXL1,15,73925989,73952137,1,protein_coding,lysyl oxidase like 1
+ENSG00000115461,cluster4,3488,IGFBP5,2,216672105,216695549,-1,protein_coding,insulin like growth factor binding protein 5
+ENSG00000069667,cluster4,6095,RORA,15,60488284,61229302,-1,protein_coding,RAR related orphan receptor A
+ENSG00000164796,cluster4,114788,CSMD3,8,112222928,113436939,-1,protein_coding,CUB and Sushi multiple domains 3
+ENSG00000108960,cluster4,23531,MMD,17,55392622,55421924,-1,protein_coding,monocyte to macrophage differentiation associated
+ENSG00000115363,cluster4,84141,EVA1A,2,75469302,75569722,-1,protein_coding,"eva-1 homolog A, regulator of programmed cell death"
+ENSG00000075643,cluster4,55034,MOCOS,18,36187497,36272157,1,protein_coding,molybdenum cofactor sulfurase
+ENSG00000106031,cluster4,3209,HOXA13,7,27193503,27200091,-1,protein_coding,homeobox A13
+ENSG00000110852,cluster4,9976,CLEC2B,12,9852369,9869386,-1,protein_coding,C-type lectin domain family 2 member B
+ENSG00000170921,cluster4,26115,TANC2,17,62966235,63427703,1,protein_coding,"tetratricopeptide repeat, ankyrin repeat and coiled-coil containing 2"
+ENSG00000066382,cluster4,744,MPPED2,11,30384493,30586872,-1,protein_coding,metallophosphoesterase domain containing 2
+ENSG00000108947,cluster4,1949,EFNB3,17,7705202,7711372,1,protein_coding,ephrin B3
+ENSG00000088882,cluster4,56265,CPXM1,20,2794074,2800627,-1,protein_coding,"carboxypeptidase X, M14 family member 1"
+ENSG00000136717,cluster4,274,BIN1,2,127048027,127107288,-1,protein_coding,bridging integrator 1
+ENSG00000092096,cluster4,51310,SLC22A17,14,23346314,23352912,-1,protein_coding,solute carrier family 22 member 17
+ENSG00000166387,cluster4,8495,PPFIBP2,11,7513298,7657127,1,protein_coding,PPFIA binding protein 2
+ENSG00000152154,cluster4,130733,TMEM178A,2,39664982,39717963,1,protein_coding,transmembrane protein 178A
+ENSG00000082438,cluster4,22837,COBLL1,2,164653624,164843679,-1,protein_coding,cordon-bleu WH2 repeat protein like 1
+ENSG00000103154,cluster4,54550,NECAB2,16,83968244,84002776,1,protein_coding,N-terminal EF-hand calcium binding protein 2
+ENSG00000111962,cluster4,10090,UST,6,148747030,149076990,1,protein_coding,uronyl 2-sulfotransferase
+ENSG00000188176,cluster4,342527,SMTNL2,17,4583999,4608319,1,protein_coding,smoothelin like 2
+ENSG00000140807,cluster4,85407,NKD1,16,50548396,50649249,1,protein_coding,NKD inhibitor of WNT signaling pathway 1
+ENSG00000124762,cluster4,1026,CDKN1A,6,36676460,36687337,1,protein_coding,cyclin dependent kinase inhibitor 1A
+ENSG00000171388,cluster4,8862,APLN,X,129645259,129654956,-1,protein_coding,apelin
+ENSG00000140511,cluster4,145864,HAPLN3,15,88877294,88895597,-1,protein_coding,hyaluronan and proteoglycan link protein 3
+ENSG00000180537,cluster4,221687,RNF182,6,13924446,13980310,1,protein_coding,ring finger protein 182
+ENSG00000103316,cluster4,1428,CRYM,16,21238874,21303083,-1,protein_coding,crystallin mu
+ENSG00000105419,cluster4,56917,MEIS3,19,47403124,47419527,-1,protein_coding,Meis homeobox 3
+ENSG00000171533,cluster4,4135,MAP6,11,75586918,75669038,-1,protein_coding,microtubule associated protein 6
+ENSG00000012171,cluster4,7869,SEMA3B,3,50267558,50277546,1,protein_coding,semaphorin 3B
+ENSG00000179546,cluster4,3352,HTR1D,1,23191895,23217502,-1,protein_coding,5-hydroxytryptamine receptor 1D
+ENSG00000146197,cluster4,222663,SCUBE3,6,35213956,35253079,1,protein_coding,"signal peptide, CUB domain and EGF like domain containing 3"
+ENSG00000105963,cluster4,11033,ADAP1,7,897900,955407,-1,protein_coding,ArfGAP with dual PH domains 1
+ENSG00000144331,cluster4,151126,ZNF385B,2,179441982,179861612,-1,protein_coding,zinc finger protein 385B
+ENSG00000108852,cluster4,4355,MPP2,17,43875357,43909711,-1,protein_coding,MAGUK p55 scaffold protein 2
+ENSG00000184060,cluster4,55803,ADAP2,17,30906344,30959322,1,protein_coding,ArfGAP with dual PH domains 2
+ENSG00000101098,cluster4,140730,RIMS4,20,44751808,44810546,-1,protein_coding,regulating synaptic membrane exocytosis 4
+ENSG00000067840,cluster4,57595,PDZD4,X,153802166,153830565,-1,protein_coding,PDZ domain containing 4
+ENSG00000100167,cluster4,55964,SEPTIN3,22,41969443,41998221,1,protein_coding,septin 3
+ENSG00000178038,cluster4,259173,ALS2CL,3,46668995,46693704,-1,protein_coding,ALS2 C-terminal like
+ENSG00000142279,cluster4,126374,WTIP,19,34481758,34512304,1,protein_coding,WT1 interacting protein
+ENSG00000128268,cluster4,4248,MGAT3,22,39457012,39492194,1,protein_coding,"beta-1,4-mannosyl-glycoprotein 4-beta-N-acetylglucosaminyltransferase"
+ENSG00000165617,cluster4,51339,DACT1,14,58633967,58648321,1,protein_coding,dishevelled binding antagonist of beta catenin 1
+ENSG00000120833,cluster4,8835,SOCS2,12,93569814,93583487,1,protein_coding,suppressor of cytokine signaling 2
+ENSG00000232653,cluster4,643699,GOLGA8N,15,32593456,32607310,1,protein_coding,golgin A8 family member N
+ENSG00000091592,cluster5,22861,NLRP1,17,5499415,5619424,-1,protein_coding,NLR family pyrin domain containing 1
+ENSG00000174469,cluster5,26047,CNTNAP2,7,146116002,148420998,1,protein_coding,contactin associated protein 2
+ENSG00000127252,cluster5,57110,PLAAT1,3,193241128,193277738,1,protein_coding,phospholipase A and acyltransferase 1
+ENSG00000145832,cluster5,153328,SLC25A48,5,135476913,135889770,1,protein_coding,solute carrier family 25 member 48
+ENSG00000078081,cluster5,27074,LAMP3,3,183122215,183163839,-1,protein_coding,lysosomal associated membrane protein 3
+ENSG00000169891,cluster5,9185,REPS2,X,16946658,17153272,1,protein_coding,RALBP1 associated Eps domain containing 2
+ENSG00000135917,cluster5,80704,SLC19A3,2,227683763,227718028,-1,protein_coding,solute carrier family 19 member 3
+ENSG00000110427,cluster5,25758,KIAA1549L,11,33376108,33674102,1,protein_coding,KIAA1549 like
+ENSG00000180828,cluster5,27319,BHLHE22,8,64580365,64583627,1,protein_coding,basic helix-loop-helix family member e22
+ENSG00000178115,cluster5,727909,GOLGA8Q,15,30552050,30565684,1,protein_coding,golgin A8 family member Q
+ENSG00000178115,cluster5,728047,GOLGA8Q,15,30552050,30565684,1,protein_coding,golgin A8 family member Q
+ENSG00000185666,cluster5,8224,SYN3,22,32507820,33058381,-1,protein_coding,synapsin III
+ENSG00000048540,cluster5,55885,LMO3,12,16548372,16610594,-1,protein_coding,LIM domain only 3
+ENSG00000138496,cluster5,83666,PARP9,3,122527924,122564577,-1,protein_coding,poly(ADP-ribose) polymerase family member 9
+ENSG00000172554,cluster5,54221,SNTG2,2,950849,1367613,1,protein_coding,syntrophin gamma 2
+ENSG00000145335,cluster5,6622,SNCA,4,89700345,89838315,-1,protein_coding,synuclein alpha
+ENSG00000171729,cluster5,55092,TMEM51,1,15152532,15220478,1,protein_coding,transmembrane protein 51
+ENSG00000176658,cluster5,4642,MYO1D,17,32492522,32877177,-1,protein_coding,myosin ID
+ENSG00000163053,cluster5,151473,SLC16A14,2,230034982,230068993,-1,protein_coding,solute carrier family 16 member 14
+ENSG00000213853,cluster5,2013,EMP2,16,10528422,10580632,-1,protein_coding,epithelial membrane protein 2
+ENSG00000006042,cluster5,26022,TMEM98,17,32927910,32945106,1,protein_coding,transmembrane protein 98
+ENSG00000134954,cluster5,2113,ETS1,11,128458761,128587558,-1,protein_coding,"ETS proto-oncogene 1, transcription factor"
+ENSG00000150347,cluster5,84159,ARID5B,10,61901684,62096944,1,protein_coding,AT-rich interaction domain 5B
+ENSG00000112769,cluster5,3910,LAMA4,6,112107931,112254939,-1,protein_coding,laminin subunit alpha 4
+ENSG00000178573,cluster5,4094,MAF,16,79585843,79600737,-1,protein_coding,MAF bZIP transcription factor
+ENSG00000239697,cluster5,8742,TNFSF12,17,7548508,7557890,1,protein_coding,TNF superfamily member 12
+ENSG00000162433,cluster5,205,AK4,1,65147549,65232145,1,protein_coding,adenylate kinase 4
+ENSG00000189067,cluster5,9516,LITAF,16,11547722,11636381,-1,protein_coding,lipopolysaccharide induced TNF factor
+ENSG00000241484,cluster5,23779,ARHGAP8,22,44752558,44862788,1,protein_coding,Rho GTPase activating protein 8
+ENSG00000149548,cluster5,80071,CCDC15,11,124954121,125041489,1,protein_coding,coiled-coil domain containing 15
+ENSG00000154188,cluster5,284,ANGPT1,8,107249482,107498055,-1,protein_coding,angiopoietin 1
+ENSG00000165495,cluster5,63876,PKNOX2,11,125164687,125433389,1,protein_coding,PBX/knotted 1 homeobox 2
+ENSG00000103460,cluster5,27324,TOX3,16,52436417,52547802,-1,protein_coding,TOX high mobility group box family member 3
+ENSG00000154134,cluster5,64221,ROBO3,11,124865432,124881471,1,protein_coding,roundabout guidance receptor 3
+ENSG00000099250,cluster5,8829,NRP1,10,33177492,33336262,-1,protein_coding,neuropilin 1
+ENSG00000175643,cluster5,116028,RMI2,16,11249619,11381662,1,protein_coding,RecQ mediated genome instability 2
+ENSG00000180287,cluster5,200150,PLD5,1,242082986,242524697,-1,protein_coding,phospholipase D family member 5
+ENSG00000186153,cluster5,51741,WWOX,16,78099400,79212667,1,protein_coding,WW domain containing oxidoreductase
+ENSG00000100505,cluster5,114088,TRIM9,14,50975262,51096061,-1,protein_coding,tripartite motif containing 9
+ENSG00000183248,cluster5,80164,PRR36,19,7868719,7874390,-1,protein_coding,proline rich 36
+ENSG00000163827,cluster5,79442,LRRC2,3,46515385,46606948,-1,protein_coding,leucine rich repeat containing 2
+ENSG00000168824,cluster5,27065,NSG1,4,4348140,4419058,1,protein_coding,neuronal vesicle trafficking associated 1
+ENSG00000066468,cluster5,2263,FGFR2,10,121478332,121598458,-1,protein_coding,fibroblast growth factor receptor 2
+ENSG00000198597,cluster5,9745,ZNF536,19,30224891,30713586,1,protein_coding,zinc finger protein 536
+ENSG00000101298,cluster5,9751,SNPH,20,1266280,1309328,1,protein_coding,syntaphilin
+ENSG00000154118,cluster5,57338,JPH3,16,87601835,87698156,1,protein_coding,junctophilin 3
+ENSG00000168702,cluster5,53353,LRP1B,2,140231423,142131016,-1,protein_coding,LDL receptor related protein 1B
+ENSG00000196482,cluster5,2104,ESRRG,1,216503246,217137755,-1,protein_coding,estrogen related receptor gamma
+ENSG00000160801,cluster5,5745,PTH1R,3,46877721,46903799,1,protein_coding,parathyroid hormone 1 receptor
+ENSG00000128394,cluster5,200316,APOBEC3F,22,39040604,39055972,1,protein_coding,apolipoprotein B mRNA editing enzyme catalytic subunit 3F
+ENSG00000141576,cluster5,114804,RNF157,17,76142465,76240493,-1,protein_coding,ring finger protein 157
+ENSG00000249931,cluster5,653125,GOLGA8K,15,32389599,32403292,-1,protein_coding,golgin A8 family member K
+ENSG00000055732,cluster5,55283,MCOLN3,1,85018082,85048500,-1,protein_coding,mucolipin TRP cation channel 3
+ENSG00000276644,cluster5,1602,DACH1,13,71437966,71867204,-1,protein_coding,dachshund family transcription factor 1
+ENSG00000111331,cluster5,4940,OAS3,12,112938051,112976460,1,protein_coding,2'-5'-oligoadenylate synthetase 3
+ENSG00000107957,cluster5,9644,SH3PXD2A,10,103594027,103855584,-1,protein_coding,SH3 and PX domains 2A
+ENSG00000168528,cluster5,347735,SERINC2,1,31409565,31434680,1,protein_coding,serine incorporator 2
+ENSG00000204128,cluster5,257407,C2orf72,2,231037523,231049719,1,protein_coding,chromosome 2 open reading frame 72
+ENSG00000084764,cluster5,22924,MAPRE3,2,26970637,27027219,1,protein_coding,microtubule associated protein RP/EB family member 3
+ENSG00000197943,cluster5,5336,PLCG2,16,81779279,81962685,1,protein_coding,phospholipase C gamma 2
+ENSG00000104154,cluster5,7782,SLC30A4,15,45479606,45522755,-1,protein_coding,solute carrier family 30 member 4
+ENSG00000100234,cluster5,7078,TIMP3,22,32801705,32863041,1,protein_coding,TIMP metallopeptidase inhibitor 3
+ENSG00000163683,cluster5,201895,SMIM14,4,39546336,39638902,-1,protein_coding,small integral membrane protein 14
+ENSG00000166825,cluster5,290,ANPEP,15,89784895,89815401,-1,protein_coding,"alanyl aminopeptidase, membrane"
+ENSG00000177508,cluster5,79191,IRX3,16,54283304,54286787,-1,protein_coding,iroquois homeobox 3
+ENSG00000106665,cluster5,7461,CLIP2,7,74289407,74405935,1,protein_coding,CAP-Gly domain containing linker protein 2
+ENSG00000162512,cluster5,9672,SDC3,1,30869466,30908758,-1,protein_coding,syndecan 3
+ENSG00000065534,cluster5,4638,MYLK,3,123610049,123884332,-1,protein_coding,myosin light chain kinase
+ENSG00000087076,cluster5,51171,HSD17B14,19,48813018,48836510,-1,protein_coding,hydroxysteroid 17-beta dehydrogenase 14
+ENSG00000188338,cluster5,10991,SLC38A3,3,50205246,50221486,1,protein_coding,solute carrier family 38 member 3
+ENSG00000119862,cluster5,29094,LGALSL,2,64453969,64461381,1,protein_coding,galectin like
+ENSG00000197587,cluster5,127343,DMBX1,1,46489836,46516216,1,protein_coding,diencephalon/mesencephalon homeobox 1
+ENSG00000050405,cluster5,51474,LIMA1,12,50175788,50283520,-1,protein_coding,LIM domain and actin binding 1
+ENSG00000083067,cluster5,80036,TRPM3,9,70529060,71446904,-1,protein_coding,transient receptor potential cation channel subfamily M member 3
+ENSG00000205213,cluster5,55366,LGR4,11,27365961,27472790,-1,protein_coding,leucine rich repeat containing G protein-coupled receptor 4
+ENSG00000128610,cluster5,389549,FEZF1,7,122301303,122310691,-1,protein_coding,FEZ family zinc finger 1
+ENSG00000169758,cluster5,123591,TMEM266,15,76059958,76229121,1,protein_coding,transmembrane protein 266
+ENSG00000169031,cluster5,1285,COL4A3,2,227164624,227314792,1,protein_coding,collagen type IV alpha 3 chain
+ENSG00000037280,cluster5,2324,FLT4,5,180601506,180649624,-1,protein_coding,fms related receptor tyrosine kinase 4
+ENSG00000184788,cluster5,340562,SATL1,X,85092284,85243911,-1,protein_coding,spermidine/spermine N1-acetyl transferase like 1
+ENSG00000182389,cluster5,785,CACNB4,2,151832771,152099167,-1,protein_coding,calcium voltage-gated channel auxiliary subunit beta 4
+ENSG00000117115,cluster5,11240,PADI2,1,17066761,17119451,-1,protein_coding,peptidyl arginine deiminase 2
+ENSG00000115414,cluster5,2335,FN1,2,215360440,215436073,-1,protein_coding,fibronectin 1
+ENSG00000128872,cluster5,29767,TMOD2,15,51751597,51816363,1,protein_coding,tropomodulin 2
+ENSG00000157613,cluster5,90993,CREB3L1,11,46277662,46321409,1,protein_coding,cAMP responsive element binding protein 3 like 1
+ENSG00000283378,cluster5,100289279,CNTNAP3C,9,61330717,61453030,1,protein_coding,contactin associated protein family member 3C
+ENSG00000272636,cluster5,8447,DOC2B,17,142789,181650,-1,protein_coding,double C2 domain beta
+ENSG00000151136,cluster5,121551,ABTB3,12,107318421,107659642,1,protein_coding,ankyrin repeat and BTB domain containing 3
+ENSG00000139219,cluster5,1280,COL2A1,12,47972967,48004554,-1,protein_coding,collagen type II alpha 1 chain
+ENSG00000119943,cluster5,84795,PYROXD2,10,98383565,98415182,-1,protein_coding,pyridine nucleotide-disulphide oxidoreductase domain 2
+ENSG00000162415,cluster5,57643,ZSWIM5,1,45016399,45306209,-1,protein_coding,zinc finger SWIM-type containing 5
+ENSG00000147256,cluster5,158763,ARHGAP36,X,131058346,131089885,1,protein_coding,Rho GTPase activating protein 36
+ENSG00000150672,cluster5,1740,DLG2,11,83455012,85628335,-1,protein_coding,discs large MAGUK scaffold protein 2
+ENSG00000079257,cluster5,56925,LXN,3,158645822,158672648,-1,protein_coding,latexin
+ENSG00000078596,cluster5,9452,ITM2A,X,79360384,79367667,-1,protein_coding,integral membrane protein 2A
+ENSG00000107099,cluster5,81704,DOCK8,9,214854,465259,1,protein_coding,dedicator of cytokinesis 8
+ENSG00000134369,cluster5,89796,NAV1,1,201539127,201826969,1,protein_coding,neuron navigator 1
+ENSG00000163694,cluster5,54502,RBM47,4,40423267,40630875,-1,protein_coding,RNA binding motif protein 47
+ENSG00000134121,cluster5,10752,CHL1,3,196763,409417,1,protein_coding,cell adhesion molecule L1 like
+ENSG00000203883,cluster5,54345,SOX18,20,64047582,64049639,-1,protein_coding,SRY-box transcription factor 18
+ENSG00000105699,cluster5,51599,LSR,19,35248330,35267964,1,protein_coding,lipolysis stimulated lipoprotein receptor
+ENSG00000151572,cluster5,121601,ANO4,12,100717526,101128641,1,protein_coding,anoctamin 4
+ENSG00000161249,cluster5,93099,DMKN,19,35497220,35513658,-1,protein_coding,dermokine
+ENSG00000186340,cluster5,7058,THBS2,6,169215780,169254050,-1,protein_coding,thrombospondin 2
+ENSG00000176399,cluster5,63951,DMRTA1,9,22446824,22455740,1,protein_coding,DMRT like family A1
+ENSG00000006071,cluster5,6833,ABCC8,11,17392498,17476894,-1,protein_coding,ATP binding cassette subfamily C member 8
+ENSG00000022556,cluster6,55655,NLRP2,19,54953130,55001142,1,protein_coding,NLR family pyrin domain containing 2
+ENSG00000171649,cluster6,284307,ZIK1,19,57578456,57593890,1,protein_coding,zinc finger protein interacting with K protein 1
+ENSG00000228836,cluster6,441521,CT45A5,X,135775852,135785503,-1,protein_coding,cancer/testis antigen family 45 member A5
+ENSG00000100867,cluster6,10202,DHRS2,14,23630115,23645639,1,protein_coding,dehydrogenase/reductase 2
+ENSG00000184697,cluster6,9074,CLDN6,16,3014712,3020071,-1,protein_coding,claudin 6
+ENSG00000162981,cluster6,151354,LRATD1,2,14632700,14650814,1,protein_coding,LRAT domain containing 1
+ENSG00000197774,cluster6,197342,EME2,16,1772810,1781708,1,protein_coding,essential meiotic structure-specific endonuclease subunit 2
+ENSG00000224109,cluster6,347549,CENPVL3,X,51617020,51618912,-1,protein_coding,centromere protein V like 3
+ENSG00000108511,cluster6,3216,HOXB6,17,48595751,48604992,-1,protein_coding,homeobox B6
+ENSG00000177519,cluster6,56475,RPRM,2,153477338,153478762,-1,protein_coding,"reprimo, TP53 dependent G2 arrest mediator homolog"
+ENSG00000000005,cluster6,64102,TNMD,X,100584936,100599885,1,protein_coding,tenomodulin
+ENSG00000140465,cluster6,1543,CYP1A1,15,74719542,74725536,-1,protein_coding,cytochrome P450 family 1 subfamily A member 1
+ENSG00000038427,cluster6,1462,VCAN,5,83471618,83582303,1,protein_coding,versican
+ENSG00000138741,cluster6,7222,TRPC3,4,121874481,121952060,-1,protein_coding,transient receptor potential cation channel subfamily C member 3
+ENSG00000047457,cluster6,1356,CP,3,149162410,149221829,-1,protein_coding,ceruloplasmin
+ENSG00000118257,cluster6,8828,NRP2,2,205681990,205798133,1,protein_coding,neuropilin 2
+ENSG00000144824,cluster6,90102,PHLDB2,3,111732497,111976517,1,protein_coding,pleckstrin homology like domain family B member 2
+ENSG00000203805,cluster6,196051,PLPP4,10,120457227,120592065,1,protein_coding,phospholipid phosphatase 4
+ENSG00000140470,cluster6,170691,ADAMTS17,15,99971437,100342005,-1,protein_coding,ADAM metallopeptidase with thrombospondin type 1 motif 17
+ENSG00000183971,cluster6,283869,NPW,16,2009926,2020755,1,protein_coding,neuropeptide W
+ENSG00000104856,cluster6,5971,RELB,19,45001461,45038192,1,protein_coding,"RELB proto-oncogene, NF-kB subunit"
+ENSG00000153071,cluster6,1601,DAB2,5,39371675,39462300,-1,protein_coding,DAB adaptor protein 2
+ENSG00000155093,cluster6,5799,PTPRN2,7,157539056,158587823,-1,protein_coding,protein tyrosine phosphatase receptor type N2
+ENSG00000177706,cluster6,56975,FAM20C,7,192571,260772,1,protein_coding,FAM20C golgi associated secretory pathway kinase
+ENSG00000178163,cluster6,85460,ZNF518B,4,10439880,10457426,-1,protein_coding,zinc finger protein 518B
+ENSG00000111783,cluster6,5992,RFX4,12,106583004,106762803,1,protein_coding,regulatory factor X4
+ENSG00000167333,cluster6,55128,TRIM68,11,4598672,4608231,-1,protein_coding,tripartite motif containing 68
+ENSG00000124225,cluster6,56937,PMEPA1,20,57648392,57711536,-1,protein_coding,"prostate transmembrane protein, androgen induced 1"
+ENSG00000119771,cluster6,114818,KLHL29,2,23385179,23708611,1,protein_coding,kelch like family member 29
+ENSG00000277586,cluster6,4747,NEFL,8,24950955,24956721,-1,protein_coding,neurofilament light chain
+ENSG00000172985,cluster6,344558,SH3RF3,2,109129205,109504634,1,protein_coding,SH3 domain containing ring finger 3
+ENSG00000001561,cluster6,22875,ENPP4,6,46129989,46146688,1,protein_coding,ectonucleotide pyrophosphatase/phosphodiesterase 4
+ENSG00000134531,cluster6,2012,EMP1,12,13196723,13219941,1,protein_coding,epithelial membrane protein 1
+ENSG00000177570,cluster6,401474,SAMD12,8,118189455,118622112,-1,protein_coding,sterile alpha motif domain containing 12
+ENSG00000163898,cluster6,200879,LIPH,3,185506262,185552588,-1,protein_coding,lipase H
+ENSG00000164236,cluster6,651746,ANKRD33B,5,10564070,10657816,1,protein_coding,ankyrin repeat domain 33B
+ENSG00000165757,cluster6,57608,JCAD,10,30012803,30115494,-1,protein_coding,junctional cadherin 5 associated
+ENSG00000156804,cluster6,114907,FBXO32,8,123497889,123541206,-1,protein_coding,F-box protein 32
+ENSG00000042493,cluster6,822,CAPG,2,85394753,85418432,-1,protein_coding,"capping actin protein, gelsolin like"
+ENSG00000182459,cluster6,400629,TEX19,17,82359247,82363775,1,protein_coding,testis expressed 19
+ENSG00000109113,cluster6,83871,RAB34,17,28714281,28718429,-1,protein_coding,"RAB34, member RAS oncogene family"
+ENSG00000126895,cluster6,554,AVPR2,X,153902531,153907166,1,protein_coding,arginine vasopressin receptor 2
+ENSG00000212747,cluster6,441518,RTL8B,X,135020513,135022542,-1,protein_coding,retrotransposon Gag like 8B
+ENSG00000163565,cluster6,3428,IFI16,1,158999968,159055155,1,protein_coding,interferon gamma inducible protein 16
+ENSG00000153823,cluster6,55022,PID1,2,228850526,229271287,-1,protein_coding,phosphotyrosine interaction domain containing 1
+ENSG00000198046,cluster6,63934,ZNF667,19,56439325,56478065,-1,protein_coding,zinc finger protein 667
+ENSG00000144057,cluster6,84620,ST6GAL2,2,106801600,106887108,-1,protein_coding,"ST6 beta-galactoside alpha-2,6-sialyltransferase 2"
+ENSG00000143858,cluster6,127833,SYT2,1,202590596,202710454,-1,protein_coding,synaptotagmin 2
+ENSG00000162344,cluster6,9965,FGF19,11,69698238,69704022,-1,protein_coding,fibroblast growth factor 19
+ENSG00000147676,cluster6,114569,MAL2,8,119165034,119245673,1,protein_coding,"mal, T cell differentiation protein 2"
+ENSG00000173210,cluster6,22885,ABLIM3,5,149141483,149260542,1,protein_coding,actin binding LIM protein family member 3
+ENSG00000276547,cluster6,56101,PCDHGB5,5,141397947,141512975,1,protein_coding,"protocadherin gamma subfamily B, 5"
+ENSG00000156925,cluster6,7547,ZIC3,X,137566127,137577691,1,protein_coding,Zic family member 3
+ENSG00000180447,cluster6,2619,GAS1,9,86944362,86947506,-1,protein_coding,growth arrest specific 1
+ENSG00000113389,cluster6,4883,NPR3,5,32689070,32791724,1,protein_coding,natriuretic peptide receptor 3
+ENSG00000121966,cluster6,7852,CXCR4,2,136114349,136119177,-1,protein_coding,C-X-C motif chemokine receptor 4
+ENSG00000169427,cluster6,51305,KCNK9,8,139600838,139704109,-1,protein_coding,potassium two pore domain channel subfamily K member 9
+ENSG00000164695,cluster6,92421,CHMP4C,8,81732448,81759515,1,protein_coding,charged multivesicular body protein 4C
+ENSG00000151650,cluster6,27287,VENTX,10,133237855,133241928,1,protein_coding,VENT homeobox
+ENSG00000119508,cluster6,8013,NR4A3,9,99821855,99866891,1,protein_coding,nuclear receptor subfamily 4 group A member 3
+ENSG00000081479,cluster6,4036,LRP2,2,169127109,169362534,-1,protein_coding,LDL receptor related protein 2
+ENSG00000168542,cluster6,1281,COL3A1,2,188974373,189012746,1,protein_coding,collagen type III alpha 1 chain
+ENSG00000179673,cluster6,388394,RPRML,17,46978156,46979253,-1,protein_coding,reprimo like
+ENSG00000136546,cluster6,6332,SCN7A,2,166403573,166611482,-1,protein_coding,sodium voltage-gated channel alpha subunit 7
+ENSG00000179761,cluster6,51268,PIPOX,17,28950513,29057216,1,protein_coding,pipecolic acid and sarcosine oxidase
+ENSG00000011201,cluster6,3730,ANOS1,X,8528874,8732137,-1,protein_coding,anosmin 1
+ENSG00000132688,cluster6,10763,NES,1,156668763,156677407,-1,protein_coding,nestin
+ENSG00000110092,cluster6,595,CCND1,11,69641156,69654474,1,protein_coding,cyclin D1
+ENSG00000075388,cluster6,2249,FGF4,11,69771022,69775341,-1,protein_coding,fibroblast growth factor 4
+ENSG00000114200,cluster6,590,BCHE,3,165772904,165837462,-1,protein_coding,butyrylcholinesterase
+ENSG00000198121,cluster6,1902,LPAR1,9,110873263,111038470,-1,protein_coding,lysophosphatidic acid receptor 1
+ENSG00000185565,cluster6,4045,LSAMP,3,115802363,117139389,-1,protein_coding,limbic system associated membrane protein
+ENSG00000128805,cluster6,58504,ARHGAP22,10,48446036,48656265,-1,protein_coding,Rho GTPase activating protein 22
+ENSG00000167157,cluster6,51450,PRRX2,9,129665647,129722674,1,protein_coding,paired related homeobox 2
+ENSG00000095587,cluster6,7093,TLL2,10,96364608,96513926,-1,protein_coding,tolloid like 2
+ENSG00000248905,cluster6,342184,FMN1,15,32765544,33194714,-1,protein_coding,formin 1
+ENSG00000155849,cluster6,9844,ELMO1,7,36852906,37449223,-1,protein_coding,engulfment and cell motility 1
+ENSG00000170166,cluster6,3233,HOXD4,2,176151550,176153226,1,protein_coding,homeobox D4
+ENSG00000021645,cluster6,9369,NRXN3,14,78170373,79868291,1,protein_coding,neurexin 3
+ENSG00000187479,cluster6,387763,C11orf96,11,43942637,43943878,1,protein_coding,chromosome 11 open reading frame 96
+ENSG00000089820,cluster6,393,ARHGAP4,X,153907367,153934999,-1,protein_coding,Rho GTPase activating protein 4
+ENSG00000244405,cluster6,2119,ETV5,3,186046314,186110318,-1,protein_coding,ETS variant transcription factor 5
+ENSG00000106034,cluster6,79974,CPED1,7,120988697,121297442,1,protein_coding,cadherin like and PC-esterase domain containing 1
+ENSG00000196415,cluster6,5657,PRTN3,19,840999,848175,1,protein_coding,proteinase 3

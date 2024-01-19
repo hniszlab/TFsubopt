@@ -1,0 +1,1031 @@
+---
+title: "Julias scRNAseq 11_Nov_2021"
+output:
+  html_notebook:
+    fig_width: 12
+    fig_height: 4
+  html_document:
+    df_print: paged
+  pdf_document: default
+editor_options:
+  chunk_output_type: inline
+---
+Load the required libraries
+```{r message=FALSE, warning=FALSE, include=FALSE}
+library(Seurat)
+library(cowplot)
+library(hdf5r)
+library(kableExtra)
+library(biomaRt)
+library(limma)
+library(topGO)
+library(org.Hs.eg.db)
+library(sva)
+library(scran)
+library(tidyverse)
+library(DoubletFinder)
+library(gprofiler2)
+library(rliger)
+library(future)
+library(harmony)
+library(pheatmap)
+library(clustree)
+library(venn)
+library(enrichR)
+library(rafalib)
+library(scPred)
+library(loomR)
+library(SeuratWrappers)
+library(velocyto.R)
+library("Nebulosa")
+library(ggalluvial)
+library(patchwork)
+plan("multicore", workers = 10)
+options(future.globals.maxSize = 28 * 1024 ^ 3)
+set.seed(12345)
+setwd("/Users/magalhae/Desktop/JulianscRNAseq/10-11-2021_JuliansScRNAseq_NewRef")
+```
+
+
+```{r}
+# Set the experiment and sample names
+experiment_name = "CEBPa B-cell experiment"
+dataset_loc <- "/Users/magalhae/Desktop/JulianscRNAseq/10-11-2021_JuliansScRNAseq_NewRef"
+ids <- c("DH-RNA-043", "DH-RNA-044", "DH-RNA-045")
+```
+```{r}
+# Read in the cell ranger sample metrics csv files
+d10x.metrics <- lapply(ids, function(i){
+  # remove _Counts is if names don't include them
+  metrics <- read.csv(file.path(dataset_loc,paste0(i,"/outs"),"metrics_summary.csv"), colClasses = "character")
+})
+experiment.metrics <- do.call("rbind", d10x.metrics)
+rownames(experiment.metrics) <- ids
+
+sequencing_metrics <- data.frame(t(experiment.metrics[,c(4:16,1,17,2,3,18,19)]))
+
+row.names(sequencing_metrics) <- gsub("\\."," ", rownames(sequencing_metrics))
+sequencing_metrics %>%
+  kable(caption = 'Cell Ranger Results') %>%
+  pack_rows("Sequencing Characteristics", 1, 6, label_row_css = "background-color: #666; color: #fff;") %>%
+  pack_rows("Mapping Characteristics", 7, 13, label_row_css = "background-color: #666; color: #fff;") %>%
+  pack_rows("Cell Characteristics", 14, 19, label_row_css = "background-color: #666; color: #fff;") %>%
+  kable_styling("striped")
+write_csv(sequencing_metrics, "sequencing_metrics.csv")
+```
+```{r message=FALSE, warning=FALSE}
+# Load the Cell Ranger Matrix Data (hdf5 file) and create the base Seurat object
+d10x.data <- lapply(ids, function(i){
+  d10x <- Read10X_h5(file.path(dataset_loc,paste0(i,"/outs"),"filtered_feature_bc_matrix.h5"))
+  colnames(d10x) <- paste(sapply(strsplit(colnames(d10x),split="-"),'[[',1L),i,sep="-")
+  d10x
+})
+names(d10x.data) <- ids
+
+str(d10x.data)
+```
+```{r message=FALSE, warning=FALSE}
+#Make Seurat objects
+sdata.wt <- CreateSeuratObject(d10x.data$`DH-RNA-043`, project = "DH-RNA-043")
+sdata.IS10 <- CreateSeuratObject(d10x.data$`DH-RNA-044`, project = "DH-RNA-044")
+sdata.IS15 <- CreateSeuratObject(d10x.data$`DH-RNA-045`, project = "DH-RNA-045")
+```
+
+```{r}
+# Add metadata to the object and merge the datasets
+sdata.wt$type = "WT"
+sdata.IS10$type = "AroPerfect_IS10"
+sdata.IS15$type = "AroPerfect_IS15"
+
+# Merge datasets into one single seurat object
+alldata <- merge(sdata.wt, c(sdata.IS10, sdata.IS15))
+samplename = alldata$orig.ident
+```
+```{r}
+# Calculate percengate of Mitocondrial and Ribosomal genes
+alldata <- PercentageFeatureSet(alldata, "^MT-", col.name = "percent_mito")
+alldata <- PercentageFeatureSet(alldata, "^RP[SL]", col.name = "percent_ribo")
+```
+```{r}
+# Filter by number of genes expressed and remove low expressed genes
+selected_c <- WhichCells(alldata, expression = nFeature_RNA > 2000)
+selected_f <- rownames(alldata)[Matrix::rowSums(alldata) > 5]
+data.filt <- subset(alldata, features = selected_f, cells = selected_c)
+```
+
+```{r}
+# Filter genes by mitochondrial and high low ribo expressed genes
+selected_mito <- WhichCells(data.filt, expression = percent_mito < 20)
+selected_ribo <- WhichCells(data.filt, expression = percent_ribo > 5)
+data.filt <- subset(data.filt, cells = selected_mito)
+data.filt <- subset(data.filt, cells = selected_ribo)
+```
+```{r}
+# Filter MALAT1
+data.filt <- data.filt[!grepl("MALAT1", rownames(data.filt)), ]
+# Filter Mitocondrial
+data.filt <- data.filt[!grepl("^MT-", rownames(data.filt)), ]
+# Filter Ribossomal gene (optional if that is a problem on your data) data.filt
+data.filt <- data.filt[ ! grepl('^RP[SL]', rownames(data.filt)), ]
+```
+
+```{r message=FALSE, warning=FALSE}
+# Sort the cells by cell cycle and normalyse
+data.filt = NormalizeData(data.filt, verbose = FALSE)
+data.filt = FindVariableFeatures(data.filt,selection.method = "vst", verbose = F)
+data.filt = ScaleData(data.filt, verbose = F)
+data.filt <- RunPCA(data.filt, features = VariableFeatures(data.filt), ndims.print = 1:10, nfeatures.print = 10)
+```
+
+```{r}
+# Sort cells by cell  cycle
+s.genes <- c("MCM5", "PCNA", "TYMS", "FEN1", "MCM2", "MCM4", "RRM1", "UNG", "GINS2", "MCM6", "CDCA7", "DTL", "PRIM1", "UHRF1", "CENPU", "HELLS", "RFC2", "RPA2", "NASP", "RAD51AP1", "GMNN", "WDR76", "SLBP", "CCNE2", "UBR7", "POLD3", "MSH2", "ATAD2", "RAD51", "RRM2", "CDC45", "CDC6", "EXO1", "TIPIN", "DSCC1", "BLM", "CASP8AP2", "USP1", "CLSPN", "POLA1", "CHAF1B", "BRIP1", "E2F8")
+g2m.genes <- c("HMGB2", "CDK1", "NUSAP1", "UBE2C", "BIRC5", "TPX2", "TOP2A", "NDC80", "CKS2", "NUF2", "CKS1B", "MKI67", "TMPO", "CENPF", "TACC3", "PIMREG", "SMC4", "CCNB2", "CKAP2L", "CKAP2", "AURKB", "BUB1", "KIF11", "ANP32E", "TUBB4B", "GTSE1", "KIF20B", "HJURP", "CDCA3", "JPT1", "CDC20", "TTK", "CDC25C", "KIF2C", "RANGAP1", "NCAPD2", "DLGAP5", "CDCA2", "CDCA8", "ECT2", "KIF23", "HMMR", "AURKA", "PSRC1", "ANLN", "LBR", "CKAP5", "CENPE", "CTCF", "NEK2", "G2E3", "GAS2L3", "CBX5", "CENPA")
+data.filt <- CellCycleScoring(data.filt, s.features = s.genes, g2m.features = g2m.genes, set.ident = TRUE)
+data.filt <- RunPCA(data.filt, features = c(s.genes, g2m.genes))
+data.filt <- ScaleData(data.filt, vars.to.regress = c("S.Score", "G2M.Score"), features = rownames(data.filt))
+data.filt <- RunPCA(data.filt, features = VariableFeatures(data.filt), nfeatures.print = 10)
+data.filt <- RunPCA(data.filt, features = c(s.genes, g2m.genes))
+```
+
+```{r}
+# Remove doublet cells.
+nExp <- round(ncol(data.filt) * 0.04)  # expect 4% doublets
+data.filt <- doubletFinder_v3(data.filt, pN = 0.25, pK = 0.09, nExp = nExp, PCs = 1:10)
+# name of the DF prediction can change, so extract the correct column name.
+DF.name = colnames(data.filt@meta.data)[grepl("DF.classification", colnames(data.filt@meta.data))]
+data.filt = data.filt[, data.filt@meta.data[, DF.name] == "Singlet"]
+gc()
+alldataC = data.filt
+```
+```{r}
+## Make subset of cells expressing markers
+meGFPSO <- subset(alldataC, subset = meGFP > 0)
+WTSO <- subset(alldataC, subset = `CEBPa-WT` > 0)
+IS10SO <- subset(alldataC, subset = `CEBPa-AroPERFECT-IS10` > 0)
+IS15SO <- subset(alldataC, subset = `CEBPa-AroPERFECT-IS15` > 0)
+
+## Get cell names
+meGFPcellNames <- rownames(meGFPSO@meta.data)
+WTcellNames <- rownames(WTSO@meta.data)
+IS10cellNames <- rownames(IS10SO@meta.data)
+IS15cellNames <- rownames(IS15SO@meta.data)
+
+## Mutate a column in original objects metadata
+alldataC$barcode <- rownames(alldataC@meta.data)
+alldataC@meta.data <- alldataC@meta.data %>% mutate(`meGFP` = ifelse((alldataC$barcode %in% meGFPcellNames), "Pos",  "Neg"))
+alldataC@meta.data <- alldataC@meta.data %>% mutate(`CEBPa-WT` = ifelse((alldataC$barcode %in% WTcellNames), "Pos",  "Neg"))
+alldataC@meta.data <- alldataC@meta.data %>% mutate(`CEBPa-AroPERFECT-IS10` = ifelse((alldataC$barcode %in% IS10cellNames), "Pos",  "Neg"))
+alldataC@meta.data <- alldataC@meta.data %>% mutate(`CEBPa-AroPERFECT-IS15` = ifelse((alldataC$barcode %in% IS15cellNames), "Pos",  "Neg"))
+
+## Extract counts and subset the object extracting the genes
+counts <- GetAssayData(alldataC, assay = "RNA")
+counts <- counts[-(which(rownames(counts) %in% c("meGFP", "CEBPa-WT", "CEBPa-AroPERFECT-IS10", "CEBPa-AroPERFECT-IS15"))),]
+alldata <- subset(alldataC, features = rownames(counts))
+alldata <- RunPCA(alldata, pc.genes = alldata@var.genes, npcs = 30, verbose = FALSE)
+# Remove batch effects
+alldata <- alldata %>% 
+    RunHarmony("orig.ident", plot_convergence = TRUE)
+```
+```{r message=FALSE, warning=FALSE}
+alldata <- alldata %>% 
+    RunUMAP(reduction = "harmony", dims = 1:20) %>% 
+    FindNeighbors(reduction = "harmony", dims = 1:20) %>% 
+    FindClusters(resolution = 0.5) %>% 
+    identity()
+```
+```{r fig.height=2, fig.width=5}
+type <- c("WT", "AroPerfect_IS10", "AroPerfect_IS15")
+typecol <- setNames(c("#ef4448", "#d57128", "#3e2d80"), type)
+DimPlot(alldata, reduction = "umap", group.by = "type", pt.size = 0.1, split.by = 'orig.ident', cols = typecol, combine = T) + theme(aspect.ratio = 1)
+ggsave("type_bytype_umap.pdf")
+```
+```{r fig.height=2, fig.width=3}
+DimPlot(alldata, reduction = "umap", label = F, pt.size = 0.1,group.by = "type", cols = typecol, combine = T) + theme(aspect.ratio = 1)
+ggsave("type_combined_umap.pdf")
+```
+```{r}
+alldata <- RunTSNE(alldata, reduction = "harmony", dims = 1:30, perplexity = 30, max_iter = 1000, 
+    theta = 0.5, eta = 200, num_threads = 0)
+```
+```{r fig.height=2, fig.width=3}
+DimPlot(alldata, reduction = "tsne", label = F, pt.size = 0.1,group.by = "type", cols = typecol, combine = T) + theme(aspect.ratio = 1)
+ggsave("type_combined_tsne.pdf")
+```
+```{r}
+alldata <- RunUMAP(alldata, reduction = "harmony", dims = 1:30, n.components = 2, n.neighbors = 30, 
+    n.epochs = 200, min.dist = 0.3, learning.rate = 1, spread = 1)
+```
+```{r fig.height=5, fig.width=6}
+myfeatures <- c("CD19", "PAX5", "CD68", "CD14", "ITGAM", "CD163", "CD36", "ANKRD22", "PTPRC")
+
+plot_density(alldata,reduction = "umap",size = 0.5, myfeatures, method = "wkde",pal = "viridis" , direction = 1) + theme(aspect.ratio = 1)
+ggsave("umap_features_viridis.pdf")
+FeaturePlot(alldata, reduction = "umap", dims = 1:2, features = myfeatures, ncol = 3, 
+    order = T, pt.size = 0.5)
+ggsave("umap_features.pdf")
+```
+```{r fig.height=2, fig.width=3}
+DimPlot(alldata, reduction = "umap", group.by = "meGFP", cols = c("gray", "blue"), pt.size = 0.1) + theme(aspect.ratio = 1)
+ggsave("umap_meGFP.pdf")
+```
+```{r}
+PrctCellExpringGene <- function(object, genes, group.by = "all"){
+    if(group.by == "all"){
+        prct = unlist(lapply(genes,calc_helper, object=object))
+        cnt = unlist(lapply(genes,calc_helper2, object=object))
+        result = data.frame(Markers = genes, Cell_proportion = prct, Cell_count = cnt)
+        return(result)
+    }
+
+    else{        
+        list = SplitObject(object, group.by)
+        factors = names(list)
+
+        results = lapply(list, PrctCellExpringGene, genes=genes)
+        for(i in 1:length(factors)){
+        results[[i]]$Feature = factors[i]
+        }
+        combined = do.call("rbind", results)
+        return(combined)
+    }
+}
+calc_helper2 <- function(object,genes){
+    counts = object[['RNA']]@counts
+    ncells = ncol(counts)
+    if(genes %in% row.names(counts)){
+    sum(counts[genes,]>0)
+    }else{return(NA)}
+}
+
+calc_helper <- function(object,genes){
+    counts = object[['RNA']]@counts
+    ncells = ncol(counts)
+    if(genes %in% row.names(counts)){
+    sum(counts[genes,]>0)/ncells
+    }else{return(NA)}
+}
+```
+```{r}
+Markergene <- c("meGFP", "CEBPa-WT", "CEBPa-AroPERFECT-IS10", "CEBPa-AroPERFECT-IS15")
+
+meGFP <- table(paste0(alldata@meta.data$type, alldata@meta.data$meGFP))
+WT <- table(paste0(alldata@meta.data$type, alldata@meta.data$`CEBPa-WT`))
+IS10 <- table(paste0(alldata@meta.data$type, alldata@meta.data$`CEBPa-AroPERFECT-IS10`))
+IS15 <- table(paste0(alldata@meta.data$type, alldata@meta.data$`CEBPa-AroPERFECT-IS15`))
+Mkp <- as.data.frame(rbind(meGFP,WT,IS10,IS15))
+write.csv(Mkp, "Cells_PosNeg_perSample.csv")
+Mkp
+```
+```{r}
+alldata <- FindNeighbors(alldata, dims = 1:30, k.param = 60, prune.SNN = 1/15)
+names(alldata@graphs)
+for (res in c(0.1, 0.25, 0.5, 1, 1.5, 2)) {
+    alldata <- FindClusters(alldata, graph.name = "RNA_snn", resolution = res, algorithm = 1)
+}
+
+```
+```{r fig.height=2, fig.width=3}
+louvclust <- c("0", "1", "2", "3", "4", "5", "6", "7")
+clustercols <- setNames(c( "#8F73B2", "#1D60A7", "#8bc34a", "#EC663B", "#34B8C1", "#EA4A7F", "#02AEDE","#46B491"), louvclust)
+clustercolsDF <- as.data.frame(clustercols)
+write_csv(clustercolsDF, "clustercolsDF.csv")
+
+DimPlot(alldata, reduction = "umap", group.by = "RNA_snn_res.0.5", pt.size = 0.1, label = T, cols = clustercols) + 
+    ggtitle("louvain_0.5")  + theme(aspect.ratio = 1)
+ggsave("umap_RNA_snn_res.0.5.pdf")
+```
+```{r}
+clustree(alldata@meta.data, prefix = "RNA_snn_res.")
+ggsave("umap_clustreeRNA_snn_res.pdf")
+```
+```{r}
+library(janitor)
+#Markergene <- c("meGFP", "CEBPa-WT", "CEBPa-AroPERFECT-IS10", "CEBPa-AroPERFECT-IS15")
+
+meGFP <- table(paste0(alldata@meta.data$RNA_snn_res.0.5, alldata@meta.data$meGFP))
+Mkp <- rbind(meGFP)
+Mkp <- as.data.frame(Mkp)
+meta.data <- alldata[[]]
+counts <- group_by(meta.data, meGFP, RNA_snn_res.0.5) %>% summarise(count = n())
+write.csv(counts, "Cells_meGFP_PosNeg_perCluster.csv")
+ggplot(counts, aes(RNA_snn_res.0.5, count, fill = meGFP)) +
+  geom_bar(position="fill", stat = 'identity') + theme_bw() + scale_fill_manual(values = c("#3b518b","#5cc763"))
+ggsave("clustreeRNA_snn_res_megfp.pdf")
+```
+
+```{r fig.height=2, fig.width=10}
+WT <- table(paste0(alldata@meta.data$RNA_snn_res.0.5, alldata@meta.data$`CEBPa-WT`))
+IS10 <- table(paste0(alldata@meta.data$RNA_snn_res.0.5, alldata@meta.data$`CEBPa-AroPERFECT-IS10`))
+IS15 <- table(paste0(alldata@meta.data$RNA_snn_res.0.5, alldata@meta.data$`CEBPa-AroPERFECT-IS15`))
+Mkp2 <- rbind(WT,IS10,IS15)
+Mkp2 <- as.data.frame(Mkp2)
+meta.data <- alldata[[]]
+countsWT <- group_by(meta.data, `CEBPa-WT`, RNA_snn_res.0.5) %>% summarise(count = n())
+countsIS10 <- group_by(meta.data, `CEBPa-AroPERFECT-IS10`, RNA_snn_res.0.5) %>% summarise(count = n())
+countsIS15 <- group_by(meta.data, `CEBPa-AroPERFECT-IS15`, RNA_snn_res.0.5) %>% summarise(count = n())
+countsall <- group_by(meta.data, type, RNA_snn_res.0.5) %>% summarise(count = n())
+write.csv(countsall, "Cells_markers_PosNeg_perCluster.csv")
+g1 <- ggplot(countsWT, aes(RNA_snn_res.0.5, count, fill = `CEBPa-WT`)) +
+  geom_bar(position="fill", stat = 'identity') + ggtitle("CEBPa-WT") + labs(fill = "") + theme_bw()+ scale_fill_manual(values = c("#3b518b","#5cc763"))
+g2 <- ggplot(countsIS10, aes(RNA_snn_res.0.5, count, fill = `CEBPa-AroPERFECT-IS10`)) +
+  geom_bar(position="fill", stat = 'identity') + ggtitle("CEBPa-AroPERFECT-IS10") + labs(fill = "") + theme_bw()+ scale_fill_manual(values = c("#3b518b","#5cc763"))
+g3 <- ggplot(countsIS15, aes(RNA_snn_res.0.5, count, fill = `CEBPa-AroPERFECT-IS15`)) +
+  geom_bar(position="fill", stat = 'identity') + ggtitle("CEBPa-AroPERFECT-IS15")  + labs(fill = "") + theme_bw() + scale_fill_manual(values = c("#3b518b","#5cc763"))
+
+plot_grid(ncol = 3, g1, g2, g3)
+ggsave("clustreeRNA_snn_res_barplot_megfp_separated.pdf")
+```
+```{r}
+geobcols <- c("#ef4448", "#d57128", "#3e2d80")
+ggplot(countsall, aes(RNA_snn_res.0.5, count, fill = type)) +
+  geom_bar(position="fill", stat = 'identity') +
+  labs(fill = "") + theme_bw() + scale_fill_manual(values = geobcols)
+ggsave("clustreeRNA_snn_res_barplot_Type.pdf")
+```
+
+
+
+```{r}
+#Ignore clusters 0, 2
+# Set the identity as louvain with resolution 1
+sel.clust = "RNA_snn_res.0.5"
+
+alldata <- SetIdent(alldata, value = sel.clust)
+identtable <- as.data.frame(table(alldata@active.ident))
+write_csv(identtable, "identtable.csv")
+```
+```{r fig.height=4, fig.width=12}
+# plot this clustering
+plot_grid(ncol = 2, DimPlot(alldata, label = F, group.by = "RNA_snn_res.0.5", reduction = "umap", pt.size = 1, cols = clustercols) + NoAxes() + theme(aspect.ratio = 1), DimPlot(alldata, group.by = "type", reduction = "umap", pt.size = 1, cols = typecol) + NoAxes() + theme(aspect.ratio = 1))
+ggsave("UMAP_RNA_snn_res.0.5_TYPE.pdf")
+```
+Cell marker genes
+```{r}
+# Compute differentiall expression
+markers_genes <- FindAllMarkers(alldata, logfc.threshold = 0.2, test.use = "wilcox", 
+    min.pct = 0.1, min.diff.pct = 0.2, only.pos = TRUE, max.cells.per.ident = 50, 
+    assay = "RNA")
+top25 <- markers_genes %>% group_by(cluster) %>% top_n(-25, p_val_adj)
+write.csv(top25, "top25_marketsperCluster.csv")
+```
+```{r}
+saveRDS(alldata, "seurat_diffexpreesion.rds")
+```
+
+```{r}
+alldata <- readRDS("seurat_diffexpreesion.rds")
+```
+
+```{r}
+#Removing the clusters that show the least gfp positive cells 0,2
+alldataF <- subset(alldata,  idents = c(0, 2), invert = TRUE)
+alldataF <- RunUMAP(alldataF, reduction = "harmony", dims = 1:30, n.components = 2, n.neighbors = 30, 
+    n.epochs = 200, min.dist = 0.3, learning.rate = 1, spread = 1)
+```
+
+```{r fig.height=2, fig.width=3}
+DimPlot(alldataF, label = T, group.by = "RNA_snn_res.0.5", reduction = "umap", pt.size = 0.1, cols = clustercols) + theme(aspect.ratio = 1)
+ggsave("UMAP_RNA_snn_res.0.5_Filtered.pdf")
+```
+```{r fig.height=5, fig.width=6}
+myfeatures <- c("CD19", "PAX5", "CD68", "CD14", "ITGAM", "CD163", "CD36", "ANKRD22", "PTPRC")
+#myfeatures <- c("CD19", "ITGAM")
+
+
+#plot_density(alldataF,reduction = "umap",size = 0.5, myfeatures) + theme(aspect.ratio = 1)
+#ggsave("umap_features_filtered_viridis.pdf")
+
+FeaturePlot(alldataF, reduction = "umap", dims = 1:2, features = myfeatures, ncol = 3, 
+    order = T, pt.size = 0.5)+ theme(aspect.ratio = 1)
+ggsave("umap_features_filtered.pdf")
+
+```
+```{r fig.height=2, fig.width=3}
+
+DimPlot(alldataF, reduction = "umap", group.by = "meGFP", cols = c("gray", "blue"), pt.size = 0.1, split.by = 'type') + theme(aspect.ratio = 1)
+
+#ggsave("umap_Sharedspace_meGFP.pdf")
+```
+
+
+
+```{r}
+#Diff expression 8, 4 and 10
+# select all cells in cluster 1
+cell_selection <- subset(alldataF, cells = colnames(alldataF)[alldataF@meta.data[, sel.clust] == c(5, 6, 7)])
+cell_selection <- SetIdent(cell_selection, value = "RNA_snn_res.0.5")
+# Compute differentiall expression
+DGE_cell_selection <- FindAllMarkers(cell_selection, logfc.threshold = 0.2, test.use = "wilcox", 
+    min.pct = 0.1, min.diff.pct = 0.2, only.pos = TRUE, max.cells.per.ident = 50, 
+    assay = "RNA")
+```
+```{r fig.height=3, fig.width=25}
+top25_cell_selection <- DGE_cell_selection %>% group_by(cluster) %>% top_n(-25, p_val)
+write.csv(top25_cell_selection, "top25_cluster5_6_7.csv")
+VlnPlot(cell_selection, features = as.character(unique(top25_cell_selection$gene)),
+    ncol = 25, group.by = "RNA_snn_res.0.5", assay = "RNA", pt.size = -1, cols = clustercols) + theme(axis.text = element_text(size = 8))
+ggsave("VlnPlot_C_5_6_7.pdf", limitsize = FALSE)
+```
+```{r}
+# select all cells in cluster 
+cell_selection2 <- subset(alldataF, cells = colnames(alldataF)[alldataF@meta.data[, sel.clust] == c(1, 3, 4)])
+cell_selection2 <- SetIdent(cell_selection2, value = "RNA_snn_res.0.5")
+# Compute differentiall expression
+DGE_cell_selection2 <- FindAllMarkers(cell_selection2, logfc.threshold = 0.2, test.use = "wilcox", 
+    min.pct = 0.1, min.diff.pct = 0.2, only.pos = TRUE, max.cells.per.ident = 50, 
+    assay = "RNA")
+top25_cell_selection2 <- DGE_cell_selection2 %>% group_by(cluster) %>% top_n(-25, p_val)
+write.csv(top25_cell_selection2, "top25_cluster1_3_4.csv")
+```
+```{r fig.height=3, fig.width=25}
+VlnPlot(cell_selection2, features = as.character(unique(top25_cell_selection2$gene)),
+    ncol = 25, group.by = "RNA_snn_res.0.5", assay = "RNA", pt.size = -1, cols = clustercols) + theme(axis.text = element_text(size = 8))
+ggsave("VlnPlot_C_1_3_4.pdf", limitsize = FALSE)
+```
+```{r fig.height=3, fig.width=25}
+genestoplot <- c("VPREB1", "CD79A", "CD79B", "EBF1", "MYB", "RAG1", "RAG2", "LEF1", "BACH2","BLK", "BCL11A", "POU2F1", "DNTT", "KIF15", "KIF2C", "KIF11", "E2F1", "E2F2", "E2F5", "E2F7", "CCNB2", "AURKB", "BUB1B", "BUB1", "CENPF", "CENPM", "CDK1", "CHAF1B")
+VlnPlot(alldataF, features = genestoplot, ncol = 20, group.by = sel.clust, 
+    assay = "RNA", pt.size = -1, cols = clustercols) + theme(axis.text = element_text(size = 8))
+ggsave("VlnPlot_genestoplot.pdf", limitsize = FALSE)
+```
+```{r}
+CellsTypeCluster <- group_by(meta.data, type, RNA_snn_res.0.5) %>% summarise(count = n())
+CellsTypeCluster <- CellsTypeCluster %>%
+    group_by(type) %>%
+    mutate(per =  count/sum(count)) %>% 
+    ungroup
+CellsTypeCluster
+```
+```{r}
+CellsTypeCluster$type <- factor(CellsTypeCluster$type, levels = c("WT", "AroPerfect_IS15", "AroPerfect_IS10"))
+p <- ggplot(CellsTypeCluster, aes(x = type, stratum = RNA_snn_res.0.5, alluvium = RNA_snn_res.0.5, y = per, fill = RNA_snn_res.0.5, label = RNA_snn_res.0.5)) +
+  geom_flow(alpha = .6) +
+  geom_stratum(color = 'black') +
+  theme_classic() +
+  scale_fill_manual(values=clustercols)
+p
+ggsave("alovial_allclusters.pdf")
+#scale_fill_manual(values=cluster_colors[match(s, cluster_order)])
+```
+```{r}
+meta.dataF <- alldataF[[]]
+countsWTF <- group_by(meta.dataF, `CEBPa-WT`, RNA_snn_res.0.5) %>% summarise(count = n())
+countsIS10F <- group_by(meta.dataF, `CEBPa-AroPERFECT-IS10`, RNA_snn_res.0.5) %>% summarise(count = n())
+countsIS15F <- group_by(meta.dataF, `CEBPa-AroPERFECT-IS15`, RNA_snn_res.0.5) %>% summarise(count = n())
+countsallF <- group_by(meta.dataF, type, RNA_snn_res.0.5) %>% summarise(count = n())
+write.csv(countsallF, "Cells_markers_PosNeg_perCluster_Filteres.csv")
+CellsTypeClusterF <- group_by(meta.dataF, type, RNA_snn_res.0.5) %>% summarise(count = n())
+CellsTypeClusterF <- CellsTypeClusterF %>%
+    group_by(type) %>%
+    mutate(per =  count/sum(count)) %>% 
+    ungroup
+CellsTypeClusterF
+```
+```{r}
+CellsTypeClusterF$type <- factor(CellsTypeClusterF$type, levels = c("WT", "AroPerfect_IS15", "AroPerfect_IS10"))
+p <- ggplot(CellsTypeClusterF, aes(x = type, stratum = RNA_snn_res.0.5, alluvium = RNA_snn_res.0.5, y = per, fill = RNA_snn_res.0.5, label = RNA_snn_res.0.5)) +
+  geom_flow(alpha = .6) +
+  geom_stratum(color = 'black') +
+  theme_classic() +
+  scale_fill_manual(values=clustercols)
+p
+ggsave("alovial_allclusters_filtered.pdf")
+```
+```{r}
+# save metadata table:
+alldataF$barcode <- colnames(alldataF)
+alldataF$UMAP_1 <- alldataF@reductions$umap@cell.embeddings[,1]
+alldataF$UMAP_2 <- alldataF@reductions$umap@cell.embeddings[,2]
+write.csv(alldataF@meta.data, file='RawVelocity/metadata_filtered.csv', quote=F, row.names=F)
+
+library(Matrix)
+counts_matrix <- GetAssayData(alldataF, assay='RNA', slot='counts')
+writeMM(counts_matrix, file='RawVelocity/counts_filtered.mtx')
+
+# write dimesnionality reduction matrix, in this example case pca matrix
+write.csv(alldataF@reductions$pca@cell.embeddings, file='RawVelocity/pca_filtered.csv', quote=F, row.names=F)
+write.csv(alldataF@reductions$umap@cell.embeddings, file='RawVelocity/umap_filtered.csv', quote=F, row.names=F)
+
+
+# write gene names
+write.table(
+  data.frame('gene'=rownames(counts_matrix)),file='RawVelocity/gene_names_filtered.csv',
+  quote=F,row.names=F,col.names=F
+)
+```
+```{r}
+# save metadata table:
+alldata$barcode <- colnames(alldata)
+alldata$UMAP_1 <- alldata@reductions$umap@cell.embeddings[,1]
+alldata$UMAP_2 <- alldata@reductions$umap@cell.embeddings[,2]
+write.csv(alldata@meta.data, file='RawVelocity/metadata_raw.csv', quote=F, row.names=F)
+
+library(Matrix)
+counts_matrix <- GetAssayData(alldata, assay='RNA', slot='counts')
+writeMM(counts_matrix, file='RawVelocity/counts_raw.mtx')
+
+# write dimesnionality reduction matrix, in this example case pca matrix
+write.csv(alldata@reductions$pca@cell.embeddings, file='RawVelocity/pca_raw.csv', quote=F, row.names=F)
+write.csv(alldata@reductions$umap@cell.embeddings, file='RawVelocity/umap_raw.csv', quote=F, row.names=F)
+
+
+# write gene names
+write.table(
+  data.frame('gene'=rownames(counts_matrix)),file='RawVelocity/gene_names_raw.csv',
+  quote=F,row.names=F,col.names=F
+)
+```
+```{r}
+# Named vector of cluster names
+Scluster <- purrr::set_names(levels(alldata$RNA_snn_res.0.5))
+Scluster
+# Total number of clusters
+nk <- length(Scluster)
+nk
+# Named vector of sample names
+sids <- c("WT", "AroPerfect_IS10", "AroPerfect_IS15" )
+# Total number of samples 
+ns <- length(sids)
+ns
+# Generate sample level metadata
+
+## Determine the number of cells per sample
+table(alldata$type)
+
+## Turn named vector into a numeric vector of number of cells per sample
+n_cells <- as.numeric(table(alldata$type))
+
+## Determine how to reoder the samples (rows) of the metadata to match the order of sample names in sids vector
+m <- match(sids, alldata$type)
+```
+```{r}
+All_averClt <- AverageExpression(object = alldata, 
+                                  assays = "RNA", 
+                                  slot = "data", 
+                                  return.seurat = TRUE)
+
+```
+```{r}
+All_scaled <- as.data.frame(as.matrix(All_averClt@assays[["RNA"]]@scale.data))
+All_raw <- as.data.frame(as.matrix(All_averClt@assays[["RNA"]]@data))
+write.csv(All_scaled, "All_scaled.csv")
+write.csv(All_raw, "All_raw.csv")
+```
+------------------- Still needs work(subset data?)
+```{r}
+
+#Diff expression 5, 6, 7 bw samples
+# select all cells in cluster 1
+alldata7 <- SetIdent(alldataF, value = "RNA_snn_res.0.5")
+alldata7 <- subset(alldata7,  idents = 7)
+alldata7 <- SetIdent(alldata7, value = "type")
+alldata7 <- subset(alldata7,  idents = c("AroPerfect_IS15", "WT"))
+cell_selection <- SetIdent(alldata7, value = "type")
+# Compute differentiall expression
+DGE_cell_selection <- FindAllMarkers(cell_selection, logfc.threshold = 0.2, test.use = "DESeq2", 
+    min.pct = 0.1, min.diff.pct = 0.2, only.pos = F, max.cells.per.ident = 200, 
+    assay = "RNA")
+```
+```{r}
+DGE_cell_selection = DGE_cell_selection %>% filter(cluster == "WT")
+top25_cell_of7ontype <- DGE_cell_selection %>% group_by(cluster) %>% top_n(-25, p_val_adj)
+write.csv(top25_cell_of7ontype, "top25_cell_of7ontypeWT_IS15_desq2.csv")
+write.csv(DGE_cell_selection, "DGE_cell_selection.csv")
+```
+
+```{r}
+DGE_cell_selection["log10pval"] <- -1 * log10(DGE_cell_selection$p_val)
+DGE_cell_selection["log10Adjpval"] <- -1 * log10(DGE_cell_selection$p_val_adj)
+```
+```{r}
+# Create new categorical column ------------------------------------------------ 
+DGE_cell_selection <- DGE_cell_selection %>%
+  mutate(gene_type = case_when(avg_log2FC >= 0.5 & p_val_adj <= 0.05 ~ "up",
+                               avg_log2FC <= -0.5 & p_val_adj <= 0.05 ~ "down",
+                               TRUE ~ "ns"))  
+```
+```{r}
+DGE_cell_selection %>%
+  distinct(gene_type) %>%
+  pull()  
+```
+
+```{r}
+ # Add colour, size and alpha (transparency) to volcano plot --------------------
+cols <- c("up" = "#26b3ff", "down" = "#26b3ff", "ns" = "grey") 
+sizes <- c("up" = 2, "down" = 2, "ns" = 1) 
+alphas <- c("up" = 1, "down" = 1, "ns" = 0.5)
+```
+
+```{r}
+myfeatures <- c("FCGR2A", "FCGR2B", "FCGR1A","FCGR1B", "HSPA6", "CEACAM1", "CEACAM8")
+```
+
+```{r fig.height=5, fig.width=4}
+#genes.to.labelT = DGE_cell_selection  %>% top_n(-25, p_val_adj)
+#genes.to.labelT = genes.to.labelT %>% arrange(desc(avg_log2FC))
+#genes.to.label = as.character(unique(genes.to.labelT$gene))
+  
+  
+  
+
+genes.to.label2 <- DGE_cell_selection %>% filter(gene %in% myfeatures)
+
+
+graph <- ggplot(DGE_cell_selection, aes(
+  x = avg_log2FC, 
+  y = log10Adjpval,
+  fill = gene_type,   
+  size = gene_type,
+  alpha = gene_type,
+  #label = gene
+  )) +
+  geom_point(shape = 21, # Specify shape and colour as fixed local parameters    
+             colour = "black") +
+  labs(x = 'Avg Log2 FC', y = '-Log10 p-value (adj)') +
+  ggtitle('Wild type vs AroPerfect IS15') +
+  theme_bw() +
+  theme(
+    panel.grid.major = element_blank(),
+    panel.grid.minor = element_blank(),
+    panel.border = element_rect(colour = "black", fill=NA, size=0.5),
+    aspect.ratio = 2/1.5) +
+  geom_vline(xintercept=c(-0.5, 0.5), col="black", linetype = "dashed") +
+  geom_hline(yintercept=-log10(0.05), col="black", linetype = "dashed") +
+  scale_fill_manual(values = cols) + # Modify point colour
+  scale_size_manual(values = sizes) + # Modify point size
+  scale_alpha_manual(values = alphas) # Modify point transparency
+  # geom_text_repel(data = . %>%
+  #                   mutate(gene = ifelse(gene %in% genes.to.label, gene, "")),
+  #                   aes(label = gene),
+  #                   min.segment.length = 0,
+  #                   seed = 42,
+  #                   box.padding = 0.5,
+  #                 max.overlaps = Inf
+  #                   )
+```
+```{r fig.height=5, fig.width=4}
+graph <- LabelPoints(plot = graph, points = myfeatures, repel = T, min.segment.length = 0, box.padding = 0.5, max.overlaps = 2000000000)
+graph
+#graph + geom_text_repel(min.segment.length = 0, seed = 42, box.padding = 0.5)
+```
+
+```{r}
+targetsC <- c("CSF3R", "SERPINA1", "CFD","HGF", "TMEM71", "S100P", "WLS", "IER5L", "PDCD4"," HLA-DRB1","HLA-DPA1", "IL2RA","MMP9", "HLA-DQA1", "XAF1", "HLA-DRB5", "FNBP1")
+```
+
+```{r fig.height=20, fig.width=8}
+VlnPlot(alldata7, features = genes.to.label,
+    ncol =5, group.by = "type", assay = "RNA", pt.size = -1, cols = typecol) &
+  theme(axis.title.x = element_blank(), axis.title.y = element_text(size = 12) , axis.text.x = element_text(size = 12),  aspect.ratio = 1)
+#VlnPlot(alldata7, features = targetsC,
+#    ncol = 8, group.by = "type", assay = "RNA", pt.size = -1, cols = typecol) + theme(axis.text = element_text(size = 12))
+#p
+ggsave("VlnPlot_C_7_typeTOP25_.pdf", limitsize = FALSE)
+```
+
+```{r}
+DoHeatmap(alldata7, features = genes.to.label, group.by = "type", 
+    assay = "RNA") + theme(axis.text = element_text(size = 8))
+```
+
+
+
+```{r}
+pos_cells = subset(alldataF, subset = meGFP == "Pos")
+```
+```{r}
+meta.dataP <- pos_cells[[]]
+CellsTypeClusterP <- group_by(meta.dataP, type, RNA_snn_res.0.5) %>% summarise(count = n())
+CellsTypeClusterP <- CellsTypeClusterP %>%
+    group_by(type) %>%
+    mutate(per =  count/sum(count)) %>% 
+    ungroup
+CellsTypeClusterP
+```
+```{r}
+CellsTypeClusterP$type <- factor(CellsTypeClusterP$type, levels = c("WT", "AroPerfect_IS15", "AroPerfect_IS10"))
+p <- ggplot(CellsTypeClusterP, aes(x = type, stratum = RNA_snn_res.0.5, alluvium = RNA_snn_res.0.5, y = per, fill = RNA_snn_res.0.5, label = RNA_snn_res.0.5)) +
+  geom_flow(alpha = 0.5, linetype = "dotted") +
+  geom_stratum(color = 'white') +
+  theme_classic() +
+  scale_fill_manual(values=clustercols)
+p
+ggsave("alovial_allclusters_Positive.pdf")
+#scale_fill_manual(values=cluster_colors[match(s, cluster_order)])
+```
+```{r}
+# Compute differentiall expression
+DEGS_clusters <- FindAllMarkers(alldataF, logfc.threshold = 0.2, test.use = "wilcox", 
+    min.pct = 0.1, min.diff.pct = 0.2, only.pos = TRUE, max.cells.per.ident = 50, 
+    assay = "RNA")
+```
+```{r}
+top10allclustersdf <- DEGS_clusters %>% group_by(cluster) %>% top_n(-10, p_val)
+write.csv(top10allclustersdf, "top10allclusters.csv")
+top10allclusters <- top10allclustersdf %>% select(gene) %>% 
+  unclass() %>% 
+  stack() %>%
+  pull(values) %>%
+  unique() %>%
+   .[!is.na(.)]
+```
+
+
+```{r fig.width=10}
+markers_cluster <- c("CD37", "IFITM3", "ARPP21", "FRMD4B", "IGFBP2", "LINC01013", "RFLNB", "IRX1", "H2AC14", "H3C2", "H3C4", "H2BC7", "H2AC11", "H2AC16", "H1-2", "H2AC20", "H2AC17", "H1-5", "H1-4", "H4C5", "H4C4", "H2BC9", "H3C8", "H2BC18", "H1-3", "H2BC12", "H3C7", "H3C3", "H3C10", "H2BC11", "CDK1", "NUF2", "H2AC12", "CHST6", "MT1G", "TRIM14", "PLS3", "KCNJ12", "CLEC2D", "NLGN1", "GPR160", "BLNK", "CRIP1", "GATM", "MAP1A", "BACH2", "CXCR4", "IARS2", "CORO2A", "ENDOD1", "DDX54", "AFF3", "PRKCZ", "BRI3BP", "RABGAP1L", "DTX1", "CFD", "AZU1", "PDE4D", "RETN", "ANXA1", "TFEC", "CSF3R", "WLS", "AIF1", "ELANE", "NUCB2", "ASPH", "SAP30", "CSTA", "BLVRB", "MS4A3", "MED30", "TRGC2", "HGF", "FUT7", "NFIL3", "ANKRD22", "GPI", "ZNF467", "RAB27A", "CD79A", "CCDC26", "SIPA1L2", "PPA1", "NRIP1", "CDK6", "VPREB1", "PSME2", "CCT3", "ZNF608", "PXDN", "UGT3A2", "LDHB", "MZB1", "OFD1", "PPFIBP1", "LRRC28", "HLA-DPB1", "MLEC", "MARCKSL1", "TOP1MT", "SRM", "BMI1", "KCNQ5", "LEF1", "CD14", "S100A9", "NCF1", "S100A8", "KCTD12", "JAML", "VNN2", "ITGB2", "VASP", "CYBB", "FCER1G", "LST1", "PTPRC", "LILRA5", "FCN1", "LILRB3", "TYROBP", "BCL2A1", "PIM1", "S100A12", "C5AR1", "LSP1", "CDC42EP3", "CD55", "MPEG1"
+)
+
+top5markets <- c("CD37", "IFITM3", "ARPP21", "FRMD4B", "IGFBP2", "H2AC14", "H3C2", "H3C4", "H2BC7", "H2AC11", "CHST6", "MT1G", "TRIM14", "PLS3", "KCNJ12", "CLEC2D
+CFD", "AZU1", "PDE4D", "RETN", "ANXA1", "CD79A", "CCDC26", "SIPA1L2", "PPA1", "NRIP1", "CD14", "S100A9", "NCF1", "S100A8", "KCTD12")
+
+top10markers <- c("CD37", "IFITM3", "ARPP21", "FRMD4B", "IGFBP2", "LINC01013", "RFLNB", "IRX1", "H2AC14", "H3C2", "H3C4", "H2BC7", "H2AC11", "H2AC16", "H1-2", "H2AC20", "H2AC17", "H1-5", "CHST6", "MT1G", "TRIM14", "PLS3", "KCNJ12", "CLEC2D", "NLGN1", "GPR160", "BLNK", "CRIP1", "CFD", "AZU1", "PDE4D", "RETN", "ANXA1", "TFEC", "CSF3R", "WLS", "AIF1", "ELANE", "CD79A", "CCDC26", "SIPA1L2", "PPA1", "NRIP1", "CDK6", "VPREB1", "PSME2", "CCT3", "ZNF608", "CD14", "S100A9", "NCF1", "S100A8", "KCTD12", "JAML", "VNN2", "ITGB2", "VASP", "CYBB")
+```
+```{r fig.width=10}
+p <- DotPlot(alldataF, features = top10allclusters,
+        cols = clustercols,
+        dot.scale = 10,
+        #split.by = "RNA_snn_res.0.5",
+        group.by = "RNA_snn_res.0.5") +
+    RotatedAxis()
+p
+
+```
+
+```{r}
+df<- p$data
+exp_mat<-df %>% 
+  select(-pct.exp, -avg.exp) %>%  
+  pivot_wider(names_from = id, values_from = avg.exp.scaled) %>% 
+  as.data.frame() 
+    
+row.names(exp_mat) <- exp_mat$features.plot  
+exp_mat <- exp_mat[,-1] %>% as.matrix()
+
+percent_mat<-df %>% 
+  select(-avg.exp, -avg.exp.scaled) %>%  
+  pivot_wider(names_from = id, values_from = pct.exp) %>% 
+  as.data.frame() 
+    
+row.names(percent_mat) <- percent_mat$features.plot  
+percent_mat <- percent_mat[,-1] %>% as.matrix()
+
+```
+
+```{r}
+library(viridis)
+library(Polychrome)
+Polychrome::swatch(inferno(20, direction = -1))
+```
+```{r}
+quantile(exp_mat, c(0.1, 0.5, 0.9, 0.99))
+```
+```{r}
+percent_mat <- t(percent_mat)
+exp_mat <- t(exp_mat)
+```
+
+```{r}
+## any value that is greater than 2 will be mapped to yellow
+col_fun = circlize::colorRamp2(c(-1, 0, 2), viridis(20, direction = -1)[c(1,10, 20)])
+
+
+cell_fun = function(j, i, x, y, w, h, fill){
+          grid.rect(x = x, y = y, width = w, height = h, 
+                    gp = gpar(col = NA, fill = NA))
+          grid.circle(x=x,y=y,r= percent_mat[i, j]/100 * min(unit.c(w, h)),
+                      gp = gpar(fill = col_fun(exp_mat[i, j]), col = NA))}
+```
+
+```{r}
+order_genes <- c("H2BC7", "H2AC14", "H1-5", "H3C2", "H2AC11", "H3C4", "H3C3", "H2AC16", "MAD2L1", "H2AC20", "MT1X", "BLNK", "AFF3", "LCN6", "PRKCZ", "OFD1", "VPREB3", "IRAG2", "STK39", "BLK", "SRM", "NME1", "IL7R", "IRX1", "UGT3A2", "RAG1", "CD79A", "DANCR", "ELK3", "SPATS2L", "TSPOAP1", "TNFAIP8", "PLEK", "CCDC26", "RGS18", "ATP8B4", "ANKRD28", "P4HB", "HERC5", "SIPA1L2", "ANXA1", "APLP2", "SRGN", "CFD", "MNDA", "SERPINB1", "LYZ", "AIF1", "S100A11", "HCST", "S100A8", "S100A9", "CYBB", "ITGB2", "NCF1", "LST1", "PIM1", "PTPRC", "FCER1G")
+```
+
+```{r fig.width=6}
+## To make the size of the dot in the heatmap body comparable to the legend, I used fixed
+## size unit.(2, "mm) rather than min(unit.c(w, h).
+cluster_anno<-  c("Early-inter", "Inicial B-cell", "Early", "Inter/late", "Inter-late", "Late Macrophage")
+
+column_ha<- HeatmapAnnotation(
+    cluster_anno = cluster_anno,
+    col = list(cluster_anno = setNames(brewer.pal(6, "Paired"), unique(cluster_anno))
+    ),
+    na_col = "grey"
+)
+```
+```{r}
+
+layer_fun1 = function(j, i, x, y, w, h, fill){
+          grid.rect(x = x, y = y, width = w, height = h, 
+                    gp = gpar(col = NA, fill = NA))
+          grid.circle(x=x,y=y,r= sqrt(pindex(percent_mat, i, j)/100)  * unit(2, "mm"),
+                      gp = gpar(fill = col_fun(pindex(exp_mat, i, j)), col = NA))}
+
+lgd_list1 = list(
+    Legend( labels = c(0,0.25,0.5,0.75,1), title = "pt",
+            graphics = list(
+              function(x, y, w, h) grid.circle(x = x, y = y, r = 0  * unit(2, "mm"),
+                                               gp = gpar(fill = "black")),
+              function(x, y, w, h) grid.circle(x = x, y = y, r = sqrt(0.25) * unit(2, "mm"),
+                                               gp = gpar(fill = "black")),
+              function(x, y, w, h) grid.circle(x = x, y = y, r = sqrt(0.5) * unit(2, "mm"),
+                                               gp = gpar(fill = "black")),
+              function(x, y, w, h) grid.circle(x = x, y = y, r = sqrt(0.75) * unit(2, "mm"),
+                                               gp = gpar(fill = "black")),
+              function(x, y, w, h) grid.circle(x = x, y = y, r = 1 * unit(2, "mm"),
+                                               gp = gpar(fill = "black")))
+            ))
+```
+```{r fig.width=6}
+
+hp<- Heatmap(exp_mat,
+        heatmap_legend_param=list(title="expression"),
+        column_title = "clustered dotplot", 
+        col=col_fun,
+        rect_gp = gpar(type = "none"),
+        layer_fun = layer_fun,
+        row_names_gp = gpar(fontsize = 5),
+        split = cluster_anno,
+        border = "black",
+        width = unit(20, "cm") , height = unit(6, "cm"),
+        column_order = order_genes,
+        row_order = c("3", "4", "1", "6", "5", "7")
+        #row_annotation = column_ha
+        )
+
+draw( hp, annotation_legend_list = lgd_list)
+```
+```{r}
+# Get number of cells per cluster and per sample of origin
+table(alldata@meta.data$RNA_snn_res.0.5, alldata@meta.data$type)
+# Get number of cells per cluster
+table(alldata@meta.data$RNA_snn_res.0.5)
+```
+```{r fig.height=6, fig.width=8}
+DimPlot(alldataF, reduction = "umap", 
+        group.by = c("CEBPa-WT", "CEBPa-AroPERFECT-IS15", "CEBPa-AroPERFECT-IS10"), 
+        cols = c("gray", "blue"), 
+        pt.size = 1,
+        label.size = 2,
+        ) + theme(aspect.ratio = 1)
+ggsave("sharedspace_megfp.pdf")
+```
+genes.to.label
+```{r}
+ISWT_IS15_cells = subset(alldataF, subset = type == c("WT", "AroPerfect_IS15"))
+```
+
+```{r fig.height=2.5, fig.width=6}
+VlnPlot(ISWT_IS15_cells, genes.to.label, stack = TRUE, sort = F, flip = F, split.by = "type", raster = F) +
+  theme(text = element_text(size = 6), axis.text = element_text(size = 6))
+```
+```{r}
+#Diff expression 1 samples
+alldata1 <- SetIdent(alldataF, value = "RNA_snn_res.0.5")
+alldata1 <- subset(alldata1,  idents = 1)
+alldata1 <- SetIdent(alldata1, value = "type")
+alldata1 <- subset(alldata1,  idents = c("AroPerfect_IS15", "WT"))
+cell_selection1 <- SetIdent(alldata1, value = "type")
+# Compute differentiall expression
+DGE_cell_selection1 <- FindAllMarkers(cell_selection1, logfc.threshold = 0.2, test.use = "DESeq2", 
+    min.pct = 0.1, min.diff.pct = 0.2, only.pos = F, max.cells.per.ident = 200, 
+    assay = "RNA")
+
+#Diff expression 4 samples
+alldata4 <- SetIdent(alldataF, value = "RNA_snn_res.0.5")
+alldata4 <- subset(alldata4,  idents = 4)
+alldata4 <- SetIdent(alldata4, value = "type")
+alldata4 <- subset(alldata4,  idents = c("AroPerfect_IS15", "WT"))
+cell_selection4 <- SetIdent(alldata4, value = "type")
+# Compute differentiall expression
+DGE_cell_selection4 <- FindAllMarkers(cell_selection4, logfc.threshold = 0.2, test.use = "DESeq2", 
+    min.pct = 0.1, min.diff.pct = 0.2, only.pos = F, max.cells.per.ident = 200, 
+    assay = "RNA")
+
+#Diff expression 3 samples
+alldata3 <- SetIdent(alldataF, value = "RNA_snn_res.0.5")
+alldata3 <- subset(alldata3,  idents = 3)
+alldata3 <- SetIdent(alldata3, value = "type")
+alldata3 <- subset(alldata3,  idents = c("AroPerfect_IS15", "WT"))
+cell_selection3 <- SetIdent(alldata3, value = "type")
+# Compute differentiall expression
+DGE_cell_selection3 <- FindAllMarkers(cell_selection3, logfc.threshold = 0.2, test.use = "DESeq2", 
+    min.pct = 0.1, min.diff.pct = 0.2, only.pos = F, max.cells.per.ident = 200, 
+    assay = "RNA")
+
+#Diff expression 5 samples
+alldata5 <- SetIdent(alldataF, value = "RNA_snn_res.0.5")
+alldata5 <- subset(alldata5,  idents = 5)
+alldata5 <- SetIdent(alldata5, value = "type")
+alldata5 <- subset(alldata5,  idents = c("AroPerfect_IS15", "WT"))
+cell_selection5 <- SetIdent(alldata5, value = "type")
+# Compute differentiall expression
+DGE_cell_selection5 <- FindAllMarkers(cell_selection5, logfc.threshold = 0.2, test.use = "DESeq2", 
+    min.pct = 0.1, min.diff.pct = 0.2, only.pos = F, max.cells.per.ident = 200, 
+    assay = "RNA")
+
+#Diff expression 6 samples
+alldata6 <- SetIdent(alldataF, value = "RNA_snn_res.0.5")
+alldata6 <- subset(alldata6,  idents = 6)
+alldata6 <- SetIdent(alldata6, value = "type")
+alldata6 <- subset(alldata6,  idents = c("AroPerfect_IS15", "WT"))
+cell_selection6 <- SetIdent(alldata6, value = "type")
+# Compute differentiall expression
+DGE_cell_selection6 <- FindAllMarkers(cell_selection6, logfc.threshold = 0.2, test.use = "DESeq2", 
+    min.pct = 0.1, min.diff.pct = 0.2, only.pos = F, max.cells.per.ident = 200, 
+    assay = "RNA")
+```
+```{r}
+#Select cluster 7
+IS15WT_7 <- SetIdent(alldataF, value = "RNA_snn_res.0.5")
+IS15WT_7 <- subset(IS15WT_7,  idents = 7)
+IS15WT_7 <- SetIdent(IS15WT_7, value = "type")
+IS15WT_7 <- subset(IS15WT_7,  idents = c("AroPerfect_IS15", "WT"))
+```
+```{r}
+#Expressed genes per cluster
+
+# three clusters
+table(alldataF$RNA_snn_res.0.5)
+cluster.set <- unique(alldataF$RNA_snn_res.0.5)
+# overall nFeature
+sum(rowSums(alldataF[['RNA']]@counts) > 5)
+
+# nFeature for each cluster
+sapply(X = cluster.set, function(c) {
+  cells.c <- WhichCells(object = alldataF, expression = RNA_snn_res.0.5 == c)
+  nFeature.c <- sum(rowSums(alldataF[['RNA']]@counts[, cells.c ]) > 5)
+  return(nFeature.c)
+}
+)
+```
+```{r}
+
+genesexpressed7 <- as.data.frame(AverageExpression(object = IS15WT_7))
+
+genesexpressed7 <- genesexpressed7 %>% rownames_to_column('gene') %>% rowwise() %>% mutate(rs = sum(c(RNA.WT, RNA.AroPerfect_IS15)))
+genesexpressed7 <- genesexpressed7 %>% filter(rs > 0) %>% column_to_rownames('gene')
+
+gExp7_WT <- genesexpressed7 %>% filter(RNA.WT > 0 )
+gExp7_IS15 <- genesexpressed7 %>% filter(RNA.AroPerfect_IS15 > 0 )
+
+gExp7_WT <- row.names(gExp7_WT)
+gExp7_IS15 <- row.names(gExp7_IS15)
+
+genesexpressed7 <- row.names(genesexpressed7)
+
+IS15WT_not7 <- SetIdent(alldataF, value = "RNA_snn_res.0.5")
+IS15WT_not7 <- subset(IS15WT_not7,  idents = c(1, 3, 4, 5, 6))
+
+genesexpressedeverywehre <- as.data.frame(AverageExpression(object = IS15WT_not7))
+genesexpressedeverywehre <- genesexpressedeverywehre %>% rownames_to_column('gene') %>% rowwise() %>% mutate(rs = sum(c(RNA.1, RNA.3, RNA.4, RNA.5, RNA.6)))
+genesexpressedeverywehre <- genesexpressedeverywehre %>% filter(rs > 0) %>% column_to_rownames('gene')
+genesexpressedeverywehre <- row.names(genesexpressedeverywehre)
+
+Unique_C7 <- setdiff(genesexpressed7,genesexpressedeverywehre)
+#write.csv(Unique_C7, "Unique_C7.csv")
+
+
+UniqueWT_C7 <- intersect(gExp7_WT, Unique_C7)
+UniqueIS15_C7 <- intersect(gExp7_IS15, Unique_C7)
+
+UniqueWT_C7 <- setdiff(UniqueWT_C7, UniqueIS15_C7)
+UniqueIS15_C7 <- setdiff(UniqueIS15_C7, UniqueWT_C7)
+
+#write.csv(UniqueWT_C7, "UniqueWT_C7.csv")
+#write.csv(UniqueIS15_C7, "UniqueIS15_C7.csv") 
+
+
+```
+```{r}
+#Select cluster 7
+IS15WT_All <- SetIdent(alldataF, value = "type")
+IS15WT_All <- subset(IS15WT_All,  idents = c("AroPerfect_IS15", "WT"))
+IS15WT_All <- SetIdent(IS15WT_All, value = "RNA_snn_res.0.5")
+```
+
+```{r fig.height=3, fig.width=2}
+genes.to.label = sort(c("HLA-B", "HLA-A", "SMAP2", "IL2RA", "MMP9", "PDCD4", "SAT1", "HLA-E", "HLA-DRB1", "HLA-C", "CSF3R", "S100A4", "PLCG2", "CFD", "CTSD", "GLIPR1", "LBVRB", "GPX4", "FXYD5"))
+
+
+
+
+VlnPlot(IS15WT_All, genes.to.label, stack = TRUE, sort = F, flip = T, split.by = "type", raster = F) +
+  theme(text = element_text(size = 6), axis.text = element_text(size = 6))
+
+```
+```{r}
+VlnPlot(IS15WT_All, features = Unique_C7,
+    ncol =6, group.by = "RNA_snn_res.0.5",split.by = "type", assay = "RNA", pt.size = -1, cols = typecol) &
+  theme(axis.title.x = element_blank(), axis.title.y = element_text(size = 6) , axis.text.x = element_text(size = 6), text = element_text(size = 20),plot.title = element_text(size = 6), axis.text.y = element_text(size = 6),  aspect.ratio = 1)
+```
+```{r}
+DoHeatmap(alldataF, features = Unique_C7, group.by = "RNA_snn_res.0.5",
+    assay = "RNA") + theme(axis.text = element_text(size = 8))
+
+DoHeatmap(IS15WT_7, features = Unique_C7, group.by = "type",
+    assay = "RNA") + theme(axis.text = element_text(size = 8))
+```
+
+

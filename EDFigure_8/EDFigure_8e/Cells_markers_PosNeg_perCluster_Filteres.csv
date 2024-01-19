@@ -1,0 +1,19 @@
+,type,RNA_snn_res.0.5,count,,,,,,,,,
+1,AroPerfect_IS10,1,1277,,,,1,3,4,5,6,7
+2,AroPerfect_IS10,3,774,,,CEBPa Wild type,303,560,292,812,3,174
+3,AroPerfect_IS10,4,435,,,AroPerfect IS15,1277,774,435,2,14,5
+4,AroPerfect_IS10,5,2,,,AroPerfect IS10,306,7,561,27,520,279
+5,AroPerfect_IS10,6,14,,,,,,,,,
+6,AroPerfect_IS10,7,5,,,,,,,,,
+7,AroPerfect_IS15,1,306,,,,,,,,,
+8,AroPerfect_IS15,3,7,,,,,,,,,
+9,AroPerfect_IS15,4,561,,,,Wild type,AroPERFECT IS15,AroPERFECT IS10,,,
+10,AroPerfect_IS15,5,27,,,Initial B-cell,303,306,1277,,,
+11,AroPerfect_IS15,6,520,,,Early,560,7,774,,,
+12,AroPerfect_IS15,7,279,,,Early-Inter,292,561,435,,,
+13,WT,1,303,,,Differentiating M_ 1,3,520,14,,,
+14,WT,3,560,,,Differentiating M_ 2,812,27,2,,,
+15,WT,4,292,,,Late M_,174,279,5,,,
+16,WT,5,812,,,,,,,,,
+17,WT,6,3,,,,,,,,,
+18,WT,7,174,,,,,,,,,

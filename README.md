@@ -2,8 +2,12 @@
 
 ## This is a repository for Naderi & Magalhaes et al.
 
-Main bioinformatics analysis is listed by figure
-Main scripts for NGS are listed separated
+The main bioinformatics analysis is listed by figure
+The main scripts for scRNAseq are listed as separated folders
+
+A copy of Periodic finder and QuasiIDR finder are stored also:
+Links: 
+
 
 
 Questions regarding code please email: magalhae@molgen.mpg.de 

@@ -3,16 +3,19 @@
 ## This is a repository for Naderi & Magalhaes et al.
 
 The main bioinformatics analysis is listed by figure
-The main scripts for scRNAseq are listed as separated folders
+The main scripts for scRNAseq are listed as separate folders
 
-A copy of Periodic finder and QuasiIDR finder are stored also:
+A copy of main scRNAseq object is located ant Zendo: 
+
+A copy of the Periodic finder and QuasiIDR finder are stored also:
 Links: 
 
+https://github.com/alexpmagalhaes/PeriodicBlock_finder
+https://github.com/gozdekibar/QuasiIDRFinder
 
 
-Questions regarding code please email: magalhae@molgen.mpg.de 
+Questions regarding code please email: Alexandre P Magalhaes -> magalhae@molgen.mpg.de 
 or to github: @alexpmagalhaes
-
 
 R packages needee:
 

@@ -1,6 +1,8 @@
-# Suboptimization of human transcription factors 2024
+# An activity-specificity trade-off encoded in human transcription factors 2024
 
 ## This is a repository for Naderi & Magalhaes et al.
+
+DOI: 10.1038/s41556-024-01411-0
 
 The main bioinformatics analysis is listed by figure
 The main scripts for scRNAseq are listed as separate folders
